@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "alexiscordova.com",
   "version": "4.0.0",
-  "description": "The personal portfolio site of Alexis Córdova, Front End UI/UX Developer",
+  "description": "The personal portfolio site of Alexis Córdova, Front-End UI/UX Developer",
   "main": "src/index.jsx",
   "scripts": {
     "prestart": "babel-node scripts/startMessage.js",
