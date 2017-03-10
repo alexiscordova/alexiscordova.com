@@ -5,15 +5,16 @@
   "main": "src/index.jsx",
   "scripts": {
     "prestart": "babel-node scripts/startMessage.js",
-    "start": "npm-run-all --parallel securityCheck open:src lint:watch",
-    "open:src": "babel-node scripts/server.js",
+    "start": "npm-run-all --parallel security-check serve:src lint:watch",
+    "poststart": "babel-node scripts/watchMessage.js",
+    "serve:src": "babel-node scripts/server.js development",
+    "serve:dist": "babel-node scripts/server.js",
     "lint": "esw webpack.config.* src server.js scripts",
     "lint:watch": "npm run lint -- --watch",
-    "securityCheck": "nsp check",
-    "clean-dist": "rimraf ./dist && mkdir dist",
-    "prebuild": "npm-run-all clean-dist lint",
-    "build": "babel-node scripts/build.js",
-    "postbuild": "babel-node scripts/distServer.js"
+    "security-check": "nsp check",
+    "clean:dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean:dist lint",
+    "build": "babel-node scripts/build.js"
   },
   "repository": {
     "type": "git",
