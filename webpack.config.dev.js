@@ -31,6 +31,13 @@ export default {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(gif|jpe?g|svg)$/i,
+        use: [
+          'file-loader?name=[path][name].[ext]',
+          'image-webpack-loader'
+        ]
       }
     ]
   },
