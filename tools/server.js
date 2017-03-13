@@ -7,16 +7,16 @@ import config from '../webpack.config.dev';
 
 /* eslint-disable no-console */
 
-const environment = process.argv.splice(2)[0];
 const host = 'http://localhost';
 const port = 3000;
 const app = express();
+const environment = app.get('env');
 let compiler;
 let indexFile;
 
 if (environment === 'development') {
   compiler = webpack(config);
-  indexFile = './src/index.html';
+  indexFile = '../src/index.html';
 
   app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
@@ -29,7 +29,7 @@ if (environment === 'development') {
     response.sendFile(path.join(__dirname, indexFile));
   });
 } else {
-  indexFile = './dist/index.html';
+  indexFile = '../dist/index.html';
 
   app.use(compression());
   app.use(express.static('dist'));
