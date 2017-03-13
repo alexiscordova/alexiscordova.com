@@ -29,7 +29,12 @@ export default {
         use: [
           'style-loader',
           'css-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['src/styles/utilities']
+            }
+          }
         ]
       },
       {
