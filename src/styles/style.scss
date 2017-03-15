@@ -1,3 +1,21 @@
-body {
-  font-family: sans-serif;
-}
+// alexiscordova.com
+
+// Normalize.css
+@import '../../node_modules/normalize.css/normalize.css';
+
+// Utilities
+@import
+  'utilities/mixins',
+  'utilities/classes';
+
+// Base
+//@import
+//  'base/colors',
+//  'base/typography',
+//  'base/links'
+//  'base/lists';
+
+// Layouts
+@import
+  'layout/main',
+  'layout/grid';
