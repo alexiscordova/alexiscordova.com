@@ -40,8 +40,7 @@ export default {
       {
         test: /\.(gif|jpe?g|svg)$/i,
         use: [
-          'file-loader?name=[path][name].[ext]',
-          'image-webpack-loader'
+          'file-loader?name=[path][name].[ext]'
         ]
       }
     ]
