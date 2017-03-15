@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 
 export default {
   devtool: 'inline-source-map',
@@ -51,7 +52,8 @@ export default {
     ]
   },
   plugins: [
-    // Create HTML index file
+    new FaviconsWebpackPlugin('./src/favicon.png'),
+
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: true

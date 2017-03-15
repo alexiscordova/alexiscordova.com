@@ -3,6 +3,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 
 export default {
   devtool: 'source-map',
@@ -28,8 +29,23 @@ export default {
         test: /\.scss/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader?sourceMap']
+          use: [
+            'css-loader',
+            {
+              loader: 'sass-loader?sourceMap',
+              options: {
+                includePaths: ['src/styles/utilities']
+              }
+            }
+          ]
         })
+      },
+      {
+        test: /\.(gif|jpe?g|svg)$/i,
+        use: [
+          'image-webpack-loader',
+          'file-loader?name=[path][name].[ext]'
+        ]
       }
     ]
   },
@@ -46,6 +62,13 @@ export default {
 
     // MD5 hash files for cache busting
     new WebpackMd5Hash(),
+
+    // Create favicons
+    new FaviconsWebpackPlugin({
+      logo: './src/favicon.png',
+      prefix: './src/assets/images/favicons/',
+      inject: true
+    }),
 
     // Create HTML index file
     new HtmlWebpackPlugin({
