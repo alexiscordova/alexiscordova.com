@@ -6,7 +6,7 @@ import AppView from './views/app-view/AppView.jsx';
 import HomeView from './views/home-view/HomeView.jsx';
 
 // Routes
-const routes = (
+const routes = () => (
   <Router history={browserHistory}>
     <Route component={AppView}>
       <Route path="/" component={HomeView} />
@@ -16,6 +16,6 @@ const routes = (
       <Route path="*" component={NotFoundView} />*/}
     </Route>
   </Router>
-);
+)
 
 export default routes;

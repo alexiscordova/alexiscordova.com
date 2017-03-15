@@ -5,6 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 export default {
   devtool: 'inline-source-map',
   entry: [
+    'react-hot-loader/patch',
     'webpack-hot-middleware/client',
     path.resolve(__dirname, './src/index.jsx')
   ],
@@ -14,13 +15,17 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  devServer: {
+    hot: true,
+    contentBase: path.resolve(__dirname, 'src'),
+    publicPath: '/'
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
-          'react-hot-loader',
           'babel-loader'
         ]
       },
@@ -56,6 +61,8 @@ export default {
       debug: true
     }),
 
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+
+    new webpack.NamedModulesPlugin()
   ]
 }
