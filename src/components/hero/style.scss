@@ -1,0 +1,15 @@
+// Hero Component
+
+[data-component="hero"] {
+  .background-container {
+    max-width: 2000px;
+    height: 200px;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    &.home {
+      background-image: url('../../assets/images/home/tableau-large_2x.jpg');
+    }
+  }
+}
