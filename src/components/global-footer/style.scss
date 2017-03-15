@@ -1,0 +1,19 @@
+// Global Footer Component
+
+@import 'mixins';
+
+// Local Variables
+$footer-background: #222;
+$footer-text: #666;
+$author-text: #ccc;
+
+.global-footer {
+  height: 50px;
+  color: $footer-text;
+  background-color: $footer-background;
+
+  .author-metadata {
+    margin-left: 5px;
+    color: $author-text;
+  }
+}
