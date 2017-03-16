@@ -9,7 +9,7 @@ class GlobalHeader extends React.Component {
     return (
       <header className="global-header">
         <div className="container block-center">
-          <div className="column small-10 large-8">
+          <div className="column">
             <Link to="/" className="logo">
               <img width="40" height="40" src={require('../../assets/svg/logo-outline-color.svg')} />
               <h1>
@@ -18,7 +18,12 @@ class GlobalHeader extends React.Component {
               </h1>
             </Link>
           </div>
-          <nav className="column large-4">
+
+          <div id="navigation-trigger">
+            <div className="menu">Menu</div>
+          </div>
+
+          <nav className="column">
             <ul role="navigation">
               <li id="work">
                 <Link to="/work" title="Selected Work">Work</Link>
