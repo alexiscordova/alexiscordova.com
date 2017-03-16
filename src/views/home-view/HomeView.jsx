@@ -22,6 +22,10 @@ class HomeView extends React.Component {
           image={require('../../assets/images/work/primer/primer-promo-large_2x.jpg')}
           title="StubHub Primer"
         />
+        <Card
+          image={require('../../assets/images/work/sony/sony-promo-large_2x.jpg')}
+          title="StubHub Primer"
+        />
       </section>
     )
   }
