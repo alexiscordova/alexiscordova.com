@@ -52,7 +52,21 @@ export default {
     ]
   },
   plugins: [
-    new FaviconsWebpackPlugin('./src/favicon.png'),
+    new FaviconsWebpackPlugin({
+      logo: './src/favicon.png',
+      icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    }),
 
     new HtmlWebpackPlugin({
       template: 'src/index.html',
