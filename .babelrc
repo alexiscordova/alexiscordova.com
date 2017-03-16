@@ -5,7 +5,6 @@
     "react"
   ],
   "plugins": [
-    "react-hot-loader/babel",
-    "transform-react-jsx-img-import"
+    "react-hot-loader/babel"
   ]
 }
