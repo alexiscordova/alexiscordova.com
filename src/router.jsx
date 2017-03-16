@@ -10,10 +10,6 @@ const routes = () => (
   <Router history={browserHistory}>
     <Route component={AppView}>
       <Route path="/" component={HomeView} />
-      {/*<Route path="/work" component={WorkView} />
-      <Route path="/resume" component={ResumeView} />
-      <Route path="/about" component={AboutView} />
-      <Route path="*" component={NotFoundView} />*/}
     </Route>
   </Router>
 )
