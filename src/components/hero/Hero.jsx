@@ -39,7 +39,9 @@ class Hero extends React.Component {
 Hero.propTypes = {
   background: React.PropTypes.bool,
   classes: React.PropTypes.string,
-  alt: React.PropTypes.string.isRequired
+  alt: React.PropTypes.string,
+  heroImage: React.PropTypes.string
+};
 };
 
 export default Hero;
