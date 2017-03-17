@@ -42,6 +42,10 @@ Hero.propTypes = {
   alt: React.PropTypes.string,
   heroImage: React.PropTypes.string
 };
+
+Hero.defaultProps = {
+  heroImage: 'http://placehold.it/576x360',
+  alt: ''
 };
 
 export default Hero;
