@@ -1,11 +1,7 @@
 import React from 'react';
 
 class ResumeView extends React.Component {
-  componentDidMount() {
-    let title = document.title;
-
-    document.title = `${title} | San Francisco, CA | Résumé`;
-  }
+  componentDidMount() {}
 
   render() {
     return (
