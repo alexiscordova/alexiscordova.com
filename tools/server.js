@@ -16,7 +16,7 @@ let indexFile;
 
 if (environment === 'development') {
   compiler = webpack(config);
-  indexFile = '../src/index.html';
+  indexFile = path.join(compiler.outputPath, 'index.html');
 
   app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
@@ -28,17 +28,31 @@ if (environment === 'development') {
 
   app.use(require('webpack-hot-middleware')(compiler));
 
-  app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, indexFile));
+  app.get('*', (request, response, next) => {
+    compiler.outputFileSystem.readFile(indexFile, (error, result) => {
+      if (error) {
+        return next(error);
+      }
+      response.set('content-type', 'text/html');
+      response.send(result);
+      response.end();
+    });
   });
 } else {
-  indexFile = '../dist/index.html';
+  indexFile = path.join(compiler.outputPath, 'index.html');
 
   app.use(compression());
   app.use(express.static('dist'));
 
-  app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, indexFile));
+  app.get('*', (request, response, next) => {
+    compiler.outputFileSystem.readFile(indexFile, (error, result) => {
+      if (error) {
+        return next(error);
+      }
+      response.set('content-type', 'text/html');
+      response.send(result);
+      response.end();
+    });
   });
 }
 
