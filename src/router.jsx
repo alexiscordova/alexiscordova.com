@@ -12,6 +12,7 @@ const routes = () => (
     <Route component={AppView}>
       <Route path="/" component={HomeView} />
       <Route path="/about" component={AboutView} />
+      <Route path="/work/:name" />
     </Route>
   </Router>
 )
