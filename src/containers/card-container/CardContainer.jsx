@@ -20,7 +20,7 @@ CardContainer.propTypes = {
 };
 
 CardContainer.defaultProps = {
-  headline: 'Subheadingw'
+  headline: 'Subheading'
 };
 
 export default CardContainer;
