@@ -1,11 +1,11 @@
-import webpack from 'webpack';
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import WebpackMd5Hash from 'webpack-md5-hash';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
+let webpack = require('webpack');
+let path = require('path');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let WebpackMd5Hash = require('webpack-md5-hash');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-export default {
+module.exports = {
   devtool: 'source-map',
   entry: {
     main: path.resolve(__dirname, './src/index.jsx')

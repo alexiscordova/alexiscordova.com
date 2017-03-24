@@ -1,6 +1,6 @@
-import webpack from 'webpack';
-import config from '../webpack.config.prod';
-import chalk from 'chalk';
+const webpack = require('webpack');
+const config = require('../webpack.config.prod');
+const chalk = require('chalk');
 
 /* eslint-disable no-console */
 
