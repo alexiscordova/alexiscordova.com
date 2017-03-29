@@ -5,6 +5,7 @@ import CardContainer from '../../containers/card-container/CardContainer.jsx';
 import Hero from '../../components/hero/Hero.jsx';
 import BodyCopy from '../../components/body-copy/BodyCopy.jsx';
 import Card from '../../components/card/Card.jsx';
+import Profile from '../../components/profile/Profile.jsx';
 
 import FeaturedWork from '../../../data/featured-work.json';
 import OtherWork from '../../../data/other-work.json';
@@ -60,6 +61,8 @@ class HomeView extends React.Component {
             })}
           </div>
         </CardContainer>
+
+        <Profile />
 
         <div className="button-container" id="resume">
           <button>Download Résumé</button>
