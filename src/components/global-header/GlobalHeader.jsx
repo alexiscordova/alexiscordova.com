@@ -25,11 +25,14 @@ class GlobalHeader extends React.Component {
 
           <nav className="column">
             <ul role="navigation">
-              <li id="resume">
+              <li id="work">
                 <Link to="/work" title="Featured Work">Work</Link>
               </li>
               <li id="about">
                 <Link to="/about" title="About Alexis">About</Link>
+              </li>
+              <li id="resume-jump">
+                <a href="#resume" title="Jump to résumé download button">Résumé</a>
               </li>
             </ul>
           </nav>
