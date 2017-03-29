@@ -10,10 +10,18 @@ class Card extends React.Component {
   }
 
   render() {
+    let hasClient = typeof this.props.client !== 'undefined' ? `${this.props.projectDate} • ${this.props.client}` : this.props.projectDate;
+
     return (
       <section data-component="card">
-        <Link to="/" title={this.props.title}>
-          <img src={this.props.image} />
+        <Link to={this.props.destination}>
+          <figure>
+            <img src={this.props.image} alt={this.props.alt}/>
+            <figcaption>
+              {this.props.title}
+              {hasClient}
+            </figcaption>
+          </figure>
         </Link>
       </section>
     );
@@ -22,7 +30,11 @@ class Card extends React.Component {
 
 Card.propTypes = {
   image: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired
+  alt: React.PropTypes.string,
+  title: React.PropTypes.string.isRequired,
+  destination: React.PropTypes.string.isRequired,
+  projectDate: React.PropTypes.string,
+  client: React.PropTypes.string
 };
 
 export default Card;
