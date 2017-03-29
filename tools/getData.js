@@ -4,7 +4,7 @@ const fs = require('fs');
 const SPACE_ID = 'lyfpmhpuuunf';
 const ACCESS_TOKEN = 'e47209d752faee22737835b186ff613d40c4cd0a592cf99b2301d2a4671c9781';
 
-const dataDir = '../data';
+const dataDir = 'data';
 
 /* eslint-disable no-console */
 let client = contentful.createClient({
