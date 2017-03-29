@@ -60,6 +60,10 @@ class HomeView extends React.Component {
             })}
           </div>
         </CardContainer>
+
+        <div className="button-container" id="resume">
+          <button>Download Résumé</button>
+        </div>
       </section>
     )
   }
