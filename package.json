@@ -5,7 +5,7 @@
   "main": "src/index.jsx",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel security-check serve:src lint:watch",
+    "start": "npm run data && npm-run-all --parallel security-check serve:src lint:watch",
     "serve:src": "babel-node tools/server.js NODE_ENV=development",
     "serve:dist": "babel-node tools/server.js NODE_ENV=production",
     "lint": "esw webpack.config.* src server.js tools",
@@ -13,7 +13,8 @@
     "security-check": "nsp check",
     "clean:dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean:dist lint",
-    "build": "babel-node tools/build.js"
+    "build": "babel-node tools/build.js",
+    "data": "babel-node tools/getData.js"
   },
   "repository": {
     "type": "git",
