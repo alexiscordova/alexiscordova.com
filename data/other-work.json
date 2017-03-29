@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Portfolio",
+    "id": "portfolio",
+    "isVisible": true,
+    "title": "alexiscordova.com",
+    "imageUrl": "/src/assets/images/work/portfolio/",
+    "alt": "Portfolio for Alexis Cordova",
+    "destinationUrl": "/work/portfolio"
+  },
+  {
+    "name": "Is It Baseball Season Yet",
+    "id": "iibbsy",
+    "isVisible": true,
+    "title": "Is It Baseball Season Yet",
+    "imageUrl": "/src/assets/images/work/iibbsy/iibbsy-promo-large.jpg",
+    "alt": "2014 World Series at AT&T Park, as promotion for Is It Baseball Season Yet",
+    "destinationUrl": "/work/is-it-baseball-season-yet"
+  },
+  {
+    "name": "Instagram Administrator Panel",
+    "id": "instagram-admin",
+    "isVisible": true,
+    "title": "Instagram Admin Panel",
+    "imageUrl": "/src/assets/images/work/instagram-admin/instagram-admin-promo-large.jpg",
+    "alt": "Instagram Administrator Panel",
+    "destinationUrl": "/work/instagram-admin"
+  },
+  {
+    "name": "Slack Food Trucks Bot",
+    "id": "slack-food-trucks",
+    "isVisible": true,
+    "title": "Slack Food Trucks Bot",
+    "imageUrl": "/src/assets/images/work/slack-foodtrucks/slack-foodtrucks-promo-large.jpg",
+    "alt": "Slack Food Trucks Bot",
+    "destinationUrl": "/work/slack-food-trucks"
+  }
+]
