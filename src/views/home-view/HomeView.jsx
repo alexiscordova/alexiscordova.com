@@ -1,7 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import CardContainer from '../../containers/card-container/CardContainer.jsx';
-
 import Hero from '../../components/hero/Hero.jsx';
 import BodyCopy from '../../components/body-copy/BodyCopy.jsx';
 import Card from '../../components/card/Card.jsx';
@@ -12,15 +12,13 @@ import FeaturedWork from '../../../data/featured-work.json';
 import OtherWork from '../../../data/other-work.json';
 
 class HomeView extends React.Component {
-  componentDidMount() {
-    let title = document.title;
-
-    document.title = `${title} | San Francisco, CA`;
-  }
-
   render() {
     return(
       <section className="block-center content">
+        <Helmet>
+          <title>Alexis Córdova | Front-End UI/UX Developer | San Francisco, CA</title>
+        </Helmet>
+
         <Hero background={true} classes="home" alt="compooter" />
 
         <BodyCopy />
