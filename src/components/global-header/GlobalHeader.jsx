@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { NavLink, Link } from 'react-router-dom';
 
 // Component styles
 import './style.scss';
@@ -26,7 +26,7 @@ class GlobalHeader extends React.Component {
           <nav className="column">
             <ul role="navigation">
               <li id="about">
-                <Link to="/about" title="About Alexis">About</Link>
+                <NavLink to="/about" activeClassName="is-active" title="About Alexis">About</NavLink>
               </li>
               <li id="resume-jump">
                 <a href="/#resume" title="Jump to résumé download button">Résumé</a>
