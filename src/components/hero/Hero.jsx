@@ -44,7 +44,7 @@ Hero.propTypes = {
 };
 
 Hero.defaultProps = {
-  heroImage: 'http://placehold.it/576x360',
+  heroImage: 'http://placehold.it/1900x600',
   alt: ''
 };
 
