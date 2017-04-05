@@ -12,7 +12,7 @@ class Hero extends React.Component {
     let content = null,
         children = this.props.children ? <h2>{this.props.children}</h2> : null;
 
-    if (typeof this.props.background !== 'undefined') {
+    if (this.props.background) {
       content = (
         <div className={`background-container block-center ${this.props.classes}`}>
           {children}
