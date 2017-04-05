@@ -28,11 +28,11 @@ let _getVisibleProjects = (entries) => {
 
 // Write file to data directory
 let _writeFile = (filename, data) => {
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir);
+  if (!fs.existsSync(`../${dataDir}`)) {
+    fs.mkdirSync(`../${dataDir}`);
   }
 
-  fs.writeFileSync(`${dataDir}/${filename}`, JSON.stringify(data));
+  fs.writeFileSync(`../${dataDir}/${filename}`, JSON.stringify(data));
 };
 
 // Get project data from Contentful
