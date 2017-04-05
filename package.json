@@ -4,7 +4,6 @@
   "description": "The personal portfolio site of Alexis Córdova, Front-End UI/UX Developer",
   "main": "src/index.jsx",
   "scripts": {
-    "prestart": "babel-node tools/startMessage.js",
     "start": "npm run data && npm-run-all --parallel security-check serve:src lint:watch",
     "serve:src": "babel-node tools/server.js NODE_ENV=development",
     "serve:dist": "babel-node tools/server.js NODE_ENV=production",
