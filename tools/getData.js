@@ -53,5 +53,29 @@ let _getProjectData = (contentType) => {
   });
 };
 
+// Get Work Detail data
+let _getWorkDetailData = () => {
+  client.getEntries({
+    'content_type': 'workDetail'
+  })
+  .then(entries => {
+    let data = entries.items.map((entry) => {
+      return entry.fields;
+    });
+
+    let components = data.map((component) => {
+      return component.modules[0].fields;
+    });
+
+    components.forEach(component => {
+      _writeFile(component.filename, component);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
+};
+
 _getProjectData('featuredWorkContainer');
 _getProjectData('otherWorkContainer');
+_getWorkDetailData();
