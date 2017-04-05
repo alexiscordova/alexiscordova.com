@@ -17,7 +17,7 @@ class WorkView extends React.Component {
     let { match } = this.props;
 
     this.setState({
-      hero: require(`../../../data/${match.params.project}-hero.json`)
+      hero: require(`../../data/${match.params.project}-hero.json`)
     });
   }
 

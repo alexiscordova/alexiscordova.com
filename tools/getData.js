@@ -4,7 +4,7 @@ const fs = require('fs');
 const SPACE_ID = 'lyfpmhpuuunf';
 const ACCESS_TOKEN = 'e47209d752faee22737835b186ff613d40c4cd0a592cf99b2301d2a4671c9781';
 
-const dataDir = 'data';
+const dataDir = 'src/data';
 
 /* eslint-disable no-console */
 let client = contentful.createClient({
@@ -28,11 +28,11 @@ let _getVisibleProjects = (entries) => {
 
 // Write file to data directory
 let _writeFile = (filename, data) => {
-  if (!fs.existsSync(`../${dataDir}`)) {
-    fs.mkdirSync(`../${dataDir}`);
+  if (!fs.existsSync(`${dataDir}`)) {
+    fs.mkdirSync(`${dataDir}`);
   }
 
-  fs.writeFileSync(`../${dataDir}/${filename}`, JSON.stringify(data));
+  fs.writeFileSync(`${dataDir}/${filename}`, JSON.stringify(data));
 };
 
 // Get project data from Contentful

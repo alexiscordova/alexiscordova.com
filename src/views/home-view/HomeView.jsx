@@ -8,8 +8,8 @@ import Card from '../../components/card/Card.jsx';
 import Profile from '../../components/profile/Profile.jsx';
 import Button from '../../components/button/Button.jsx';
 
-import FeaturedWork from '../../../data/featured-work.json';
-import OtherWork from '../../../data/other-work.json';
+import FeaturedWork from '../../data/featured-work.json';
+import OtherWork from '../../data/other-work.json';
 
 class HomeView extends React.Component {
   render() {
