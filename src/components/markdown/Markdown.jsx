@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 // Component Style
 import './style.scss';
@@ -9,7 +10,7 @@ class Markdown extends Component {
       <section data-component="markdown">
         <div className="row">
           <div className="column">
-            {this.props.markdown}
+            <ReactMarkdown source={this.props.markdown} />
           </div>
         </div>
       </section>
@@ -20,5 +21,9 @@ class Markdown extends Component {
 Markdown.propTypes = {
   markdown: PropTypes.string
 };
+
+Markdown.defaultProps = {
+  markdown: '# This is a header in markdown\n\nAnd this is a paragraph'
+}
 
 export default Markdown;

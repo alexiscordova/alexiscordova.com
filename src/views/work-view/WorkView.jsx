@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import Hero from '../../components/hero/Hero.jsx';
 import Introduction from '../../components/introduction/Introduction.jsx';
+import Markdown from '../../components/markdown/Markdown.jsx';
 
 class WorkView extends React.Component {
   constructor(props) {
@@ -35,6 +36,8 @@ class WorkView extends React.Component {
         />
 
         <Introduction />
+
+        <Markdown />
       </section>
     )
   }
