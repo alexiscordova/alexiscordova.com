@@ -59,11 +59,11 @@ let _getWorkDetailData = () => {
     'content_type': 'workDetail'
   })
   .then(entries => {
-    let data = entries.items.map((entry) => {
+    let data = entries.items.map(entry => {
       return entry.fields;
     });
 
-    let components = data.map((component) => {
+    let components = data.map(component => {
       return component.modules[0].fields;
     });
 

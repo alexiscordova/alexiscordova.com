@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 class CardContainer extends Component {
   render() {
     return (
-      <section className="card-container">
+      <section data-component="card-container">
         <h3>{this.props.headline}</h3>
         {this.props.children}
       </section>

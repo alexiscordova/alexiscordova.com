@@ -63,7 +63,7 @@ class HomeView extends Component {
 
         <Profile />
 
-        <div className="button-container" id="resume">
+        <div data-component="button-container" id="resume">
           <Button text="Download Résumé (PDF)" />
         </div>
       </section>
