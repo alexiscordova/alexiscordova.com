@@ -10,6 +10,9 @@ class Markdown extends Component {
       <section data-component="markdown">
         <div className="row">
           <div className="column">
+            {typeof this.props.headline !== 'undefined' &&
+              <h2>{this.props.headline}</h2>
+            }
             <ReactMarkdown source={this.props.markdown} />
           </div>
         </div>
@@ -19,6 +22,7 @@ class Markdown extends Component {
 };
 
 Markdown.propTypes = {
+  headline: PropTypes.string,
   markdown: PropTypes.string
 };
 
