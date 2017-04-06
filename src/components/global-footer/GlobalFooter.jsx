@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './style.scss';
 
-class GlobalFooter extends React.Component {
+class GlobalFooter extends Component {
   render() {
     const currentYear = new Date().getFullYear();
 

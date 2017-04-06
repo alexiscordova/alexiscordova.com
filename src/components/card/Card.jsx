@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
 
 // Component Styles
 import './style.scss';
 
-class Card extends React.Component {
+class Card extends Component {
   constructor(props) {
     super(props);
   }
@@ -29,12 +29,12 @@ class Card extends React.Component {
 };
 
 Card.propTypes = {
-  image: React.PropTypes.string.isRequired,
-  alt: React.PropTypes.string,
-  title: React.PropTypes.string.isRequired,
-  destination: React.PropTypes.string.isRequired,
-  projectDate: React.PropTypes.string,
-  client: React.PropTypes.string
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  destination: PropTypes.string.isRequired,
+  projectDate: PropTypes.string,
+  client: PropTypes.string
 };
 
 export default Card;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import './style.scss';
 
-class Avatar extends React.Component {
+class Avatar extends Component {
   render() {
     return (
       <div className="avatar">
@@ -13,7 +13,7 @@ class Avatar extends React.Component {
 };
 
 Avatar.propTypes = {
-  avatarImage: React.PropTypes.string.isRequired
+  avatarImage: PropTypes.string.isRequired
 }
 
 export default Avatar;

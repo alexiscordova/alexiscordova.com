@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
 import CardContainer from '../../containers/card-container/CardContainer.jsx';
@@ -11,7 +11,7 @@ import Button from '../../components/button/Button.jsx';
 import FeaturedWork from '../../data/featured-work.json';
 import OtherWork from '../../data/other-work.json';
 
-class HomeView extends React.Component {
+class HomeView extends Component {
   render() {
     return(
       <section className="block-center content">

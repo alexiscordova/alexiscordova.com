@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import './style.scss';
 
-class Button extends React.Component {
+class Button extends Component {
   render() {
     return (
       <button>{this.props.text}</button>
@@ -11,7 +11,7 @@ class Button extends React.Component {
 };
 
 Button.propTypes = {
-  text: React.PropTypes.string.isRequired
+  text: PropTypes.string.isRequired
 };
 
 export default Button;

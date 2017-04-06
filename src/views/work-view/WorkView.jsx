@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Hero from '../../components/hero/Hero.jsx';
 import Introduction from '../../components/introduction/Introduction.jsx';
 import Markdown from '../../components/markdown/Markdown.jsx';
 
-class WorkView extends React.Component {
+class WorkView extends Component {
   constructor(props) {
     super(props);
 

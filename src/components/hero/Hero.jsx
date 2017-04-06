@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
 // Component Style
 import './style.scss';
 
-class Hero extends React.Component {
+class Hero extends Component {
   constructor(props) {
     super(props);
   }
@@ -37,10 +37,10 @@ class Hero extends React.Component {
 };
 
 Hero.propTypes = {
-  background: React.PropTypes.bool,
-  classes: React.PropTypes.string,
-  alt: React.PropTypes.string,
-  heroImage: React.PropTypes.string
+  background: PropTypes.bool,
+  classes: PropTypes.string,
+  alt: PropTypes.string,
+  heroImage: PropTypes.string
 };
 
 Hero.defaultProps = {

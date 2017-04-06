@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import GlobalHeader from '../../components/global-header/GlobalHeader.jsx';
 import GlobalFooter from '../../components/global-footer/GlobalFooter.jsx';
 
-class Application extends React.Component {
+class Application extends Component {
   render() {
     return (
       <article className="react-root">

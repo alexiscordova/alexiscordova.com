@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 // Component styles
 import './style.scss';
 
-class GlobalHeader extends React.Component {
+class GlobalHeader extends Component {
   render() {
     return (
       <header className="global-header">

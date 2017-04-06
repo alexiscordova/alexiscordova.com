@@ -1,10 +1,6 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-class CardContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+class CardContainer extends Component {
   render() {
     return (
       <section className="card-container">
@@ -16,7 +12,7 @@ class CardContainer extends React.Component {
 };
 
 CardContainer.propTypes = {
-  headline: React.PropTypes.string
+  headline: PropTypes.string
 };
 
 CardContainer.defaultProps = {
