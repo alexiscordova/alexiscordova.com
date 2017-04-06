@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import CardContainer from '../../containers/card-container/CardContainer.jsx';
 import Hero from '../../components/hero/Hero.jsx';
-import BodyCopy from '../../components/body-copy/BodyCopy.jsx';
+import Introduction from '../../components/introduction/Introduction.jsx';
 import Card from '../../components/card/Card.jsx';
 import Profile from '../../components/profile/Profile.jsx';
 import Button from '../../components/button/Button.jsx';
@@ -21,7 +21,7 @@ class HomeView extends React.Component {
 
         <Hero background={true} classes="home" alt="compooter" />
 
-        <BodyCopy />
+        <Introduction />
 
         <CardContainer headline="Featured Work">
           <div className="row">

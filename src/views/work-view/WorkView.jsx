@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Hero from '../../components/hero/Hero.jsx';
-import BodyCopy from '../../components/body-copy/BodyCopy.jsx';
+import Introduction from '../../components/introduction/Introduction.jsx';
 
 class WorkView extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class WorkView extends React.Component {
           alt={this.state.hero.alt}
         />
 
-        <BodyCopy />
+        <Introduction />
       </section>
     )
   }

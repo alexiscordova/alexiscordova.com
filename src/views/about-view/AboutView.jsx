@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Hero from '../../components/hero/Hero.jsx';
-import BodyCopy from '../../components/body-copy/BodyCopy.jsx';
+import Introduction from '../../components/introduction/Introduction.jsx';
 
 class AboutView extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class AboutView extends React.Component {
 
         <Hero />
 
-        <BodyCopy />
+        <Introduction />
       </section>
     )
   }
