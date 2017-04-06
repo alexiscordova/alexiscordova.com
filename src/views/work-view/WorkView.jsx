@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import Hero from '../../components/hero/Hero.jsx';
 import Introduction from '../../components/introduction/Introduction.jsx';
-import Markdown from '../../components/markdown/Markdown.jsx';
 
 class WorkView extends Component {
   constructor(props) {
@@ -18,7 +17,8 @@ class WorkView extends Component {
     let { match } = this.props;
 
     this.setState({
-      hero: require(`../../data/${match.params.project}-hero.json`)
+      hero: require(`../../data/${match.params.project}-hero.json`),
+      intro: require(`../../data/${match.params.project}-introduction.json`)
     });
   }
 
@@ -35,9 +35,10 @@ class WorkView extends Component {
           alt={this.state.hero.alt}
         />
 
-        <Introduction />
-
-        <Markdown />
+        <Introduction
+          headline={this.state.intro.headline}
+          text={this.state.intro.text}
+        />
       </section>
     )
   }

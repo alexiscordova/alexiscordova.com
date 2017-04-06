@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import CardContainer from '../../containers/card-container/CardContainer.jsx';
 import Hero from '../../components/hero/Hero.jsx';
-import Markdown from '../../components/markdown/Markdown.jsx';
+import Introduction from '../../components/introduction/Introduction.jsx';
 import Card from '../../components/card/Card.jsx';
 import Profile from '../../components/profile/Profile.jsx';
 import Button from '../../components/button/Button.jsx';
@@ -27,9 +27,9 @@ class HomeView extends Component {
           alt={HomeHero.alt}
         />
 
-        <Markdown
+        <Introduction
           headline={HomeIntro.headline}
-          markdown={HomeIntro.text}
+          text={HomeIntro.text}
         />
 
         <CardContainer headline="Featured Work">
