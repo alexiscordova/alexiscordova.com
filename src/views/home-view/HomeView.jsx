@@ -73,7 +73,10 @@ class HomeView extends Component {
         <Profile />
 
         <div data-component="button-container" id="resume">
-          <Button text="Download Résumé (PDF)" />
+          <Button
+            link="https://www.dropbox.com/s/crh7mex1fga03we/cordova_resume.pdf?dl=0"
+            text="Download Résumé (PDF)"
+          />
         </div>
       </section>
     )
