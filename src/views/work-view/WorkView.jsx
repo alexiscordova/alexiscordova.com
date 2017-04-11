@@ -9,7 +9,8 @@ class WorkView extends Component {
     super(props);
 
     this.state = {
-      hero: {}
+      hero: {},
+      intro: {}
     };
   }
 
