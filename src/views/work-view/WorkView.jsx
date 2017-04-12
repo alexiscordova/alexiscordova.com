@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import Hero from '../../components/hero/Hero.jsx';
 import Introduction from '../../components/introduction/Introduction.jsx';
+import CodePen from '../../components/codepen/CodePen.jsx';
 
 class WorkView extends Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class WorkView extends Component {
 
     this.state = {
       hero: {},
-      intro: {}
+      intro: {},
+      screenshots: {}
     };
   }
 
@@ -19,7 +21,8 @@ class WorkView extends Component {
 
     this.setState({
       hero: require(`../../data/${match.params.project}-hero.json`),
-      intro: require(`../../data/${match.params.project}-introduction.json`)
+      intro: require(`../../data/${match.params.project}-introduction.json`),
+      screenshots: require(`../../data/${match.params.project}-screenshots.json`)
     });
   }
 
@@ -40,6 +43,22 @@ class WorkView extends Component {
           headline={this.state.intro.headline}
           text={this.state.intro.text}
         />
+
+        { this.state.screenshots.map((screenshot, index) => {
+          if (screenshot.type === 'image') {
+            return <p key={index}>image</p>;
+          } else if (screenshot.type === 'codepen') {
+            return (
+              <CodePen
+                key={index}
+                hash={screenshot.hash}
+                height={screenshot.height}
+                title={screenshot.title}
+                caption={screenshot.caption}
+              />
+            );
+          }
+        })}
       </section>
     )
   }
