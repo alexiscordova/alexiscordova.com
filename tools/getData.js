@@ -68,7 +68,25 @@ let _getWorkDetailData = (contentType) => {
   });
 };
 
+let _getScreenshotData = () => {
+  client.getEntries({
+    'content_type': 'screenshotContainer'
+  })
+  .then(entries => {
+    let data,
+        modules,
+        filename;
 
+    entries.items.forEach((entry, index) => {
+      modules = entry.fields.modules;
+      filename = entry.fields.filename;
+
+      data = modules.map(module => {
+        return module.fields;
+      });
+
+      _writeFile(filename, data);
+    })
   })
   .catch(error => {
     console.log(error);
@@ -79,3 +97,4 @@ _getProjectData('featuredWorkContainer');
 _getProjectData('otherWorkContainer');
 _getWorkDetailData('introduction');
 _getWorkDetailData('hero');
+_getScreenshotData();
