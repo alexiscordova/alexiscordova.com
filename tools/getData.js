@@ -59,7 +59,7 @@ let _getWorkDetailData = (contentType) => {
     'content_type': contentType
   })
   .then(entries => {
-    let data = entries.items.map(entry => {
+    entries.items.map(entry => {
       _writeFile(entry.fields.filename, entry.fields);
     });
   })
@@ -77,7 +77,7 @@ let _getScreenshotData = () => {
         modules,
         filename;
 
-    entries.items.forEach((entry, index) => {
+    entries.items.forEach(entry => {
       modules = entry.fields.modules;
       filename = entry.fields.filename;
 
