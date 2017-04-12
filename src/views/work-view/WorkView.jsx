@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import Hero from '../../components/hero/Hero.jsx';
 import Introduction from '../../components/introduction/Introduction.jsx';
+import Screenshot from '../../components/screenshot/Screenshot.jsx';
 import CodePen from '../../components/codepen/CodePen.jsx';
 
 class WorkView extends Component {
@@ -46,7 +47,13 @@ class WorkView extends Component {
 
         { this.state.screenshots.map((screenshot, index) => {
           if (screenshot.type === 'image') {
-            return <p key={index}>image</p>;
+            return (
+              <Screenshot
+                key={index}
+                imageUrl={screenshot.imageUrl}
+                details={screenshot.details}
+              />
+            );
           } else if (screenshot.type === 'codepen') {
             return (
               <CodePen
