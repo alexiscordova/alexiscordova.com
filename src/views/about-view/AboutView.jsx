@@ -5,6 +5,20 @@ import Hero from '../../components/hero/Hero.jsx';
 import Introduction from '../../components/introduction/Introduction.jsx';
 
 class AboutView extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      about: {}
+    };
+  }
+
+  componentWillMount() {
+    this.setState({
+      about: require('../../data/about.json')
+    });
+  }
+
   render() {
     return (
       <section className="block-center content">
@@ -14,7 +28,7 @@ class AboutView extends Component {
 
         <Hero />
 
-        <Introduction />
+        <Introduction text={this.state.about.text} />
       </section>
     )
   }

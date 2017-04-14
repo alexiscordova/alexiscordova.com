@@ -99,4 +99,5 @@ _getProjectData('featuredWorkContainer');
 _getProjectData('otherWorkContainer');
 _getWorkDetailData('introduction');
 _getWorkDetailData('hero');
+_getWorkDetailData('about');
 _getScreenshotData();
