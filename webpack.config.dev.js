@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const SvgStore = require('webpack-svgstore-plugin');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -58,6 +59,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new SvgStore({
+      prefix: ''
+    }),
+
     new FaviconsWebpackPlugin({
       logo: './src/favicon.png',
       icons: {

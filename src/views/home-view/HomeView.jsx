@@ -13,6 +13,12 @@ import HomeIntro from '../../data/home-introduction.json';
 import FeaturedWork from '../../data/featured-work.json';
 import OtherWork from '../../data/other-work.json';
 
+const __svg__ = {
+  path: '../../assets/svg/*.svg',
+  name: '[hash].icons.svg'
+};
+
+require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
 class HomeView extends Component {
   render() {
     return(
