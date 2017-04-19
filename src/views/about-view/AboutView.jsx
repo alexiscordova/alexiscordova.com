@@ -26,7 +26,11 @@ class AboutView extends Component {
           <title>Alexis Córdova | Front-End UI/UX Developer | About Alexis</title>
         </Helmet>
 
-        <Hero />
+        <Hero
+          background={false}
+          heroImage={require('../../assets/images/about/about-hero-large.jpg')}
+          alt="Alexis Córdova"
+        />
 
         <Introduction text={this.state.about.text} />
       </section>
