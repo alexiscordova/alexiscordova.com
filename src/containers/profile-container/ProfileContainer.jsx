@@ -51,12 +51,12 @@ let networks = [
   }
 ];
 
-class Profile extends Component {
+class ProfileContainer extends Component {
   render() {
     return (
       <section data-component="profile">
         <div className="profile">
-          <Avatar avatarImage="http://placehold.it/250x250" />
+          <Avatar avatarImage={this.props.avatarImage} />
 
           <h2>Alexis Córdova</h2>
           <p>Front-End UI/UX Developer and Maker of Things</p>
@@ -80,4 +80,4 @@ class Profile extends Component {
   }
 };
 
-export default Profile;
+export default ProfileContainer;

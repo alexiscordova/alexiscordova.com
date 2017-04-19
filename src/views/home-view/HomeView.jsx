@@ -5,7 +5,7 @@ import CardContainer from '../../containers/card-container/CardContainer.jsx';
 import Hero from '../../components/hero/Hero.jsx';
 import Introduction from '../../components/introduction/Introduction.jsx';
 import Card from '../../components/card/Card.jsx';
-import Profile from '../../components/profile/Profile.jsx';
+import ProfileContainer from '../../containers/profile-container/ProfileContainer.jsx';
 import Button from '../../components/button/Button.jsx';
 
 import HomeHero from '../../data/home-hero.json';
@@ -19,6 +19,7 @@ const __svg__ = {
 };
 
 require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+
 class HomeView extends Component {
   render() {
     return(
@@ -76,7 +77,7 @@ class HomeView extends Component {
           </div>
         </CardContainer>
 
-        <Profile />
+        <ProfileContainer avatarImage={require('../../assets/images/about/profile-avatar.jpg')} />
 
         <div data-component="button-container" id="resume">
           <Button
