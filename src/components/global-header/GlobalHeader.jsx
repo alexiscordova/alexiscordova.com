@@ -11,7 +11,7 @@ class GlobalHeader extends Component {
         <div className="container block-center">
           <div className="column">
             <Link to="/" className="logo">
-              <img width="40" height="40" src={require('../../assets/svg/logo-outline-color.svg')} />
+              <img width="40" height="40" src={require('Svg/logo-outline-color.svg')} />
               <h1>
                 Alexis Córdova
                 <span className="is-hidden">Front-End Web Developer</span>

@@ -7,6 +7,13 @@ const SvgStore = require('webpack-svgstore-plugin');
 module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json'],
+    alias: {
+      Images: path.resolve(__dirname, 'src/assets/images/'),
+      Svg: path.resolve(__dirname, 'src/assets/svg/'),
+      Components: path.resolve(__dirname, 'src/components/'),
+      Containers: path.resolve(__dirname, 'src/containers'),
+      Data: path.resolve(__dirname, 'src/data/')
+    }
   },
   devtool: 'inline-source-map',
   entry: [

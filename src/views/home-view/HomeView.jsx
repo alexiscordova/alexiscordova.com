@@ -45,7 +45,7 @@ class HomeView extends Component {
               return (
                 <div className="column-small column-medium-6" key={project.id}>
                   <Card
-                    image={require(`../../assets/images/work/${project.imageUrl}`)}
+                    image={require(`Images/work/${project.imageUrl}`)}
                     alt={project.alt}
                     title={project.title}
                     projectDate={project.projectDate}
@@ -64,7 +64,7 @@ class HomeView extends Component {
               return (
                 <div className="column-small column-medium-6" key={project.id}>
                   <Card
-                    image={require(`../../assets/images/work/${project.imageUrl}`)}
+                    image={require(`Images/work/${project.imageUrl}`)}
                     alt={project.alt}
                     title={project.title}
                     projectDate={project.projectDate}
@@ -77,7 +77,7 @@ class HomeView extends Component {
           </div>
         </CardContainer>
 
-        <ProfileContainer avatarImage={require('../../assets/images/about/profile-avatar.jpg')} />
+        <ProfileContainer avatarImage={require('Images/about/profile-avatar.jpg')} />
 
         <div data-component="button-container" id="resume">
           <Button

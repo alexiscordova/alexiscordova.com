@@ -21,9 +21,9 @@ class WorkView extends Component {
     let { match } = this.props;
 
     this.setState({
-      hero: require(`../../data/${match.params.project}-hero.json`),
-      intro: require(`../../data/${match.params.project}-introduction.json`),
-      screenshots: require(`../../data/${match.params.project}-screenshots.json`)
+      hero: require(`Data/${match.params.project}-hero.json`),
+      intro: require(`Data/${match.params.project}-introduction.json`),
+      screenshots: require(`Data/${match.params.project}-screenshots.json`)
     });
   }
 
@@ -36,7 +36,7 @@ class WorkView extends Component {
 
         <Hero
           background={this.state.hero.background}
-          heroImage={require(`../../assets/images/work/${this.state.hero.backgroundUrl}`)}
+          heroImage={require(`Images/work/${this.state.hero.backgroundUrl}`)}
           alt={this.state.hero.alt}
         />
 
@@ -67,7 +67,7 @@ class WorkView extends Component {
           }
         })}
       </section>
-    )
+    );
   }
 };
 

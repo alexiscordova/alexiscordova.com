@@ -6,7 +6,7 @@ class Screenshot extends Component {
     return(
       <section data-component="screenshot">
         <figure>
-          <img src={require(`../../assets/images/work/${this.props.imageUrl}`)} />
+          <img src={require(`Images/work/${this.props.imageUrl}`)} />
           <figcaption>
             <ReactMarkdown source={this.props.details} />
           </figcaption>

@@ -15,7 +15,7 @@ class AboutView extends Component {
 
   componentWillMount() {
     this.setState({
-      about: require('../../data/about.json')
+      about: require('Data/about.json')
     });
   }
 
@@ -28,7 +28,7 @@ class AboutView extends Component {
 
         <Hero
           background={false}
-          heroImage={require('../../assets/images/about/about-hero-large.jpg')}
+          heroImage={require('Images/about/about-hero-large.jpg')}
           alt="Alexis Córdova"
         />
 
