@@ -5,6 +5,9 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const SvgStore = require('webpack-svgstore-plugin');
 
 module.exports = {
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.json'],
+  },
   devtool: 'inline-source-map',
   entry: [
     'react-hot-loader/patch',

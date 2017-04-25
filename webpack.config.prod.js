@@ -6,6 +6,9 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.json'],
+  },
   devtool: 'source-map',
   entry: {
     main: path.resolve(__dirname, './src/index.jsx')
