@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-
-import Routes from './router.jsx';
-
-// Application Styles
+import Routes from './router';
 import './styles/style.scss';
 
 const render = (Component) => {

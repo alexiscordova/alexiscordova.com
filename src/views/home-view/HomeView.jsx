@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-
-import CardContainer from '../../containers/card-container/CardContainer.jsx';
-import Hero from '../../components/hero/Hero.jsx';
-import Introduction from '../../components/introduction/Introduction.jsx';
-import Card from '../../components/card/Card.jsx';
-import ProfileContainer from '../../containers/profile-container/ProfileContainer.jsx';
-import Button from '../../components/button/Button.jsx';
-
-import HomeHero from '../../data/home-hero.json';
-import HomeIntro from '../../data/home-introduction.json';
-import FeaturedWork from '../../data/featured-work.json';
-import OtherWork from '../../data/other-work.json';
+import CardContainer from 'Containers/card-container/CardContainer';
+import Hero from 'Components/hero/Hero';
+import Introduction from 'Components/introduction/Introduction';
+import Card from 'Components/card/Card';
+import ProfileContainer from 'Containers/profile-container/ProfileContainer';
+import Button from 'Components/button/Button';
+import HomeHero from 'Data/home-hero';
+import HomeIntro from 'Data/home-introduction';
+import FeaturedWork from 'Data/featured-work';
+import OtherWork from 'Data/other-work';
 
 const __svg__ = {
   path: '../../assets/svg/*.svg',
@@ -43,7 +41,7 @@ class HomeView extends Component {
           <div className="row">
             { FeaturedWork.map(project => {
               return (
-                <div className="column-small column-medium-6" key={project.id}>
+                <div key={project.id}>
                   <Card
                     image={require(`Images/work/${project.imageUrl}`)}
                     alt={project.alt}
@@ -62,7 +60,7 @@ class HomeView extends Component {
           <div className="row">
             { OtherWork.map(project => {
               return (
-                <div className="column-small column-medium-6" key={project.id}>
+                <div key={project.id}>
                   <Card
                     image={require(`Images/work/${project.imageUrl}`)}
                     alt={project.alt}
@@ -86,7 +84,7 @@ class HomeView extends Component {
           />
         </div>
       </section>
-    )
+    );
   }
 };
 

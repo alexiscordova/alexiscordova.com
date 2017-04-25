@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import ReactMarkdown from 'react-markdown';
-
-// Component Style
 import './style.scss';
 
 class Introduction extends Component {

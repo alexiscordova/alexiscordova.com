@@ -1,6 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-
-// Component styles
 import './style.scss';
 
 class Icon extends Component {
@@ -15,7 +13,7 @@ class Icon extends Component {
           <use xlinkHref={`#icon-${this.props.name}`} />
         </svg>
       </a>
-    )
+    );
   }
 };
 
@@ -30,6 +28,6 @@ Icon.propTypes = {
 Icon.defaultProps = {
   width: '40',
   height: '40'
-}
+};
 
 export default Icon;

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-
 import './style.scss';
 
 class Avatar extends Component {
@@ -8,12 +7,12 @@ class Avatar extends Component {
       <div className="avatar">
         <img className="avatar-image" src={this.props.avatarImage} />
       </div>
-    )
+    );
   }
 };
 
 Avatar.propTypes = {
   avatarImage: PropTypes.string.isRequired
-}
+};
 
 export default Avatar;

@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Component styles
 import './styles.scss';
 
 class Menu extends React.Component {
@@ -9,9 +7,7 @@ class Menu extends React.Component {
   }
 
   render() {
-    return(
-
-    )
+    return ();
   }
 };
 

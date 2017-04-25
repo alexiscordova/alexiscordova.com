@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-
-import GlobalHeader from '../../components/global-header/GlobalHeader.jsx';
-import GlobalFooter from '../../components/global-footer/GlobalFooter.jsx';
+import GlobalHeader from 'Components/global-header/GlobalHeader';
+import GlobalFooter from 'Components/global-footer/GlobalFooter';
 
 class Application extends Component {
   render() {

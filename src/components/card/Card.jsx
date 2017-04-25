@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
-
-// Component Styles
 import './style.scss';
 
 class Card extends Component {

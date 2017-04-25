@@ -1,11 +1,8 @@
 const contentful = require('contentful');
 const fs = require('fs');
-
 const auth = require('../contentful-auth.json');
-
 const SPACE_ID = auth.space_id;
 const ACCESS_TOKEN = auth.access_token;
-
 const dataDir = 'src/data';
 
 /* eslint-disable no-console */

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-
-import Avatar from '../../components/avatar/Avatar.jsx';
-import Icon from '../../components/icon/Icon.jsx';
-
-// Component styles
+import Avatar from 'Components/avatar/Avatar';
+import Icon from 'Components/icon/Icon';
 import './style.scss';
 
 let networks = [
@@ -76,7 +73,7 @@ class ProfileContainer extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 };
 

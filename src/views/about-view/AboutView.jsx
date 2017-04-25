@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-
-import Hero from '../../components/hero/Hero.jsx';
-import Introduction from '../../components/introduction/Introduction.jsx';
+import Hero from 'Components/hero/Hero';
+import Introduction from 'Components/introduction/Introduction';
 
 class AboutView extends Component {
   constructor(props) {
@@ -34,7 +33,7 @@ class AboutView extends Component {
 
         <Introduction text={this.state.about.text} />
       </section>
-    )
+    );
   }
 };
 

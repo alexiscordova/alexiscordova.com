@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-
-// Component styles
 import './style.scss';
 
 class GlobalHeader extends Component {

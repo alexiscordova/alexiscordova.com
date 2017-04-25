@@ -7,7 +7,7 @@ class CardContainer extends Component {
         <h3>{this.props.headline}</h3>
         {this.props.children}
       </section>
-    )
+    );
   }
 };
 

@@ -12,7 +12,7 @@ class Screenshot extends Component {
           </figcaption>
         </figure>
       </section>
-    )
+    );
   }
 };
 

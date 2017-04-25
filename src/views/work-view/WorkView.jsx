@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-
-import Hero from '../../components/hero/Hero.jsx';
-import Introduction from '../../components/introduction/Introduction.jsx';
-import Screenshot from '../../components/screenshot/Screenshot.jsx';
-import CodePen from '../../components/codepen/CodePen.jsx';
+import Hero from 'Components/hero/Hero';
+import Introduction from 'Components/introduction/Introduction';
+import Screenshot from 'Components/screenshot/Screenshot';
+import CodePen from 'Components/codepen/CodePen';
 
 class WorkView extends Component {
   constructor(props) {
