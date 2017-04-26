@@ -13,17 +13,6 @@ let client = contentful.createClient({
   accessToken: ACCESS_TOKEN
 });
 
-// Clear dataDir
-let _clearDataDir = () => {
-  if (fs.existsSync(`${dataDir}`)) {
-    console.log(`Cleaning directory: ${chalk.underline(dataDir)}`);
-
-    rmdir(`${dataDir}`, error => {
-      if (error) console.log(error);
-    });
-  }
-};
-
 // Filter out hidden items
 let _getVisibleData = (entries) => {
   let data = [];
@@ -109,7 +98,6 @@ let init = () => {
   });
 
   promise.then(() => {
-    _clearDataDir();
   })
   .then(() => {
     getProjectData('featuredWorkContainer');
