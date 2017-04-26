@@ -35,11 +35,13 @@ class WorkView extends Component {
           <title>Alexis Córdova | Front-End UI/UX Developer | Work</title>
         </Helmet>
 
+        {typeof hero.backgroundUrl !== 'undefined' &&
           <Hero
             background={hero.background}
             heroImage={require(`Images/work/${hero.backgroundUrl}`)}
             alt={hero.alt}
           />
+        }
 
         <Introduction
           headline={intro.headline}
