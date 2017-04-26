@@ -27,24 +27,26 @@ class WorkView extends Component {
   }
 
   render() {
+    let { hero, intro, screenshots } = this.state;
+
     return (
       <section className="block-center content">
         <Helmet>
           <title>Alexis Córdova | Front-End UI/UX Developer | Work</title>
         </Helmet>
 
-        <Hero
-          background={this.state.hero.background}
-          heroImage={require(`Images/work/${this.state.hero.backgroundUrl}`)}
-          alt={this.state.hero.alt}
-        />
+          <Hero
+            background={hero.background}
+            heroImage={require(`Images/work/${hero.backgroundUrl}`)}
+            alt={hero.alt}
+          />
 
         <Introduction
-          headline={this.state.intro.headline}
-          text={this.state.intro.text}
+          headline={intro.headline}
+          text={intro.text}
         />
 
-        { this.state.screenshots.map((screenshot, index) => {
+        { screenshots.map((screenshot, index) => {
           if (screenshot.type === 'image') {
             return (
               <Screenshot
