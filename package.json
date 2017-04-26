@@ -13,7 +13,7 @@
     "clean:dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean:dist lint",
     "build": "babel-node tools/build.js",
-    "data": "babel-node tools/getData.js"
+    "data": "babel-node tools/getData.js -s"
   },
   "repository": {
     "type": "git",
