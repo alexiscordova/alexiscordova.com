@@ -1,1 +1,23 @@
-[{"name":"SAF Featured Image","type":"image","isVisible":true,"imageUrl":"saf/saf-featured-large.jpg","details":"The SAF style guide, created in Sketch. This document laid out all the pieces of the design system, along with documentation and usage rules for designers and developers."},{"name":"SAF Profile View","type":"image","isVisible":true,"imageUrl":"saf/saf-profile-large.jpg","details":"The profile view of SAF Platform. Each user has their own profile, managed by either the individual or the administrator of their group, and different user roles (e.g., “Team Manager”) allow for certain sections of the platform to be hidden or accessible to users. "},{"name":"SAF Funds Grid","type":"image","isVisible":true,"imageUrl":"saf/saf-funds-grid-large.jpg","details":"The SAF Funds section allows authenticated users to search and/or browse specific funds they’re interested investing in. Each fund type has a specific color designation, and all search queries can be filtered and sorted as the investor desires."}]
+[
+  {
+    "name": "SAF Featured Image",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "saf/saf-featured-large.jpg",
+    "details": "The SAF style guide, created in Sketch. This document laid out all the pieces of the design system, along with documentation and usage rules for designers and developers."
+  },
+  {
+    "name": "SAF Profile View",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "saf/saf-profile-large.jpg",
+    "details": "The profile view of SAF Platform. Each user has their own profile, managed by either the individual or the administrator of their group, and different user roles (e.g., “Team Manager”) allow for certain sections of the platform to be hidden or accessible to users. "
+  },
+  {
+    "name": "SAF Funds Grid",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "saf/saf-funds-grid-large.jpg",
+    "details": "The SAF Funds section allows authenticated users to search and/or browse specific funds they’re interested investing in. Each fund type has a specific color designation, and all search queries can be filtered and sorted as the investor desires."
+  }
+]

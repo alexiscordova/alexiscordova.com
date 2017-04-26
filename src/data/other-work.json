@@ -1,1 +1,32 @@
-[{"name":"Portfolio","id":"portfolio","isVisible":true,"title":"alexiscordova.com","projectDate":"2014-2017","imageUrl":"portfolio/portfolio-promo-large.jpg","alt":"Portfolio for Alexis Cordova","destinationUrl":"/work/portfolio"},{"name":"Is It Baseball Season Yet","id":"iibbsy","isVisible":true,"title":"Is It Baseball Season Yet","projectDate":"2011-2017","imageUrl":"iibbsy/iibbsy-promo-large.jpg","alt":"2014 World Series at AT&T Park, as promotion for Is It Baseball Season Yet","destinationUrl":"/work/iibbsy"},{"name":"Instagram Administrator","id":"instagram-admin","isVisible":true,"title":"Instagram Administrator","projectDate":"2017","imageUrl":"instagram-admin/instagram-admin-promo-large.jpg","alt":"Instagram Administrator","destinationUrl":"/work/instagram-admin"}]
+[
+  {
+    "name": "Portfolio",
+    "id": "portfolio",
+    "isVisible": true,
+    "title": "alexiscordova.com",
+    "projectDate": "2014-2017",
+    "imageUrl": "portfolio/portfolio-promo-large.jpg",
+    "alt": "Portfolio for Alexis Cordova",
+    "destinationUrl": "/work/portfolio"
+  },
+  {
+    "name": "Is It Baseball Season Yet",
+    "id": "iibbsy",
+    "isVisible": true,
+    "title": "Is It Baseball Season Yet",
+    "projectDate": "2011-2017",
+    "imageUrl": "iibbsy/iibbsy-promo-large.jpg",
+    "alt": "2014 World Series at AT&T Park, as promotion for Is It Baseball Season Yet",
+    "destinationUrl": "/work/iibbsy"
+  },
+  {
+    "name": "Instagram Administrator",
+    "id": "instagram-admin",
+    "isVisible": true,
+    "title": "Instagram Administrator",
+    "projectDate": "2017",
+    "imageUrl": "instagram-admin/instagram-admin-promo-large.jpg",
+    "alt": "Instagram Administrator",
+    "destinationUrl": "/work/instagram-admin"
+  }
+]

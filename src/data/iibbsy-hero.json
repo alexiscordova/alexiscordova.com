@@ -1,1 +1,7 @@
-{"name":"IIBBSY Hero","filename":"iibbsy-hero.json","isVisible":true,"background":false,"alt":"Is It Baseball Season Yet 2014 countdown"}
+{
+  "name": "IIBBSY Hero",
+  "filename": "iibbsy-hero.json",
+  "isVisible": true,
+  "background": false,
+  "alt": "Is It Baseball Season Yet 2014 countdown"
+}

@@ -1,1 +1,34 @@
-[{"name":"StubHub Primer Style Guide ","type":"image","isVisible":true,"imageUrl":"stubhub/primer-style-guide-large.jpg","details":"[The StubHub Primer style guide](https://www.dropbox.com/s/t6o2x8ck0ycdm3p/SH_PrimerDesignToolkit_0.3.pdf?dl=0), created in [Sketch](https://sketchapp.com). This document laid out the design rules for each piece of the system (its code counterpart did the same for developers)."},{"name":"StubHub Primer Cheat Sheet","type":"image","isVisible":true,"imageUrl":"stubhub/primer-cheat-sheet-large.jpg","details":"The Primer design cheat sheet was created as an at-a-glance look of many of the components in the Primer framework and design system. While not representing a realistic depiction of what a StubHub page would look like, we found it helpful to show how components might look and behave next to each other (rather than just in isolation)."},{"name":"StubHub Primer Buttons Demo","type":"codepen","isVisible":true,"hash":"zGjjKm","height":500,"title":"Primer - Buttons","caption":"A live demo of all available buttons in Primer. Buttons are displayed as either native `<button>` or `<a>` elements, with hover, active, and disabled states. Buttons declared as `<a>` elements have related ARIA tags, allowing every button in the Primer framework to be accessible by keyboard. (More demos can be viewed on the [Primer CodePen collection](http://codepen.io/collection/XOLjZm/))"},{"name":"StubHub Primer Cards Demo","type":"codepen","isVisible":true,"hash":"gpdbvY","height":650,"title":"Primer - Cards","caption":"A live demo of content card options in Primer. Content cards are a convenient way to display events with its associated data—location, date, remaining number of tickets—as well as optional badges, such as price floor and the ability to favorite the event. (More demos can be viewed on the [Primer CodePen collection](http://codepen.io/collection/XOLjZm/))"}]
+[
+  {
+    "name": "StubHub Primer Style Guide ",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "stubhub/primer-style-guide-large.jpg",
+    "details": "[The StubHub Primer style guide](https://www.dropbox.com/s/t6o2x8ck0ycdm3p/SH_PrimerDesignToolkit_0.3.pdf?dl=0), created in [Sketch](https://sketchapp.com). This document laid out the design rules for each piece of the system (its code counterpart did the same for developers)."
+  },
+  {
+    "name": "StubHub Primer Cheat Sheet",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "stubhub/primer-cheat-sheet-large.jpg",
+    "details": "The Primer design cheat sheet was created as an at-a-glance look of many of the components in the Primer framework and design system. While not representing a realistic depiction of what a StubHub page would look like, we found it helpful to show how components might look and behave next to each other (rather than just in isolation)."
+  },
+  {
+    "name": "StubHub Primer Buttons Demo",
+    "type": "codepen",
+    "isVisible": true,
+    "hash": "zGjjKm",
+    "height": 500,
+    "title": "Primer - Buttons",
+    "caption": "A live demo of all available buttons in Primer. Buttons are displayed as either native `<button>` or `<a>` elements, with hover, active, and disabled states. Buttons declared as `<a>` elements have related ARIA tags, allowing every button in the Primer framework to be accessible by keyboard. (More demos can be viewed on the [Primer CodePen collection](http://codepen.io/collection/XOLjZm/))"
+  },
+  {
+    "name": "StubHub Primer Cards Demo",
+    "type": "codepen",
+    "isVisible": true,
+    "hash": "gpdbvY",
+    "height": 650,
+    "title": "Primer - Cards",
+    "caption": "A live demo of content card options in Primer. Content cards are a convenient way to display events with its associated data—location, date, remaining number of tickets—as well as optional badges, such as price floor and the ability to favorite the event. (More demos can be viewed on the [Primer CodePen collection](http://codepen.io/collection/XOLjZm/))"
+  }
+]

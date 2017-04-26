@@ -1,1 +1,9 @@
-[{"name":"Portfolio Featured Image","type":"image","isVisible":true,"imageUrl":"portfolio/portfolio-featured-large.jpg","details":"lorem ipsum"}]
+[
+  {
+    "name": "Portfolio Featured Image",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "portfolio/portfolio-featured-large.jpg",
+    "details": "lorem ipsum"
+  }
+]

@@ -1,1 +1,22 @@
-[{"name":"Sony Featured Image","type":"image","isVisible":true,"imageUrl":"sony/sony-featured-large.jpg"},{"name":"Sony Custom Module","type":"image","isVisible":true,"imageUrl":"sony/sony-custom-module-large.jpg","details":"The BTX-500 product page is one of the pages where custom modules were used. To illustrate how small the Bluetooth speaker was, I created a component that began zoomed into the speaker grill, then zoomed out to show its true size. To show how the innovative speaker design fit in such a small enclosure, I placed an image of the speaker with a HTML5 video layered on top that showed the dual passive radiators vibrating when the module was scrolled into view."},{"name":"Sony Hotspots","type":"image","isVisible":true,"imageUrl":"sony/sony-hotspots-large.jpg","details":"Hotspots were a great tool to selectively display additional content. When a user clicked or tapped on the circular button, the user would be presented with a popup (or overlay on mobile) with the information related to that hotspot. This allowed us to show the information that was of interest to the user."},{"name":"Sony Walkman","type":"image","isVisible":false,"imageUrl":"sony/sony-walkman-large.jpg","details":"The NWZ-W273/NWZ-W274S—or the waterproof Walkman—was a great opportunity for a custom module. Using HTML5 Canvas, we created an animation where the Walkman looked to be dunked in water as the user scrolled down the page. The product would them float and bob in the water, and the water moved as if there was a light current passing through the screen."}]
+[
+  {
+    "name": "Sony Featured Image",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "sony/sony-featured-large.jpg"
+  },
+  {
+    "name": "Sony Custom Module",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "sony/sony-custom-module-large.jpg",
+    "details": "The BTX-500 product page is one of the pages where custom modules were used. To illustrate how small the Bluetooth speaker was, I created a component that began zoomed into the speaker grill, then zoomed out to show its true size. To show how the innovative speaker design fit in such a small enclosure, I placed an image of the speaker with a HTML5 video layered on top that showed the dual passive radiators vibrating when the module was scrolled into view."
+  },
+  {
+    "name": "Sony Hotspots",
+    "type": "image",
+    "isVisible": true,
+    "imageUrl": "sony/sony-hotspots-large.jpg",
+    "details": "Hotspots were a great tool to selectively display additional content. When a user clicked or tapped on the circular button, the user would be presented with a popup (or overlay on mobile) with the information related to that hotspot. This allowed us to show the information that was of interest to the user."
+  }
+]
