@@ -1,7 +1,5 @@
 const contentful = require('contentful');
 const fs = require('fs');
-const rmdir = require('rimraf');
-const chalk = require('chalk');
 const auth = require('../contentful-auth.json');
 const SPACE_ID = auth.space_id;
 const ACCESS_TOKEN = auth.access_token;
@@ -92,25 +90,12 @@ let getScreenshotData = () => {
 
 // Get all data
 let init = () => {
-  let promise = new Promise((resolve, reject) => {
-    reject(new Error('Something bad happened that really shouldn’t have'));
-    resolve();
-  });
-
-  promise.then(() => {
-  })
-  .then(() => {
-    getProjectData('featuredWorkContainer');
-    getProjectData('otherWorkContainer');
-    getWorkDetailData('introduction');
-    getWorkDetailData('hero');
-    getWorkDetailData('about');
-    getScreenshotData();
-  })
-  .then(() => {
-    console.log(chalk.green('Data fetching complete.'));
-  })
-  .catch(error => console.log(error));
-}
+  getProjectData('featuredWorkContainer');
+  getProjectData('otherWorkContainer');
+  getWorkDetailData('introduction');
+  getWorkDetailData('hero');
+  getWorkDetailData('about');
+  getScreenshotData();
+};
 
 init();
