@@ -104,6 +104,7 @@ let getScreenshotData = () => {
 // Get all data
 let init = () => {
   let promise = new Promise((resolve, reject) => {
+    reject(new Error('Something bad happened that really shouldn’t have'));
     resolve();
   });
 
