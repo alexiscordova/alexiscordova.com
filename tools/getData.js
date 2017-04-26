@@ -1,5 +1,6 @@
 const contentful = require('contentful');
 const fs = require('fs');
+const rmdir = require('rimraf');
 const auth = require('../contentful-auth.json');
 const SPACE_ID = auth.space_id;
 const ACCESS_TOKEN = auth.access_token;
@@ -19,6 +20,15 @@ let _getVisibleProjects = (entries) => {
   projects.forEach(project => {
     if (project.fields.isVisible) {
       data.push(project.fields);
+// Clear dataDir
+let _clearDataDir = () => {
+  if (fs.existsSync(`${dataDir}`)) {
+    rmdir(`${dataDir}`, error => {
+      if (error) console.log(error);
+    });
+  }
+};
+
     }
   });
 
