@@ -12,14 +12,6 @@ let client = contentful.createClient({
   accessToken: ACCESS_TOKEN
 });
 
-// Filter out projects flagged as "not visible" (or hidden)
-let _getVisibleProjects = (entries) => {
-  let projects = entries.items[0].fields.modules,
-      data = [];
-
-  projects.forEach(project => {
-    if (project.fields.isVisible) {
-      data.push(project.fields);
 // Clear dataDir
 let _clearDataDir = () => {
   if (fs.existsSync(`${dataDir}`)) {
@@ -29,60 +21,68 @@ let _clearDataDir = () => {
   }
 };
 
+// Filter out hidden items
+let _getVisibleData = (entries) => {
+  let data = [];
+
+  entries.forEach(entry => {
+    if (entry.fields.isVisible) {
+      data.push(entry.fields);
     }
   });
 
   return data;
 };
 
-// Write file to data directory
-let _writeFile = (filename, data) => {
+// Write file to dataDir
+let _writeFile = (filename, source) => {
   if (!fs.existsSync(`${dataDir}`)) {
     fs.mkdirSync(`${dataDir}`);
   }
 
-  fs.writeFileSync(`${dataDir}/${filename}`, JSON.stringify(data));
+  fs.writeFileSync(`${dataDir}/${filename}`, JSON.stringify(source, null, 2));
 };
 
-// Get project data from Contentful
-let _getProjectData = (contentType) => {
+// Get project data
+let getProjectData = (contentType) => {
   client.getEntries({
     'content_type': contentType
   })
   .then(entries => {
     let filename = entries.items[0].fields.filename,
-        data;
-
-    data = _getVisibleProjects(entries);
+        source = entries.items[0].fields.modules,
+        data = _getVisibleData(source);
 
     _writeFile(filename, data);
   })
-  .catch(error => {
-    console.log(error);
-  });
+  .catch(error => console.log(error));
 };
 
 // Get Work Detail data
-let _getWorkDetailData = (contentType) => {
+let getWorkDetailData = (contentType) => {
   client.getEntries({
     'content_type': contentType
   })
   .then(entries => {
-    entries.items.map(entry => {
-      _writeFile(entry.fields.filename, entry.fields);
+    let source = entries.items,
+        data = _getVisibleData(source);
+
+    data.map(entry => {
+      let filename = entry.filename;
+
+      _writeFile(filename, entry);
     });
   })
-  .catch(error => {
-    console.log(error);
-  });
+  .catch(error => console.log(error));
 };
 
-let _getScreenshotData = () => {
+// Get screenshot data
+let getScreenshotData = () => {
   client.getEntries({
     'content_type': 'screenshotContainer'
   })
   .then(entries => {
-    let data,
+    let source,
         modules,
         filename;
 
@@ -90,21 +90,24 @@ let _getScreenshotData = () => {
       modules = entry.fields.modules;
       filename = entry.fields.filename;
 
-      data = modules.map(module => {
-        return module.fields;
-      });
+      source = _getVisibleData(modules);
 
-      _writeFile(filename, data);
-    })
+      _writeFile(filename, source);
+    });
   })
-  .catch(error => {
-    console.log(error);
-  });
-};
+  .catch(error => console.log(error));
+}
 
-_getProjectData('featuredWorkContainer');
-_getProjectData('otherWorkContainer');
-_getWorkDetailData('introduction');
-_getWorkDetailData('hero');
-_getWorkDetailData('about');
-_getScreenshotData();
+// Get all data
+let init = () => {
+  _clearDataDir();
+
+  getProjectData('featuredWorkContainer');
+  getProjectData('otherWorkContainer');
+  getWorkDetailData('introduction');
+  getWorkDetailData('hero');
+  getWorkDetailData('about');
+  getScreenshotData();
+}
+
+init();
