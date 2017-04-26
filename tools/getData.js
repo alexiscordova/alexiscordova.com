@@ -1,6 +1,7 @@
 const contentful = require('contentful');
 const fs = require('fs');
 const rmdir = require('rimraf');
+const chalk = require('chalk');
 const auth = require('../contentful-auth.json');
 const SPACE_ID = auth.space_id;
 const ACCESS_TOKEN = auth.access_token;
@@ -15,6 +16,8 @@ let client = contentful.createClient({
 // Clear dataDir
 let _clearDataDir = () => {
   if (fs.existsSync(`${dataDir}`)) {
+    console.log(`Cleaning directory: ${chalk.underline(dataDir)}`);
+
     rmdir(`${dataDir}`, error => {
       if (error) console.log(error);
     });
@@ -100,14 +103,25 @@ let getScreenshotData = () => {
 
 // Get all data
 let init = () => {
-  _clearDataDir();
+  let promise = new Promise((resolve, reject) => {
+    resolve();
+  });
 
-  getProjectData('featuredWorkContainer');
-  getProjectData('otherWorkContainer');
-  getWorkDetailData('introduction');
-  getWorkDetailData('hero');
-  getWorkDetailData('about');
-  getScreenshotData();
+  promise.then(() => {
+    _clearDataDir();
+  })
+  .then(() => {
+    getProjectData('featuredWorkContainer');
+    getProjectData('otherWorkContainer');
+    getWorkDetailData('introduction');
+    getWorkDetailData('hero');
+    getWorkDetailData('about');
+    getScreenshotData();
+  })
+  .then(() => {
+    console.log(chalk.green('Data fetching complete.'));
+  })
+  .catch(error => console.log(error));
 }
 
 init();
