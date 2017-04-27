@@ -41,16 +41,16 @@ class HomeView extends Component {
           <div className="row">
             { FeaturedWork.map(project => {
               return (
-                <div key={project.id}>
-                  <Card
-                    image={require(`Images/work/${project.imageUrl}`)}
-                    alt={project.alt}
-                    title={project.title}
-                    projectDate={project.projectDate}
-                    client={project.client}
-                    destination={project.destinationUrl}
-                  />
-                </div>
+                <Card
+                  key={project.id}
+                  columns="6"
+                  image={require(`Images/work/${project.imageUrl}`)}
+                  alt={project.alt}
+                  title={project.title}
+                  projectDate={project.projectDate}
+                  client={project.client}
+                  destination={project.destinationUrl}
+                />
               )
             })}
           </div>
@@ -60,16 +60,16 @@ class HomeView extends Component {
           <div className="row">
             { OtherWork.map(project => {
               return (
-                <div key={project.id}>
-                  <Card
-                    image={require(`Images/work/${project.imageUrl}`)}
-                    alt={project.alt}
-                    title={project.title}
-                    projectDate={project.projectDate}
-                    client={project.client}
-                    destination={project.destinationUrl}
-                  />
-                </div>
+                <Card
+                  key={project.id}
+                  columns="6"
+                  image={require(`Images/work/${project.imageUrl}`)}
+                  alt={project.alt}
+                  title={project.title}
+                  projectDate={project.projectDate}
+                  client={project.client}
+                  destination={project.destinationUrl}
+                />
               )
             })}
           </div>
@@ -89,6 +89,6 @@ class HomeView extends Component {
       </section>
     );
   }
-};
+}
 
 export default HomeView;
