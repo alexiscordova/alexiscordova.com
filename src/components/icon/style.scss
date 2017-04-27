@@ -1,1 +1,10 @@
 // Icon Component
+.icon {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+
+  svg {
+    opacity: 0.75;
+  }
+}
