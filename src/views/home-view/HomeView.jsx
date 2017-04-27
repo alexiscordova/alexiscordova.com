@@ -4,8 +4,8 @@ import CardContainer from 'Containers/card-container/CardContainer';
 import Hero from 'Components/hero/Hero';
 import Introduction from 'Components/introduction/Introduction';
 import Card from 'Components/card/Card';
-import Button from 'Components/button/Button';
 import Profile from 'Components/profile/Profile';
+import ButtonContainer from 'Containers/button-container/ButtonContainer';
 import HomeHero from 'Data/home-hero';
 import HomeIntro from 'Data/home-introduction';
 import FeaturedWork from 'Data/featured-work';
@@ -81,12 +81,11 @@ class HomeView extends Component {
           title="Front-End Developer and Maker of Things"
         />
 
-        <div data-component="button-container" id="resume">
-          <Button
-            link="https://www.dropbox.com/s/crh7mex1fga03we/cordova_resume.pdf?dl=0"
-            text="Download Résumé (PDF)"
-          />
-        </div>
+        <ButtonContainer
+          id="resume"
+          link="https://www.dropbox.com/s/crh7mex1fga03we/cordova_resume.pdf?dl=0"
+          text="Download Résumé (PDF)"
+        />
       </section>
     );
   }
