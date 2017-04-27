@@ -25,7 +25,7 @@ class Card extends Component {
       </section>
     );
   }
-};
+}
 
 Card.propTypes = {
   columns: PropTypes.string,

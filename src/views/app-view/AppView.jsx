@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, { Component, PropTypes } from 'react';
 import GlobalHeader from 'Components/global-header/GlobalHeader';
 import GlobalFooter from 'Components/global-footer/GlobalFooter';
 
@@ -17,6 +16,10 @@ class Application extends Component {
       </article>
     );
   }
-};
+}
+
+Application.propTypes = {
+  children: PropTypes.any
+}
 
 export default Application;

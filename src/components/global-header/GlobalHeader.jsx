@@ -35,6 +35,6 @@ class GlobalHeader extends Component {
       </header>
     );
   }
-};
+}
 
 export default GlobalHeader;

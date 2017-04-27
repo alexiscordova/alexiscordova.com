@@ -11,7 +11,7 @@ class Avatar extends Component {
       </div>
     );
   }
-};
+}
 
 Avatar.propTypes = {
   avatarImage: PropTypes.string.isRequired,

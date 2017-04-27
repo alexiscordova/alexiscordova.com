@@ -18,6 +18,6 @@ class GlobalFooter extends Component {
       </footer>
     );
   }
-};
+}
 
 export default GlobalFooter;

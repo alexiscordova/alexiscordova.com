@@ -13,7 +13,7 @@ class CardContainer extends Component {
       </section>
     );
   }
-};
+}
 
 CardContainer.propTypes = {
   headline: PropTypes.string,

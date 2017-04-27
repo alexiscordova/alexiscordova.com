@@ -17,7 +17,7 @@ class Introduction extends Component {
       </section>
     );
   }
-};
+}
 
 Introduction.propTypes = {
   headline: PropTypes.string,

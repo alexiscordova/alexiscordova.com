@@ -15,7 +15,7 @@ class Icon extends Component {
       </a>
     );
   }
-};
+}
 
 Icon.propTypes = {
   width: PropTypes.string,
