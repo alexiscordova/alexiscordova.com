@@ -18,7 +18,7 @@ render(Routes);
 if (module.hot) {
   module.hot.accept();
 
-  module.hot.accept('./router.jsx', () => {
+  module.hot.accept(Routes, () => {
     render(Routes);
   });
 }
