@@ -14,12 +14,18 @@ class Button extends Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>{this.props.text}</button>
+      <button
+        className={this.props.classes}
+        onClick={this.handleClick}
+      >
+        {this.props.text}
+      </button>
     );
   }
-};
+}
 
 Button.propTypes = {
+  classes: PropTypes.string,
   text: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired
 };
