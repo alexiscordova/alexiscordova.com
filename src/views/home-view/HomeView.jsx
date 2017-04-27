@@ -4,8 +4,8 @@ import CardContainer from 'Containers/card-container/CardContainer';
 import Hero from 'Components/hero/Hero';
 import Introduction from 'Components/introduction/Introduction';
 import Card from 'Components/card/Card';
-import ProfileContainer from 'Containers/profile-container/ProfileContainer';
 import Button from 'Components/button/Button';
+import Profile from 'Components/profile/Profile';
 import HomeHero from 'Data/home-hero';
 import HomeIntro from 'Data/home-introduction';
 import FeaturedWork from 'Data/featured-work';
@@ -75,7 +75,11 @@ class HomeView extends Component {
           </div>
         </CardContainer>
 
-        <ProfileContainer avatarImage={require('Images/about/profile-avatar.jpg')} />
+        <Profile
+          avatarImage={require('Images/about/profile-avatar.jpg')}
+          name="Alexis Córdova"
+          title="Front-End Developer and Maker of Things"
+        />
 
         <div data-component="button-container" id="resume">
           <Button

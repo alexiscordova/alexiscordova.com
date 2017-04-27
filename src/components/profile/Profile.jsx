@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Avatar from 'Components/avatar/Avatar';
-import Icon from 'Components/icon/Icon';
+import IconContainer from 'Containers/icon-container/IconContainer';
 import './style.scss';
 
 let networks = [
@@ -52,29 +52,27 @@ class ProfileContainer extends Component {
   render() {
     return (
       <section data-component="profile">
-        <div className="profile">
-          <Avatar avatarImage={this.props.avatarImage} />
+        <div className="row container block-center">
+          <div className="column">
+            <Avatar
+              avatarImage={this.props.avatarImage}
+              name={this.props.name}
+              title={this.props.title}
+            />
+          </div>
 
-          <h2>Alexis Córdova</h2>
-          <p>Front-End UI/UX Developer and Maker of Things</p>
-
-          <div className="icon-container">
-            { networks.map(network => {
-              return (
-                <Icon
-                  key={network.id}
-                  className={network.className}
-                  name={network.name}
-                  network={network.network}
-                  link={network.link}
-                />
-              )
-            })}
+          <div className="column">
+            <IconContainer networks={networks} />
           </div>
         </div>
       </section>
     );
   }
-};
+}
 
+ProfileContainer.propTypes = {
+  avatarImage: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
+};
 export default ProfileContainer;
