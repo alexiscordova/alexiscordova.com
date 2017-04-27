@@ -2,10 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import './style.scss';
 
 class Hero extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let content = null,
         children = this.props.children ? <h2>{this.props.children}</h2> : null;
