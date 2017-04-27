@@ -8,7 +8,8 @@ class Card extends Component {
   }
 
   render() {
-    let hasClient = typeof this.props.client !== 'undefined' ? `${this.props.projectDate} • ${this.props.client}` : this.props.projectDate;
+    let hasClient = typeof this.props.client !== 'undefined' ? (
+      `${this.props.projectDate} • ${this.props.client}`) : ( this.props.projectDate);
 
     return (
       <section data-component="card" className={`column-${this.props.columns}`}>
