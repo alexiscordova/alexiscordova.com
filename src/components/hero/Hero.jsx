@@ -3,35 +3,24 @@ import './style.scss';
 
 class Hero extends Component {
   render() {
-    let content = null,
-        children = this.props.children ? <h2>{this.props.children}</h2> : null;
-
-    if (this.props.background) {
-      content = (
-        <div className={`background-container block-center ${this.props.classes}`}>
-          {children}
-        </div>
-      );
-    } else {
-      content = (
-        <div className="row">
-          <div className="column">
-            <img src={this.props.heroImage} alt={this.props.alt} />
-          </div>
-        </div>
-      );
-    }
-
     return (
-      <div data-component="hero">
-        {content}
-      </div>
+      <section data-component="hero">
+        { this.props.background ? (
+          <div className={`background-container block-center ${this.props.classes}`}></div>
+        ) : (
+          <div className="row">
+            <div className="column">
+              <img src={this.props.heroImage} alt={this.props.alt} />
+            </div>
+          </div>
+        )}
+      </section>
     );
   }
-};
+}
 
 Hero.propTypes = {
-  background: PropTypes.bool,
+  background: PropTypes.bool.isRequired,
   classes: PropTypes.string,
   alt: PropTypes.string,
   heroImage: PropTypes.string
@@ -39,7 +28,7 @@ Hero.propTypes = {
 
 Hero.defaultProps = {
   heroImage: 'http://placehold.it/1900x600',
-  alt: ''
+  alt: 'Missing alt text'
 };
 
 export default Hero;
