@@ -1,4 +1,13 @@
 // Icon Component
+$networks: (
+  email: #000,
+  github: #000,
+  linkedin: #0077b5,
+  codepen: #000,
+  instagram: #e1306c,
+  twitter: #1da1f2
+);
+
 .icon {
   width: 45px;
   height: 45px;
@@ -6,5 +15,12 @@
 
   svg {
     opacity: 0.75;
+  }
+
+  @each $network, $color in $networks {
+    .icon-#{$network}:hover {
+      opacity: 1;
+      fill: #{$color};
+    }
   }
 }
