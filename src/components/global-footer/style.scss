@@ -12,6 +12,16 @@ $author-text: #ccc;
   color: $footer-text;
   background-color: $footer-background;
 
+  & > .container {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @include breakpoint(medium) {
+      justify-content: flex-start;
+    }
+  }
+
   .author-metadata {
     margin-left: 5px;
     color: $author-text;
