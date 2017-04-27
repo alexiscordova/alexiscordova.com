@@ -6,7 +6,7 @@ class GlobalHeader extends Component {
   render() {
     return (
       <header className="global-header">
-        <div className="container block-center">
+        <div className="row container block-center">
           <div className="column">
             <Link to="/" className="logo">
               <img width="40" height="40" src={require('Svg/logo-outline-color.svg')} />

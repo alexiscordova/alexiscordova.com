@@ -11,7 +11,7 @@ class Card extends Component {
     let hasClient = typeof this.props.client !== 'undefined' ? `${this.props.projectDate} • ${this.props.client}` : this.props.projectDate;
 
     return (
-      <section data-component="card">
+      <section data-component="card" className={`column-${this.props.columns}`}>
         <Link to={this.props.destination}>
           <figure>
             <img src={this.props.image} alt={this.props.alt}/>
@@ -27,6 +27,7 @@ class Card extends Component {
 };
 
 Card.propTypes = {
+  columns: PropTypes.string,
   image: PropTypes.string.isRequired,
   alt: PropTypes.string,
   title: PropTypes.string.isRequired,

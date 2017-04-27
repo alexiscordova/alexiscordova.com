@@ -6,7 +6,7 @@ class Introduction extends Component {
   render() {
     return (
       <section data-component="intro">
-        <div className="row">
+        <div className="row container block-center">
           <div className="column">
             {typeof this.props.headline !== 'undefined' &&
               <h2>{this.props.headline}</h2>

@@ -7,11 +7,13 @@ class GlobalFooter extends Component {
 
     return (
       <footer className="global-footer">
-        <div className="container block-center">
-          <small>
-            © 2001-{currentYear}
-            <span className="author-metadata">Alexis Córdova • Made in San Francisco</span>
-          </small>
+        <div className="row container block-center">
+          <div className="column">
+            <small>
+              © 2001-{currentYear}
+              <span className="author-metadata">Alexis Córdova • Made in San Francisco</span>
+            </small>
+          </div>
         </div>
       </footer>
     );
