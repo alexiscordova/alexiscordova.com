@@ -4,9 +4,9 @@ import './style.scss';
 class Icon extends Component {
   render() {
     return (
-      <a href={this.props.link}>
+      <a href={this.props.link} className="icon">
         <svg
-          className={`icon ${this.props.className}`}
+          className={this.props.className}
           width={this.props.width}
           height={this.props.height}
         >
