@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Icon from 'Components/icon/Icon';
-import './styles.scss';
+import './style.scss';
 
 class IconContainer extends Component {
   render() {
