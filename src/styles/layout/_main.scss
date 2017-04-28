@@ -35,9 +35,14 @@ body {
   }
 }
 
-// Adds consistent spacing for direct children (header, main, footer) of .react-root
-.react-root > * {
+// Adds consistent spacing for content components
+.content > [data-component]:not(:first-child) {
   margin-top: ($stripe-height * 2);
+}
+
+// Adds consistent spacing to the last content component
+.content > [data-component]:last-child {
+  margin-bottom: ($stripe-height * 4);
 }
 
 // Content Container
