@@ -40,3 +40,38 @@ $breakpoints: (
     @warn 'Not a valid breakpoint: ' + $breakpoint;
   }
 }
+
+// columns-setup
+// Required: $i, iterator from grid-setup mixin loop
+// Required: $name, key from $breakpoints map, passed in from grid-setup mixin
+$grid-columns: 12;
+
+@mixin columns-setup($i, $name) {
+  .column-#{$name}-#{$i} {
+    flex-basis: ((100% / $grid-columns) * $i);
+    max-width: ((100% / $grid-columns) * $i);
+  }
+
+  .column-#{$name}-offset-#{$i} {
+    margin-left: ((100% / $grid-columns) * $i);
+  }
+}
+
+// grid-system
+@mixin grid-system {
+  @each $name, $size in $breakpoints {
+    @if $name == 'small' {
+      @for $i from 1 through $grid-columns {
+        @include columns-setup($i, $name);
+      }
+    }
+
+    @else {
+      @include breakpoint($name) {
+        @for $i from 1 through $grid-columns {
+          @include columns-setup($i, $name);
+        }
+      }
+    }
+  }
+}

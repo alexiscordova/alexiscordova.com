@@ -1,1 +1,28 @@
 // Grid
+$grid-columns: 12;
+$grid-gutters: 5px;
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+
+  // Columns
+  [class^="column-"] {
+    flex: 0 0 auto;
+    padding-right: $grid-gutters;
+    padding-left: $grid-gutters;
+  }
+
+  .no-gutters {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .end {
+    justify-content: flex-end;
+  }
+
+  @include grid-system;
+}
