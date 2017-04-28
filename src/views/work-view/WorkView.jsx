@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from 'Components/hero/Hero';
 import Introduction from 'Components/introduction/Introduction';
@@ -72,6 +72,10 @@ class WorkView extends Component {
       </section>
     );
   }
-};
+}
+
+WorkView.propTypes = {
+  match: PropTypes.string
+}
 
 export default WorkView;
