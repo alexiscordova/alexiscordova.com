@@ -23,7 +23,7 @@ class HomeView extends Component {
     return(
       <section className="block-center content">
         <Helmet>
-          <title>Alexis Córdova | Front-End UI/UX Developer | San Francisco, CA</title>
+          <title>Alexis Córdova | Front-End Developer | San Francisco, CA</title>
         </Helmet>
 
         <Hero

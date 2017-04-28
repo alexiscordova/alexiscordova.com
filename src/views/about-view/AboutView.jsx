@@ -22,7 +22,7 @@ class AboutView extends Component {
     return (
       <section className="block-center content">
         <Helmet>
-          <title>Alexis Córdova | Front-End UI/UX Developer | About Alexis</title>
+          <title>Alexis Córdova | Front-End Developer | About Alexis</title>
         </Helmet>
 
         <Hero

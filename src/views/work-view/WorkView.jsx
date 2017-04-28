@@ -32,7 +32,7 @@ class WorkView extends Component {
     return (
       <section className="block-center content">
         <Helmet>
-          <title>Alexis Córdova | Front-End UI/UX Developer | Work</title>
+          <title>Alexis Córdova | Front-End Developer | Work</title>
         </Helmet>
 
         {typeof hero.backgroundUrl !== 'undefined' &&
