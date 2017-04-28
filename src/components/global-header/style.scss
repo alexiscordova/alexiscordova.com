@@ -1,1 +1,72 @@
 // Global Header Component
+
+@import 'mixins';
+
+[data-component="global-header"] {
+  position: relative;
+  z-index: 1;
+  margin-top: 25px;
+  margin-bottom: 10px;
+
+  @include breakpoint(large) {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+
+    .logo-image + .logo-text {
+      margin-top: 3px;
+      margin-left: 10px;
+    }
+  }
+
+  [role="navigation"] {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    visibility: hidden;
+
+    @include breakpoint(medium) {
+      position: relative;
+      z-index: 1;
+      flex-direction: row;
+      justify-content: space-around;
+      top: auto;
+      right: auto;
+      left: auto;
+      text-align: left;
+      background-color: transparent;
+      visibility: visible;
+    }
+
+    li {
+      width: 100%;
+      text-transform: uppercase;
+      border-top: 1px solid rgba(gray, 0.75);
+
+      @include breakpoint(medium) {
+        width: auto;
+        border-top: none;
+      }
+    }
+
+    a {
+      padding: 10px;
+    }
+  }
+}
