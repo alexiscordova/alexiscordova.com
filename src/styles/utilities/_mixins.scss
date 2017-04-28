@@ -1,11 +1,9 @@
 // Mixins
 
-/**
- * Media Query Breakpoints – Breakpoint values should be in ems, which will allow triggering when users zoom.
- * Per the W3C, relative units in media query declarations are based on the initial value of :root, which is 16px
- * e.g., font-size: 1em = 1rem = 16px = 100%;
- * http://www.w3.org/TR/css3-mediaqueries/#units
- */
+// Media Query Breakpoints – Breakpoint values should be in ems, which will allow triggering when users zoom.
+// Per the W3C, relative units in media query declarations are based on the initial value of :root, which is 16px
+// e.g., font-size: 1em = 1rem = 16px = 100%;
+// http://www.w3.org/TR/css3-mediaqueries/#units
 
 $screen-sm: 0em; // 0px
 $screen-md: 40em; // 640px
@@ -17,10 +15,8 @@ $breakpoints: (
   large: $screen-lg
 );
 
-/**
- * breakpoint - Media query declaration using map
- * Required: $breakpoint - valid key from $breakpoints map
- */
+// breakpoint - Media query declaration using map
+// Required: $breakpoint - valid key from $breakpoints map
 
 @mixin breakpoint($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
