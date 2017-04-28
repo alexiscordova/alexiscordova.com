@@ -43,7 +43,7 @@ class HomeView extends Component {
               return (
                 <Card
                   key={project.id}
-                  columns="6"
+                  columns="column-small-12 column-medium-6"
                   image={require(`Images/work/${project.imageUrl}`)}
                   alt={project.alt}
                   title={project.title}
@@ -62,7 +62,7 @@ class HomeView extends Component {
               return (
                 <Card
                   key={project.id}
-                  columns="6"
+                  columns="column-small-12 column-medium-6"
                   image={require(`Images/work/${project.imageUrl}`)}
                   alt={project.alt}
                   title={project.title}

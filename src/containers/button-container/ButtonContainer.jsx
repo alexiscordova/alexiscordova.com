@@ -6,7 +6,7 @@ class ButtonContainer extends Component {
     return (
       <section data-component="button-container" id={this.props.id}>
         <div className="row container block-center">
-          <div className="column">
+          <div className="column-small-12">
             <Button
               classes={this.props.classes}
               link={this.props.link}

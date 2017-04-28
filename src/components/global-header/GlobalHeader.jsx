@@ -7,10 +7,10 @@ class GlobalHeader extends Component {
     return (
       <header className="global-header">
         <div className="row container block-center">
-          <div className="column">
             <Link to="/" className="logo">
               <img width="40" height="40" src={require('Svg/logo-outline-color.svg')} />
               <h1>
+          <div className="column-small-12 column-medium-6">
                 Alexis Córdova
                 <span className="is-hidden">Front-End Web Developer</span>
               </h1>
@@ -21,7 +21,7 @@ class GlobalHeader extends Component {
             <div className="menu">Menu</div>
           </div>
 
-          <nav className="column">
+          <nav className="column-small-12 column-medium-offset-3 column-medium-3">
             <ul role="navigation">
               <li id="about">
                 <NavLink to="/about" activeClassName="is-active" title="About Alexis">About</NavLink>

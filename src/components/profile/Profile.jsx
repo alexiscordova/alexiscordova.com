@@ -53,7 +53,7 @@ class ProfileContainer extends Component {
     return (
       <section data-component="profile">
         <div className="row container block-center">
-          <div className="column">
+          <div className="column-small-12">
             <Avatar
               avatarImage={this.props.avatarImage}
               name={this.props.name}
@@ -61,7 +61,7 @@ class ProfileContainer extends Component {
             />
           </div>
 
-          <div className="column">
+          <div className="column-small-12 column-medium-offset-3 column-medium-6">
             <IconContainer networks={networks} />
           </div>
         </div>
