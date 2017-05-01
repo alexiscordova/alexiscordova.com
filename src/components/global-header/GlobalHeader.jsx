@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import classNames from 'classnames';
 import Menu from 'Components/menu/Menu';
 import './style.scss';
 
@@ -21,6 +22,11 @@ class GlobalHeader extends Component {
   }
 
   render() {
+    let menuClass = classNames({
+      menu: true,
+      'is-open': this.state.isMenuOpen
+    });
+
     return (
       <header data-component="global-header">
         <div className="row container block-center">
@@ -39,7 +45,7 @@ class GlobalHeader extends Component {
           </div>
 
           <nav className="column-small-12 column-medium-offset-3 column-medium-3">
-            <ul role="navigation">
+            <ul role="navigation" className={menuClass}>
               <li id="about">
                 <NavLink to="/about" activeClassName="is-active" title="About Alexis">About</NavLink>
               </li>

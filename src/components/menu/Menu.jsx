@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 import './style.scss';
 
 class Menu extends Component {
@@ -24,6 +25,11 @@ class Menu extends Component {
   }
 
   render() {
+    let menuClass = classNames({
+      menu: true,
+      'is-open': this.state.isMenuOpen
+    });
+
     return (
       <div className="navigation-trigger">
         <div className={menuClass} onClick={this.toggleMenu}>
