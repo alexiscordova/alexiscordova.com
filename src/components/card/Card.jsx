@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 import './style.scss';
 
 class Card extends Component {
@@ -9,10 +10,12 @@ class Card extends Component {
 
   render() {
     let hasClient = typeof this.props.client !== 'undefined' ? (
-      `${this.props.projectDate} • ${this.props.client}`) : ( this.props.projectDate);
+      `${this.props.projectDate} • ${this.props.client}`) : this.props.projectDate,
+        classes = this.props.columns.split(' '),
+        cardClass = classNames('no-gutters-small', classes);
 
     return (
-      <section data-component="card" className={`no-gutters-small ${this.props.columns}`}>
+      <section data-component="card" className={cardClass}>
         <Link to={this.props.destination}>
           <figure>
             <img src={this.props.image} alt={this.props.alt}/>
