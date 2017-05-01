@@ -39,7 +39,9 @@
     text-align: center;
     list-style: none;
     background-color: #fff;
-    visibility: hidden;
+    transform: perspective(350px) rotateX(-90deg);
+    transform-origin: top center;
+    transition: transform 1s ease;
 
     @include breakpoint(medium) {
       position: relative;
@@ -51,11 +53,19 @@
       left: auto;
       text-align: left;
       background-color: transparent;
-      visibility: visible;
+      transform: none;
+      transition: none;
     }
 
     &.is-open {
-      visibility: visible;
+      transform: perspective(350px) rotateX(0deg);
+      transform-origin: center top;
+      transition: transform 0.5s ease;
+
+      @include breakpoint(medium) {
+        transform: none;
+        transition: none;
+      }
     }
 
     li {
@@ -70,6 +80,7 @@
     }
 
     a {
+      display: block;
       padding: 10px;
     }
   }

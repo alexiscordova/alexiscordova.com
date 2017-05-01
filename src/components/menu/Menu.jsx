@@ -35,9 +35,9 @@ class Menu extends Component {
         <div className={menuClass} onClick={this.toggleMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
             <g fillRule="evenodd">
-              <rect className="line-1" width="50" height="3" y="36" rx="1.5" />
-              <rect className="line-2" width="50" height="3" y="18" rx="1.5" />
-              <rect className="line-3" width="50" height="3" rx="1.5" />
+              <rect className="line-top" width="50" height="3" y="0" rx="1.5" />
+              <rect className="line-middle" width="50" height="3" y="18" rx="1.5" />
+              <rect className="line-bottom" width="50" height="3" y="36" rx="1.5" />
             </g>
           </svg>
 

@@ -1,4 +1,8 @@
 // Menu component
+$transition-duration: 0.5s;
+$transition-delay: 0.45s;
+$transition-timing-function: ease;
+
 .menu {
   margin-top: 3px;
   margin-right: 5px;
@@ -8,3 +12,47 @@
   }
 }
 
+// Menu Animations
+.menu {
+  [class^="line-"] {
+    position: relative;
+    z-index: 1;
+    transform-origin: center center;
+  }
+
+  .line-top {
+    transition:
+      transform $transition-duration $transition-timing-function,
+      y $transition-duration $transition-delay $transition-timing-function;
+  }
+  .line-middle {
+    opacity: 1;
+    transition: opacity 0.25s $transition-delay $transition-timing-function;
+  }
+  .line-bottom {
+    transition:
+      transform $transition-duration $transition-timing-function,
+      y $transition-duration $transition-delay $transition-timing-function;
+  }
+
+  &.is-open {
+    .line-top {
+      y: 18px;
+      transform: rotate(-45deg);
+      transition:
+        y $transition-duration $transition-timing-function,
+        transform $transition-duration $transition-delay $transition-timing-function;
+    }
+    .line-middle {
+      opacity: 0;
+      transition: opacity 0.25s $transition-timing-function;
+    }
+    .line-bottom {
+      y: 18px;
+      transform: rotate(45deg);
+      transition:
+        y $transition-duration $transition-timing-function,
+        transform $transition-duration $transition-delay $transition-timing-function;
+    }
+  }
+}
