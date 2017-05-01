@@ -3,7 +3,7 @@
     "name": "StubHub Primer",
     "id": "stubhub-primer",
     "isVisible": true,
-    "title": "StubHub Primer",
+    "title": "Primer",
     "client": "StubHub",
     "projectDate": "2015",
     "imageUrl": "stubhub/primer-promo-large.jpg",
@@ -11,11 +11,11 @@
     "destinationUrl": "/work/stubhub-primer"
   },
   {
-    "name": "Strategic Alternative Funds (SAF) Group",
+    "name": "Strategic Alternative Funds (SAF)",
     "id": "saf",
     "isVisible": true,
-    "title": "SAF Platform",
-    "client": "Strategic Alternative Funds (SAF) Group",
+    "title": "Investment Platform",
+    "client": "Strategic Alternative Funds (SAF)",
     "projectDate": "2015-2016",
     "imageUrl": "saf/saf-promo-large.png",
     "alt": "Strategic Alternative Funds (SAF) Group",
