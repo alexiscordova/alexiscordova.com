@@ -5,8 +5,8 @@ class CardContainer extends Component {
     return (
       <section data-component="card-container">
         <div className="row container block-center">
-          <div className="column">
-            <h3>{this.props.headline}</h3>
+          <div className="column-small-12">
+            <h3 className="card-container-headline">{this.props.headline}</h3>
             {this.props.children}
           </div>
         </div>

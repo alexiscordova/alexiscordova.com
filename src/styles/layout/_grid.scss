@@ -9,15 +9,23 @@ $grid-gutters: 5px;
   flex: 0 1 auto;
 
   // Columns
-  [class^="column-"] {
+  [class*="column-"] {
     flex: 0 0 auto;
     padding-right: $grid-gutters;
     padding-left: $grid-gutters;
   }
 
+  // Remove gutters
   .no-gutters {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .no-gutters-small {
+    @include breakpoint(small) {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   .end {

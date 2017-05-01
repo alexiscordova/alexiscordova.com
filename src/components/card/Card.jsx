@@ -12,7 +12,7 @@ class Card extends Component {
       `${this.props.projectDate} • ${this.props.client}`) : ( this.props.projectDate);
 
     return (
-      <section data-component="card" className={this.props.columns}>
+      <section data-component="card" className={`no-gutters-small ${this.props.columns}`}>
         <Link to={this.props.destination}>
           <figure>
             <img src={this.props.image} alt={this.props.alt}/>
