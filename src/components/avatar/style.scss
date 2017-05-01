@@ -6,6 +6,16 @@
 
   .avatar-image {
     width: 300px;
-    border-radius: 50%;
+
+    img {
+      border-radius: 50%;
+    }
+
+    figcaption {
+      margin: 15px 0 20px;
+    }
+
+    h2,
+    p { margin: 0; }
   }
 }
