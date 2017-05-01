@@ -75,7 +75,11 @@ class WorkView extends Component {
 }
 
 WorkView.propTypes = {
-  match: PropTypes.string
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      project: PropTypes.string
+    })
+  })
 }
 
 export default WorkView;
