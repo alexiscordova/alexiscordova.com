@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import './style.scss';
 
 class CardContainer extends Component {
   render() {
@@ -18,10 +19,6 @@ class CardContainer extends Component {
 CardContainer.propTypes = {
   headline: PropTypes.string,
   children: PropTypes.element.isRequired
-};
-
-CardContainer.defaultProps = {
-  headline: 'Subheading'
 };
 
 export default CardContainer;
