@@ -1,4 +1,5 @@
 // Utility Classes
+@import 'mixins';
 
 // Horizontally centers a block-level element
 .block-center {
@@ -10,4 +11,31 @@
 // Hide an element
 .is-hidden {
   display: none;
+}
+
+// Hide an element on small breakpoint
+.is-hidden-small {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: inherit;
+  }
+}
+
+// Hide an element on medium breakpoint
+.is-hidden-medium {
+  display: inherit;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+// Hide an element on large breakpoint
+.is-hidden-large {
+  display: inherit;
+
+  @include breakpoint(large) {
+    display: none;
+  }
 }
