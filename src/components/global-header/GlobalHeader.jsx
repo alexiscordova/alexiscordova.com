@@ -7,7 +7,7 @@ class GlobalHeader extends Component {
     return (
       <header data-component="global-header">
         <div className="row container block-center">
-          <div className="column-small-12 column-medium-6">
+          <div className="column-small-10 column-medium-6">
             <Link to="/" className="logo-container">
               <img className="logo-image" width="40" height="40" src={require('Svg/logo-outline-color.svg')} />
               <h1 className="logo-text">
@@ -17,8 +17,8 @@ class GlobalHeader extends Component {
             </Link>
           </div>
 
-          <div id="navigation-trigger">
             <div className="menu">Menu</div>
+          <div className="column-small-2 is-hidden-medium end">
           </div>
 
           <nav className="column-small-12 column-medium-offset-3 column-medium-3">

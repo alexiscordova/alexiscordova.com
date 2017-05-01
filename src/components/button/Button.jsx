@@ -2,12 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import './style.scss';
 
 class Button extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
   handleClick() {
     window.open(this.props.link)
   }
@@ -16,7 +10,7 @@ class Button extends Component {
     return (
       <button
         className={this.props.classes}
-        onClick={this.handleClick}
+        onClick={this.handleClick.bind(this)}
       >
         {this.props.text}
       </button>
