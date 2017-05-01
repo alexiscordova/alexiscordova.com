@@ -1,4 +1,31 @@
 // Button Component
-button:hover {
-  cursor: pointer;
+@import 'mixins';
+
+$background-color: lightBlue;
+$border-color: rgba(0, 0, 0, 0.15);
+
+.btn {
+  appearance: none;
+  display: inline-block;
+  padding: 10px 12px 9px;
+  color: #000;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  &.btn-block-small {
+    @include breakpoint(small) {
+      display: block;
+      width: 100%;
+    }
+  }
 }
