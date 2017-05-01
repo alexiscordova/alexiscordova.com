@@ -5,9 +5,13 @@ class Avatar extends Component {
   render() {
     return (
       <div className="avatar">
-        <img className="avatar-image" src={this.props.avatarImage} />
-        <h2>{this.props.name}</h2>
-        <p>{this.props.title}</p>
+        <figure className="avatar-image">
+          <img src={this.props.avatarImage} />
+          <figcaption className="text-center">
+            <h2>{this.props.name}</h2>
+            <p>{this.props.title}</p>
+          </figcaption>
+        </figure>
       </div>
     );
   }

@@ -8,8 +8,10 @@ class CardContainer extends Component {
         <div className="row container block-center">
           <div className="column-small-12">
             <h3 className="card-container-headline">{this.props.headline}</h3>
-            {this.props.children}
           </div>
+        </div>
+        <div className="row container block-center">
+          {this.props.children}
         </div>
       </section>
     );
