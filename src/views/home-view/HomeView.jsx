@@ -82,7 +82,7 @@ class HomeView extends Component {
         />
 
         <ButtonContainer
-          classes="block-center"
+          classes="btn-block-small block-center"
           id="resume"
           link="https://www.dropbox.com/s/crh7mex1fga03we/cordova_resume.pdf?dl=0"
           text="Download Résumé (PDF)"

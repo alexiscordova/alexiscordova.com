@@ -4,10 +4,6 @@ import classNames from 'classnames';
 import './style.scss';
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let hasClient = typeof this.props.client !== 'undefined' ? (
       `${this.props.projectDate} • ${this.props.client}`) : this.props.projectDate,
