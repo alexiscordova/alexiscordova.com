@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import Menu from 'Components/menu/Menu';
 import './style.scss';
 
 class GlobalHeader extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleMenuState = this.handleMenuState.bind(this);
+
+    this.state = {
+      isMenuOpen: false
+    };
+  }
+
+  handleMenuState(status) {
+    this.setState({
+      isMenuOpen: status
+    });
+  }
+
   render() {
     return (
       <header data-component="global-header">
@@ -17,8 +34,8 @@ class GlobalHeader extends Component {
             </Link>
           </div>
 
-            <div className="menu">Menu</div>
           <div className="column-small-2 is-hidden-medium end">
+            <Menu handleMenuState={this.handleMenuState} />
           </div>
 
           <nav className="column-small-12 column-medium-offset-3 column-medium-3">
