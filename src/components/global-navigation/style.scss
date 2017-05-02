@@ -35,7 +35,7 @@
   &.is-open {
     transform: perspective(350px) rotateX(0deg);
     transform-origin: center top;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 
     @include breakpoint(medium) {
       transform: none;
@@ -43,7 +43,7 @@
     }
   }
 
-  li {
+  .navigation-item {
     width: 100%;
     text-transform: uppercase;
     border-top: 1px solid rgba(gray, 0.75);
@@ -54,7 +54,7 @@
     }
   }
 
-  a {
+  .navigation-link {
     display: block;
     padding: 10px;
   }
