@@ -44,7 +44,7 @@ class GlobalHeader extends Component {
             <Menu handleMenuState={this.handleMenuState} />
           </div>
 
-          <nav className="column-small-12 column-medium-offset-3 column-medium-3">
+          <nav className="no-gutters column-small-12 column-medium-offset-3 column-medium-3">
             <ul role="navigation" className={menuClass}>
               <li id="about">
                 <NavLink to="/about" activeClassName="is-active" title="About Alexis">About</NavLink>
