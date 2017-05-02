@@ -1,0 +1,61 @@
+// Global Navigation Component
+@import 'mixins';
+
+[role="navigation"] {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  top: 50px;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  background-color: #fff;
+  transform: perspective(350px) rotateX(-90deg);
+  transform-origin: top center;
+  transition: transform 1s ease;
+
+  @include breakpoint(medium) {
+    position: relative;
+    z-index: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 3px;
+    right: auto;
+    left: auto;
+    text-align: left;
+    background-color: transparent;
+    transform: none;
+    transition: none;
+  }
+
+  &.is-open {
+    transform: perspective(350px) rotateX(0deg);
+    transform-origin: center top;
+    transition: transform 0.5s ease;
+
+    @include breakpoint(medium) {
+      transform: none;
+      transition: none;
+    }
+  }
+
+  li {
+    width: 100%;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(gray, 0.75);
+
+    @include breakpoint(medium) {
+      width: auto;
+      border-top: none;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+  }
+}
