@@ -2,6 +2,8 @@
 $grid-columns: 12;
 $grid-gutters: 10px;
 
+@import 'mixins';
+
 .row {
   display: flex;
   flex-direction: row;
