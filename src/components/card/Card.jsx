@@ -14,7 +14,7 @@ class Card extends Component {
       <section data-component="card" className={cardClass}>
         <Link to={this.props.destination}>
           <figure>
-            <img src={this.props.image} alt={this.props.alt}/>
+            <img src={this.props.image} alt={this.props.alt} />
             <figcaption>
               <h4>{this.props.title}</h4>
               <h5>{hasClient}</h5>
