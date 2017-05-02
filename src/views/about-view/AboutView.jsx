@@ -35,6 +35,6 @@ class AboutView extends Component {
       </section>
     );
   }
-};
+}
 
 export default AboutView;

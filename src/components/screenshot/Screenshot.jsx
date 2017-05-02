@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
 class Screenshot extends Component {
@@ -14,7 +15,7 @@ class Screenshot extends Component {
       </section>
     );
   }
-};
+}
 
 Screenshot.propTypes = {
   imageUrl: PropTypes.string.isRequired,

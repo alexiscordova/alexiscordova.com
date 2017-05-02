@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import GlobalHeader from 'Components/global-header/GlobalHeader';
 import GlobalFooter from 'Components/global-footer/GlobalFooter';
 

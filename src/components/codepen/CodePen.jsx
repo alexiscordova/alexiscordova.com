@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
 class CodePen extends Component {
@@ -24,7 +25,7 @@ class CodePen extends Component {
       </section>
     );
   }
-};
+}
 
 CodePen.propTypes = {
   hash: PropTypes.string,
