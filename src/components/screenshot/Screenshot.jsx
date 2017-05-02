@@ -6,12 +6,18 @@ class Screenshot extends Component {
   render() {
     return(
       <section data-component="screenshot">
-        <figure>
-          <img src={require(`Images/work/${this.props.imageUrl}`)} />
-          <figcaption>
-            <ReactMarkdown source={this.props.details} />
-          </figcaption>
-        </figure>
+        <div className="row container block-center">
+          <div className="column-small-12">
+            <figure className="screenshot">
+              <img className="screenshot-image" src={require(`Images/work/${this.props.imageUrl}`)} />
+                {typeof this.props.details !== 'undefined' &&
+                  <figcaption className="screenshot-caption">
+                    <ReactMarkdown source={this.props.details} />
+                  </figcaption>
+                }
+            </figure>
+          </div>
+        </div>
       </section>
     );
   }
