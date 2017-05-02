@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import Hero from 'Components/hero/Hero';
-import Introduction from 'Components/introduction/Introduction';
-import Screenshot from 'Components/screenshot/Screenshot';
-import CodePen from 'Components/codepen/CodePen';
+import Hero from 'Components/hero/hero';
+import Introduction from 'Components/introduction/introduction';
+import Screenshot from 'Components/screenshot/screenshot';
+import CodePen from 'Components/codepen/codepen';
 
 class WorkView extends Component {
   constructor(props) {

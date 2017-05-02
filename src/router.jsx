@@ -1,10 +1,10 @@
 import React from 'react';
 import { Router, Route, Redirect, Switch } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
-import AppView from './views/app-view/AppView';
-import HomeView from './views/home-view/HomeView';
-import AboutView from './views/about-view/AboutView';
-import WorkView from './views/work-view/WorkView';
+import AppView from './views/app-view/app-view';
+import HomeView from './views/home-view/home-view';
+import AboutView from './views/about-view/about-view';
+import WorkView from './views/work-view/work-view';
 
 const history = createBrowserHistory();
 

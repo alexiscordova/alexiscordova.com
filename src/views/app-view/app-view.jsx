@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import GlobalHeader from 'Components/global-header/GlobalHeader';
-import GlobalFooter from 'Components/global-footer/GlobalFooter';
+import GlobalHeader from 'Components/global-header/global-header';
+import GlobalFooter from 'Components/global-footer/global-footer';
 
 class Application extends Component {
   render() {

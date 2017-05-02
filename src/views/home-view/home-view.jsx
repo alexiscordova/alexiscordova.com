@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import CardContainer from 'Containers/card-container/CardContainer';
-import Hero from 'Components/hero/Hero';
-import Introduction from 'Components/introduction/Introduction';
-import Card from 'Components/card/Card';
-import Profile from 'Components/profile/Profile';
-import ButtonContainer from 'Containers/button-container/ButtonContainer';
+import CardContainer from 'Containers/card-container/card-container';
+import Hero from 'Components/hero/hero';
+import Introduction from 'Components/introduction/introduction';
+import Card from 'Components/card/card';
+import Profile from 'Components/profile/profile';
+import ButtonContainer from 'Containers/button-container/button-container';
 import HomeHero from 'Data/home-hero';
 import HomeIntro from 'Data/home-introduction';
 import FeaturedWork from 'Data/featured-work';

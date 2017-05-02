@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import Hero from 'Components/hero/Hero';
-import Introduction from 'Components/introduction/Introduction';
+import Hero from 'Components/hero/hero';
+import Introduction from 'Components/introduction/introduction';
 
 class AboutView extends Component {
   constructor(props) {

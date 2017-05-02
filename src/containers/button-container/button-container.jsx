@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from 'Components/button/Button';
+import Button from 'Components/button/button';
 
 class ButtonContainer extends Component {
   render() {

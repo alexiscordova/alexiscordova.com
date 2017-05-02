@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import Menu from 'Components/menu/Menu';
+import Menu from 'Components/menu/menu';
+import GlobalNavigation from 'Components/global-navigation/global-navigation';
 import './style.scss';
 
 class GlobalHeader extends Component {
@@ -44,16 +45,7 @@ class GlobalHeader extends Component {
             <Menu handleMenuState={this.handleMenuState} />
           </div>
 
-          <nav className="no-gutters column-small-12 column-medium-offset-3 column-medium-3">
-            <ul role="navigation" className={menuClass}>
-              <li id="about">
-                <NavLink to="/about" activeClassName="is-active" title="About Alexis">About</NavLink>
-              </li>
-              <li id="resume-jump">
-                <a href="/#resume" title="Jump to résumé download button">Résumé</a>
-              </li>
-            </ul>
-          </nav>
+          <GlobalNavigation menuClass={menuClass} />
         </div>
       </header>
     );
