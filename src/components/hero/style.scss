@@ -4,7 +4,8 @@
 [data-component="hero"] {
   position: relative;
   z-index: 1;
-  .background-container {
+  background-color: #999;
+  .hero-background-image {
     max-width: 2000px;
     height: 200px;
     background-size: cover;
@@ -30,7 +31,17 @@
     }
   }
 
-  img {
+  // Project Hero background color overrides
+  &[data-project="sony"] {
+    background-color: #343A64;
+  }
+
+  &[data-project="content-cloud"] {
+    background-color: #6bc04b;
+  }
+
+  .hero-image {
+    display: block;
     max-width: 100%;
   }
 }

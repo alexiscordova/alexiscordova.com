@@ -6,10 +6,10 @@ import './style.scss';
 class Hero extends Component {
   render() {
     let classes = this.props.background ? this.props.classes.split(' ') : '',
-        heroClass = classNames('background-container', 'block-center', classes);
+        heroClass = classNames('hero-background-image', 'block-center', classes);
 
     return (
-      <section data-component="hero">
+      <section data-component="hero" data-project={this.props.project}>
         { this.props.background ? (
           <div className={heroClass}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -17,9 +17,9 @@ class Hero extends Component {
             </svg>
           </div>
         ) : (
-          <div className="row">
-            <div className="column">
-              <img src={this.props.heroImage} alt={this.props.alt} />
+          <div className="row container block-center">
+            <div className="no-gutters column-small-12">
+              <img className="hero-image" src={this.props.heroImage} alt={this.props.alt} />
             </div>
           </div>
         )}
