@@ -1,9 +1,23 @@
 // Card Component
+@import 'mixins';
+
 [data-component="card"] {
   position: relative;
   z-index: 1;
+  margin-bottom: 10px;
+
+  @include breakpoint(medium) {
+    margin-bottom: 20px;
+  }
 
   a {
     display: block;
+  }
+
+  figcaption {
+    margin-top: -4px;
+    width: 100%;
+    padding: 8px 5px;
+    color: #000;
   }
 }
