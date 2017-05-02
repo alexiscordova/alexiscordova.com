@@ -1,8 +1,12 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 import './style.scss';
 
 class Hero extends Component {
   render() {
+    let classes = this.props.background ? this.props.classes.split(' ') : '',
+        heroClass = classNames('background-container', 'block-center', classes);
+
     return (
       <section data-component="hero">
         { this.props.background ? (
