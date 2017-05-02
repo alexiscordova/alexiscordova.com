@@ -23,8 +23,7 @@ class GlobalHeader extends Component {
   }
 
   render() {
-    let menuClass = classNames({
-      menu: true,
+    let menuClass = classNames('menu', {
       'is-open': this.state.isMenuOpen
     });
 
@@ -34,7 +33,7 @@ class GlobalHeader extends Component {
           <div className="column-small-10 column-medium-6">
             <Link to="/" className="logo-container">
               <img className="logo-image" width="40" height="40" src={require('Svg/logo-outline-color.svg')} />
-              <h1 className="logo-text">
+              <h1 className="logo-headline">
                 Alexis Córdova
                 <span className="is-hidden">Front-End Web Developer</span>
               </h1>

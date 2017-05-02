@@ -5,10 +5,11 @@
 [data-component="global-header"] {
   position: relative;
   z-index: 2;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 10px;
 
   @include breakpoint(large) {
+    margin-top: 25px;
     margin-bottom: 20px;
   }
 
@@ -20,9 +21,11 @@
     display: flex;
     flex-direction: row;
 
-    .logo-image + .logo-text {
-      margin-top: 3px;
-      margin-left: 10px;
+    .logo-image + .logo-headline {
+      position: relative;
+      z-index: 1;
+      top: 3px;
+      left: 10px;
     }
   }
 }
