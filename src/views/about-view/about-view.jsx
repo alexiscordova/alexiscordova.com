@@ -19,6 +19,8 @@ class AboutView extends Component {
   }
 
   render() {
+    const { about } = this.state;
+
     return (
       <section className="block-center content">
         <Helmet>
@@ -31,7 +33,10 @@ class AboutView extends Component {
           alt="Alexis Córdova"
         />
 
-        <Introduction text={this.state.about.text} />
+        <Introduction
+          headline={about.headline}
+          text={about.text}
+        />
       </section>
     );
   }
