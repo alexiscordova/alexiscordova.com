@@ -5,6 +5,7 @@ import Hero from 'Components/hero/hero';
 import Introduction from 'Components/introduction/introduction';
 import Screenshot from 'Components/screenshot/screenshot';
 import CodePen from 'Components/codepen/codepen';
+import ScrollToTopOnMount from 'Components/scroll-to-top-on-mount/scroll-to-top-on-mount';
 
 class WorkView extends Component {
   constructor(props) {
@@ -35,6 +36,8 @@ class WorkView extends Component {
         <Helmet>
           <title>Alexis Córdova | Front-End Developer | Work</title>
         </Helmet>
+
+        <ScrollToTopOnMount />
 
         {typeof hero.backgroundUrl !== 'undefined' &&
           <Hero
