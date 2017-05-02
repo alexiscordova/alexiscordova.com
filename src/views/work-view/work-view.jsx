@@ -41,6 +41,7 @@ class WorkView extends Component {
 
         {typeof hero.backgroundUrl !== 'undefined' &&
           <Hero
+            project={this.props.match.params.project}
             background={hero.background}
             heroImage={require(`Images/work/${hero.backgroundUrl}`)}
             alt={hero.alt}
