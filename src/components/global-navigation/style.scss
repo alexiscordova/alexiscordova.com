@@ -1,4 +1,8 @@
 // Global Navigation Component
+$transition-duration: 0.5s;
+$transition-timing-function: ease;
+$perspective: perspective(350px);
+
 @import 'mixins';
 
 [role="navigation"] {
@@ -14,9 +18,9 @@
   text-align: center;
   list-style: none;
   background-color: #fff;
-  transform: perspective(350px) rotateX(-90deg);
+  transform: $perspective rotateX(-90deg);
   transform-origin: top center;
-  transition: transform 1s ease;
+  transition: transform $transition-duration $transition-timing-function;
 
   @include breakpoint(medium) {
     position: relative;
@@ -33,9 +37,8 @@
   }
 
   &.is-open {
-    transform: perspective(350px) rotateX(0deg);
-    transform-origin: center top;
-    transition: transform 1s ease;
+    transform: $perspective rotateX(0deg);
+    transition: transform $transition-duration $transition-timing-function;
 
     @include breakpoint(medium) {
       transform: none;
