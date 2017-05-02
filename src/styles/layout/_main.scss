@@ -1,12 +1,9 @@
 // Main
-
-// Local Variables
 $container-width: 960px;
 $stripe-height: 10px;
 
 // box-sizing
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-
 html {
   position: relative;
   z-index: 1;
@@ -52,17 +49,4 @@ body {
   z-index: 1;
   max-width: $container-width;
   width: 100%;
-}
-
-// Images
-figure {
-  margin: 0;
-  img {
-    width: 100%;
-  }
-}
-
-// Links
-a {
-  text-decoration: none;
 }
