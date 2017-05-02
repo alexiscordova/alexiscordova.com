@@ -1,12 +1,12 @@
 // alexiscordova.com
 
 // Normalize.css
-@import '../../node_modules/normalize.css/normalize.css';
 
 // Utilities
 @import
   'utilities/mixins',
   'utilities/classes';
+@import '~normalize.css/normalize.css';
 
 // Base
 @import
