@@ -10,9 +10,9 @@ class Introduction extends Component {
         <div className="row container block-center">
           <div className="column-small-12">
             {typeof this.props.headline !== 'undefined' &&
-              <h2>{this.props.headline}</h2>
+              <h2 className="intro-headline">{this.props.headline}</h2>
             }
-            <ReactMarkdown source={this.props.text} />
+            <ReactMarkdown className="intro-markdown" source={this.props.text} />
           </div>
         </div>
       </section>
