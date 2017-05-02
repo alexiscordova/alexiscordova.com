@@ -7,22 +7,28 @@ class CodePen extends Component {
   render() {
     return (
       <section data-component="codepen">
-        <iframe
-          height={this.props.height}
-          scrolling='no'
-          title={this.props.title}
-          src={`//codepen.io/acordova/embed/${this.props.hash}/?height=${this.props.height}&theme-id=0&default-tab=result&embed-version=2`}
-          frameBorder='no'
-          allowTransparency='true'
-          allowFullScreen='true'
-          style={{width: '100%'}}>
-        </iframe>
-        <script
-          async
-          src="https://production-assets.codepen.io/assets/embed/ei.js">
-        </script>
+        <div className="row container block-center">
+          <div className="column-small-12 column-large-10 column-large-offset-1">
+            <div className="codepen-embed-wrapper block-center">
+              <iframe
+                scrolling='no'
+                title={this.props.title}
+                src={`//codepen.io/acordova/embed/${this.props.hash}/?theme-id=0&default-tab=result&embed-version=2`}
+                frameBorder='no'
+                allowTransparency='true'
+                allowFullScreen='true'>
+              </iframe>
+              <script
+                async
+                src="https://production-assets.codepen.io/assets/embed/ei.js">
+              </script>
+            </div>
+          </div>
 
-        <ReactMarkdown source={this.props.caption} />
+          <div className="column-small-12">
+            <ReactMarkdown source={this.props.caption} />
+          </div>
+        </div>
       </section>
     );
   }
@@ -30,7 +36,6 @@ class CodePen extends Component {
 
 CodePen.propTypes = {
   hash: PropTypes.string,
-  height: PropTypes.number,
   title: PropTypes.string,
   caption: PropTypes.string
 };
