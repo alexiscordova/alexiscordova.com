@@ -10,7 +10,11 @@ class Hero extends Component {
     return (
       <section data-component="hero">
         { this.props.background ? (
-          <div className={`background-container block-center ${this.props.classes}`}></div>
+          <div className={heroClass}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <polygon fill="#fff" points="0, 100 100, 0 100, 100" />
+            </svg>
+          </div>
         ) : (
           <div className="row">
             <div className="column">
