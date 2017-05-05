@@ -26,23 +26,19 @@ class Menu extends Component {
   }
 
   render() {
-    let menuClass = classNames({
-      menu: true,
+    let menuClass = classNames('navigation-trigger', {
       'is-open': this.state.isMenuOpen
     });
 
     return (
-      <div className="navigation-trigger">
-        <div className={menuClass} onClick={this.toggleMenu}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
-            <g fillRule="evenodd">
-              <rect className="line-top" width="50" height="3" y="0" rx="1.5" />
-              <rect className="line-middle" width="50" height="3" y="18" rx="1.5" />
-              <rect className="line-bottom" width="50" height="3" y="36" rx="1.5" />
-            </g>
-          </svg>
-
-        </div>
+      <div data-component="menu" className={menuClass} onClick={this.toggleMenu}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
+          <g>
+            <rect className="line-top" width="50" height="3" y="0" rx="1.5" />
+            <rect className="line-middle" width="50" height="3" y="18" rx="1.5" />
+            <rect className="line-bottom" width="50" height="3" y="36" rx="1.5" />
+          </g>
+        </svg>
       </div>
     );
   }

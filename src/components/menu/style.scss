@@ -3,9 +3,10 @@ $transition-duration: 0.35s;
 $transition-delay: 0.2s;
 $transition-timing-function: ease;
 
-.menu {
-  margin-top: 3px;
-  margin-right: 5px;
+[data-component="menu"] {
+  position: relative;
+  z-index: 1;
+  top: 3px;
 
   svg:hover {
     cursor: pointer;
@@ -13,10 +14,8 @@ $transition-timing-function: ease;
 }
 
 // Menu Animations
-.menu {
+[data-component="menu"] {
   [class^="line-"] {
-    position: relative;
-    z-index: 1;
     transform-origin: center center;
   }
 
