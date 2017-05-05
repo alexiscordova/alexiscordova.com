@@ -64,7 +64,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|jpe?g|png|svg)$/i,
+        test: /\.(gif|jpe?g|png|svg)$/,
+        use: [
+          'file-loader?name=[path][name].[ext]'
+        ]
+      },
+      {
+        test: /\.(eot|otf|ttf|woff)$/,
         use: [
           'file-loader?name=[path][name].[ext]'
         ]
