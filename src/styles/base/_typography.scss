@@ -1,14 +1,63 @@
-// Typography System
+// Typography
+@import 'type-setting';
+
+// Typography System Engine
+// The map $typography holds all the variables to create the proper element and utility-class declarations.
+// Each Sass list must be declared in specific order: (font-size, line-height)
+$typography: (
+  h1: ($h1-font-size, $h1-line-height),
+  h2: ($h2-font-size, $h2-line-height),
+  h3: ($h3-font-size, $h3-line-height),
+  h4: ($h4-font-size, $h4-line-height),
+  h5: ($h5-font-size, $h5-line-height),
+  h6: ($h6-font-size, $h6-line-height),
+  p: ($text-font-size, $base-line-height),
+  small: ($small-font-size, $small-line-height)
+);
+
+html {
+  font-size: $base-font-size-percentage;
+  font-family: $base-font-family;
+}
 
 h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 0;
-  font-weight: normal;
+h5,
+h6 {
+  margin-top: $heading-top-margin;
+  margin-bottom: $heading-bottom-margin;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
 }
 
-body {
-  font-family: Helvetica, Arial, sans-serif; // FPO
+p {
+  margin-top: $text-top-margin;
+  margin-bottom: $text-bottom-margin;
+
+  & + &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+small {
+  display: $small-display-property;
+  margin-top: $small-top-margin;
+  margin-bottom: $small-bottom-margin;
+}
+
+@each $element, $value in $typography {
+  @if $has-namespace {
+    .#{$namespace}-#{$element} {
+      font-size: nth($value, 1);
+      line-height: nth($value, 2);
+    }
+  }
+
+  #{$element} {
+    font-size: nth($value, 1);
+    line-height: nth($value, 2);
+  }
 }

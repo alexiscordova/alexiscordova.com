@@ -1,0 +1,53 @@
+// Typography Variables
+
+// Namespace
+$has-namespace: true !default;
+$namespace: 'heading' !default;
+
+// Base Type
+$base-font-size-percentage: 62.5% !default;
+$base-font-family: Helvetica, Arial, sans-serif !default;
+$base-monospaced-font-family: $base-font-family !default;
+$base-serif-font-family: $base-font-family !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.6 !default;
+
+// Bold Type
+$bold-font-weight: 500 !default;
+
+// Headings
+$heading-font-family: $base-font-family !default;
+$heading-font-weight: $base-font-weight !default;
+$heading-line-height: 1.2 !default;
+$h1-line-height: $heading-line-height !default;
+$h2-line-height: $heading-line-height !default;
+$h3-line-height: $heading-line-height !default;
+$h4-line-height: $heading-line-height !default;
+$h5-line-height: $heading-line-height !default;
+$h6-line-height: $heading-line-height !default;
+
+// Small Copy
+$small-display-property: block !default;
+$small-line-height: 1 !default;
+
+// <code> Type
+$code-font-family: $base-monospaced-font-family !default;
+
+// Type Scale
+// Default: Perfect Fifth (2:3) ratio
+$h1-font-size: 5.4rem !default;
+$h2-font-size: 3.6rem !default;
+$h3-font-size: 2.4rem !default;
+$h4-font-size: 1.6rem !default;
+$h5-font-size: 1.6rem !default;
+$h6-font-size: 1.6rem !default;
+$text-font-size: 1.6rem !default;
+$small-font-size: 1.2rem !default;
+
+// Margins
+$heading-top-margin: 0 !default;
+$heading-bottom-margin: 12px !default;
+$text-top-margin: 0 !default;
+$text-bottom-margin: 16px !default;
+$small-top-margin: 0 !default;
+$small-bottom-margin: $small-top-margin !default;

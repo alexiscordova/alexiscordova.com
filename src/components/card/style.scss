@@ -1,5 +1,6 @@
 // Card Component
 @import 'mixins';
+@import 'type-setting';
 
 [data-component="card"] {
   position: relative;
@@ -19,5 +20,7 @@
     width: 100%;
     padding: 8px 5px;
     color: #000;
+  h4 + p {
+    margin-top: -($heading-bottom-margin);
   }
 }

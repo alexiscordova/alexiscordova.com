@@ -18,7 +18,7 @@ class Card extends Component {
             <img src={this.props.image} alt={this.props.alt} />
             <figcaption>
               <h4>{this.props.title}</h4>
-              <h5>{hasClient}</h5>
+              <p>{hasClient}</p>
             </figcaption>
           </figure>
         </Link>
