@@ -6,8 +6,8 @@ $namespace: 'heading' !default;
 
 // Base Type
 $base-font-size-percentage: 62.5% !default;
-$base-font-family: Helvetica, Arial, sans-serif !default;
-$base-monospaced-font-family: $base-font-family !default;
+$base-font-family: 'HelveticaNeue', 'Helvetica Neue', 'HelveticaNeueRoman', 'HelveticaNeue-Roman', 'Helvetica Neue Roman', 'HelveticaNeueLTStd-Roman', Helvetica, Arial, sans-serif !default;
+$base-monospaced-font-family: 'Hack', Courier, Monaco, monospace !default;
 $base-serif-font-family: $base-font-family !default;
 $base-font-weight: 400 !default;
 $base-line-height: 1.4 !default;
@@ -15,10 +15,16 @@ $base-line-height: 1.4 !default;
 // Bold Type
 $bold-font-weight: 500 !default;
 
+// Light Type
+$light-font-family: 'GothamRounded-Light', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'HelveticaNeueLTStd-Lt', Helvetica, Arial, sans-serif !default;
+$light-font-weight: 300 !default;
+$light-letter-spacing: 0.04em !default;
+
 // Headings
-$heading-font-family: $base-font-family !default;
+$heading-font-family: 'Gotham-Book', Helvetica, Arial, sans-serif !default;
 $heading-font-weight: $base-font-weight !default;
 $heading-line-height: 1.2 !default;
+$heading-letter-spacing: -0.04em !default;
 $h1-line-height: $heading-line-height !default;
 $h2-line-height: $heading-line-height !default;
 $h3-line-height: $heading-line-height !default;

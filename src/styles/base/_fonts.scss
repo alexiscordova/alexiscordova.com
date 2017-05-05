@@ -1,0 +1,50 @@
+// Font Declarations
+$font-path: '../assets/fonts';
+$helvetica-neue-roman-path: 'helvetica-neue-roman';
+$helvetica-neue-light-path: 'helvetica-neue-light';
+$gotham-book-path: 'gotham-book';
+$gotham-round-light-path: 'gotham-rounded-light';
+$hack-path: 'hack';
+
+// Helvetica Neue Roman
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Roman';
+  src: url('#{$font-path}/#{$helvetica-neue-roman-path}/HelveticaNeueLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$helvetica-neue-roman-path}/HelveticaNeueLTStd-Roman.otf') format('opentype'),
+    url('#{$font-path}/#{$helvetica-neue-roman-path}/HelveticaNeueLTStd-Roman.woff') format('woff'), url('#{$font-path}/#{$helvetica-neue-roman-path}/HelveticaNeueLTStd-Roman.ttf') format('truetype');
+}
+
+// Helvetica Neue Light
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Lt';
+  src: url('#{$font-path}/#{$helvetica-neue-light-path}/HelveticaNeueLTStd-Lt.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$helvetica-neue-light-path}/HelveticaNeueLTStd-Lt.otf') format('opentype'),
+    url('#{$font-path}/#{$helvetica-neue-light-path}/HelveticaNeueLTStd-Lt.woff') format('woff'),
+    url('#{$font-path}/#{$helvetica-neue-light-path}/HelveticaNeueLTStd-Lt.ttf') format('truetype');
+}
+
+// Gotham Book
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('#{$font-path}/#{$gotham-book-path}/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$gotham-book-path}/Gotham-Book.otf') format('opentype'),
+    url('#{$font-path}/#{$gotham-book-path}/Gotham-Book.woff') format('woff'),
+    url('#{$font-path}/#{$gotham-book-path}/Gotham-Book.ttf') format('truetype');
+}
+
+// Gotham Round Light
+@font-face {
+  font-family: 'GothamRounded-Light';
+  src: url('#{$font-path}/#{$gotham-round-light-path}/GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$gotham-round-light-path}/GothamRounded-Light.otf')  format('opentype'),
+    url('#{$font-path}/#{$gotham-round-light-path}/GothamRounded-Light.woff') format('woff'),
+    url('#{$font-path}/#{$gotham-round-light-path}/GothamRounded-Light.ttf')  format('truetype');
+}
+
+// Hack
+@font-face {
+  font-family: 'Hack';
+  src: url('#{$font-path}/#{$hack-path}/hack-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$hack-path}/hack-regular-webfont.woff') format('woff'),
+    url('#{$font-path}/#{$hack-path}/hack-regular-webfont.ttf') format('truetype');
+}

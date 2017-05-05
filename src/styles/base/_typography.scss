@@ -1,5 +1,9 @@
 // Typography
+@import 'fonts';
 @import 'type-setting';
+@import 'colors';
+
+$code-background-color: lighten($gray, 8%);
 
 // Typography System Engine
 // The map $typography holds all the variables to create the proper element and utility-class declarations.
@@ -28,9 +32,15 @@ h5,
 h6 {
   margin-top: $heading-top-margin;
   margin-bottom: $heading-bottom-margin;
-  font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font-family;
+  letter-spacing: $heading-letter-spacing;
 }
 
 p {
@@ -48,6 +58,13 @@ small {
   margin-bottom: $small-bottom-margin;
 }
 
+code {
+  padding: 1px 5px;
+  font-family: $base-monospaced-font-family;
+  border-radius: 3px;
+  background-color: $code-background-color;
+}
+
 @each $element, $value in $typography {
   @if $has-namespace {
     .#{$namespace}-#{$element} {
@@ -60,4 +77,10 @@ small {
     font-size: nth($value, 1);
     line-height: nth($value, 2);
   }
+}
+
+// Utility Classes
+.headline-light {
+  font-family: $light-font-family;
+  font-weight: $light-font-weight;
 }

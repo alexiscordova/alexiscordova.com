@@ -1,4 +1,5 @@
 // Utility Classes
+@import 'type-setting';
 @import 'mixins';
 
 // Horizontally centers a block-level element
@@ -47,5 +48,6 @@
 
 // Typography
 .text-uppercase {
+  letter-spacing: $light-letter-spacing;
   text-transform: uppercase;
 }
