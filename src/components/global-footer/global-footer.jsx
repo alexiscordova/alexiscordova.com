@@ -8,8 +8,8 @@ class GlobalFooter extends Component {
     return (
       <footer className="global-footer">
         <div className="row container block-center">
-          <div className="column">
-            <small>
+          <div className="column-small-12">
+            <small className="footer-text">
               © 2001-{currentYear}
               <span className="author-metadata">Alexis Córdova • Made in San Francisco</span>
             </small>
