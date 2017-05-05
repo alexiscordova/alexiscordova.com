@@ -16,11 +16,19 @@
   }
 
   figcaption {
-    margin-top: -4px;
+    margin-top: -1px;
     width: 100%;
-    padding: 8px 5px;
+    padding: 10px 10px 6px;
     color: #000;
-  h4 + p {
+
+    @include breakpoint(medium) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .card-title + .card-metadata {
     margin-top: -($heading-bottom-margin);
+    margin-bottom: 0;
   }
 }

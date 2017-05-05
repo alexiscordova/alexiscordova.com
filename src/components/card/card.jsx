@@ -6,19 +6,21 @@ import './style.scss';
 
 class Card extends Component {
   render() {
-    let hasClient = typeof this.props.client !== 'undefined' ? (
-      `${this.props.projectDate} • ${this.props.client}`) : this.props.projectDate,
-        classes = this.props.columns.split(' '),
-        cardClass = classNames('no-gutters-small', classes);
+    const classes = this.props.columns.split(' '),
+          cardClass = classNames('no-gutters-small', classes);
 
     return (
       <section data-component="card" className={cardClass}>
         <Link to={this.props.destination}>
           <figure>
-            <img src={this.props.image} alt={this.props.alt} />
+            <img className="card-image" src={this.props.image} alt={this.props.alt} />
             <figcaption>
-              <h4>{this.props.title}</h4>
-              <p>{hasClient}</p>
+              <h4 className="card-title">{this.props.title}</h4>
+              { typeof this.props.client !== 'undefined' ? (
+                <p className="card-metadata">{this.props.projectDate} • {this.props.client}</p>
+              ) : (
+                <p className="card-metadata">{this.props.projectDate}</p>
+              )}
             </figcaption>
           </figure>
         </Link>
