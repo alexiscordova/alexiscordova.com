@@ -55,7 +55,10 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              includePaths: ['src/styles/utilities']
+              includePaths: [
+                'src/styles/base',
+                'src/styles/utilities'
+              ]
             }
           }
         ]
