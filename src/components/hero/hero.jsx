@@ -12,7 +12,7 @@ class Hero extends Component {
       <section data-component="hero" data-project={this.props.project}>
         { this.props.background ? (
           <div className={heroClass}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg className="hero-skew" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon fill="#fff" points="0, 100 100, 0 100, 100" />
             </svg>
           </div>
@@ -32,7 +32,8 @@ Hero.propTypes = {
   background: PropTypes.bool.isRequired,
   classes: PropTypes.string,
   alt: PropTypes.string,
-  heroImage: PropTypes.string
+  heroImage: PropTypes.string,
+  project: PropTypes.string
 };
 
 Hero.defaultProps = {

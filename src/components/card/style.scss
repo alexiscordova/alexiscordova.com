@@ -4,6 +4,7 @@
 @import 'colors';
 
 $caption-text-color: $eerie-black;
+$metadata-margin-top: -($heading-bottom-margin);
 
 [data-component="card"] {
   position: relative;
@@ -14,7 +15,7 @@ $caption-text-color: $eerie-black;
     margin-bottom: 20px;
   }
 
-  a {
+  .card-link {
     display: block;
 
     &:after {
@@ -22,7 +23,7 @@ $caption-text-color: $eerie-black;
     }
   }
 
-  figcaption {
+  .card-caption {
     margin-top: -1px;
     width: 100%;
     padding: 10px 10px 6px;
@@ -35,7 +36,7 @@ $caption-text-color: $eerie-black;
   }
 
   .card-title + .card-metadata {
-    margin-top: -($heading-bottom-margin);
+    margin-top: $metadata-margin-top;
     margin-bottom: 0;
   }
 }

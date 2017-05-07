@@ -5,12 +5,8 @@ import './style.scss';
 class Icon extends Component {
   render() {
     return (
-      <a href={this.props.link} className="icon">
-        <svg
-          className={this.props.className}
-          width={this.props.width}
-          height={this.props.height}
-        >
+      <a href={this.props.link} data-component="icon">
+        <svg className={this.props.className} width={this.props.width} height={this.props.height}>
           <use xlinkHref={`#icon-${this.props.name}`} />
         </svg>
       </a>

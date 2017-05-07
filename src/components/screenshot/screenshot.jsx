@@ -9,7 +9,10 @@ class Screenshot extends Component {
         <div className="row container block-center">
           <div className="column-small-12">
             <figure className="screenshot">
-              <img className="screenshot-image" src={require(`Images/work/${this.props.imageUrl}`)} />
+              <img
+                className="screenshot-image"
+                src={require(`Images/work/${this.props.imageUrl}`)}
+              />
                 {typeof this.props.details !== 'undefined' &&
                   <figcaption className="screenshot-caption">
                     <ReactMarkdown source={this.props.details} />

@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class ScrollToTopOnMount extends Component {
   componentDidMount() {
@@ -10,9 +9,5 @@ class ScrollToTopOnMount extends Component {
     return null;
   }
 }
-
-ScrollToTopOnMount.propTypes = {
-  location: PropTypes.object
-};
 
 export default ScrollToTopOnMount;

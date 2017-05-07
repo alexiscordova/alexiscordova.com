@@ -18,10 +18,7 @@ class CodePen extends Component {
                 allowTransparency='true'
                 allowFullScreen='true'>
               </iframe>
-              <script
-                async
-                src="https://production-assets.codepen.io/assets/embed/ei.js">
-              </script>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
             </div>
           </div>
 

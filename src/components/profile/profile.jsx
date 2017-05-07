@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Avatar from 'Components/avatar/avatar';
 import IconContainer from 'Containers/icon-container/icon-container';
-import './style.scss';
 
 let networks = [
   {
@@ -76,4 +75,5 @@ ProfileContainer.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 };
+
 export default ProfileContainer;

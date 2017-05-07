@@ -11,10 +11,10 @@ class Card extends Component {
 
     return (
       <section data-component="card" className={cardClass}>
-        <Link to={this.props.destination}>
+        <Link to={this.props.destination} className="card-link">
           <figure>
             <img className="card-image" src={this.props.image} alt={this.props.alt} />
-            <figcaption>
+            <figcaption className="card-caption">
               <h4 className="card-title">{this.props.title}</h4>
               { typeof this.props.client !== 'undefined' ? (
                 <p className="card-metadata">{this.props.projectDate} • {this.props.client}</p>

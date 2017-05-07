@@ -5,12 +5,12 @@ import './style.scss';
 class Avatar extends Component {
   render() {
     return (
-      <div className="avatar">
-        <figure className="avatar-image">
-          <img src={this.props.avatarImage} />
-          <figcaption className="text-center">
-            <h2>{this.props.name}</h2>
-            <p>{this.props.title}</p>
+      <div data-component="avatar">
+        <figure className="avatar">
+          <img className="avatar-image" src={this.props.avatarImage} />
+          <figcaption className="avatar-caption text-center">
+            <h2 className="avatar-name">{this.props.name}</h2>
+            <p className="avatar-title">{this.props.title}</p>
           </figcaption>
         </figure>
       </div>
