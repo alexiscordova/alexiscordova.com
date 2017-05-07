@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 import Button from 'Components/button/button';
 
 class ButtonContainer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.openResumePDF = this.openResumePDF.bind(this);
+  }
+
+  openResumePDF() {
+    window.open(this.props.link);
+  }
+
   render() {
     return (
       <section data-component="button-container" id={this.props.id}>
@@ -10,7 +20,7 @@ class ButtonContainer extends Component {
           <div className="column-small-12">
             <Button
               classes={this.props.classes}
-              link={this.props.link}
+              handleClick={this.openResumePDF}
               text={this.props.text}
             />
           </div>
