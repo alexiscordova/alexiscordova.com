@@ -23,6 +23,10 @@ $logo-text-color: $eerie-black;
     display: flex;
     flex-direction: row;
 
+    &:after {
+      display: none;
+    }
+
     .logo-headline {
       position: relative;
       z-index: 1;

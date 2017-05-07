@@ -65,6 +65,11 @@ $navigation-item-border-color: $gray;
     display: block;
     padding: 10px;
     color: $navigation-item-text-color;
+
+    &:after {
+      display: none;
+    }
+
     &:hover {
       color: $navigation-item-hover-text-color;
     }

@@ -16,6 +16,10 @@ $caption-text-color: $eerie-black;
 
   a {
     display: block;
+
+    &:after {
+      display: none;
+    }
   }
 
   figcaption {
