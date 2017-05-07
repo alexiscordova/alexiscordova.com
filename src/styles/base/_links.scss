@@ -1,4 +1,22 @@
 // Links
+@import 'colors';
+
+$link-text-color: darken($cerulean, 10%);
+$link-text-hover-color: darken($cerulean, 20%);
+
 a {
+  color: $link-text-color;
   text-decoration: none;
+  &:after {
+    background-color: $link-text-color;
+  }
+
+  &:hover {
+    color: $link-text-hover-color;
+    transition: color 0.25s ease-in;
+
+    &:after {
+      width: 100%;
+    }
+  }
 }

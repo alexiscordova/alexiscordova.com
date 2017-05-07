@@ -1,16 +1,15 @@
 // Global Footer Component
-
 @import 'mixins';
+@import 'colors';
 
-// Local Variables
-$footer-background: #222;
-$footer-text: #666;
-$author-text: #ccc;
+$footer-background-color: $eerie-black;
+$footer-text-color: $granite-gray;
+$author-text-color: $gray;
 
 .global-footer {
   height: 50px;
-  color: $footer-text;
-  background-color: $footer-background;
+  color: $footer-text-color;
+  background-color: $footer-background-color;
 
   & > .container {
     align-items: center;
@@ -26,6 +25,6 @@ $author-text: #ccc;
   }
   .author-metadata {
     margin-left: 5px;
-    color: $author-text;
+    color: $author-text-color;
   }
 }

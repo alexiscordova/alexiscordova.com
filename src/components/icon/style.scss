@@ -1,17 +1,23 @@
 // Icon Component
+@import 'colors';
+
 $networks: (
-  email: #000,
-  github: #000,
-  linkedin: #0077b5,
-  codepen: #000,
-  instagram: #e1306c,
-  twitter: #1da1f2
+  email: $true-black,
+  github: $true-black,
+  linkedin: $brand-linkedin,
+  codepen: $true-black,
+  instagram: $brand-instagram,
+  twitter: $brand-twitter
 );
 
-.icon {
+[data-component="icon"] {
   width: 45px;
   height: 45px;
   text-align: center;
+
+  &:after {
+    display: none;
+  }
 
   svg {
     opacity: 0.75;

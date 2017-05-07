@@ -1,6 +1,8 @@
 // Global Header Component
-
 @import 'mixins';
+@import 'colors';
+
+$logo-text-color: $eerie-black;
 
 [data-component="global-header"] {
   position: relative;
@@ -25,6 +27,11 @@
       position: relative;
       z-index: 1;
       margin-bottom: 0;
+      color: rgba($logo-text-color, 0.75);
+
+      &:hover {
+        color: $logo-text-color;
+      }
     }
 
     .logo-image + .logo-headline {

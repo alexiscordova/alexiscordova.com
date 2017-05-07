@@ -1,6 +1,9 @@
 // Card Component
 @import 'mixins';
 @import 'type-setting';
+@import 'colors';
+
+$caption-text-color: $eerie-black;
 
 [data-component="card"] {
   position: relative;
@@ -19,7 +22,7 @@
     margin-top: -1px;
     width: 100%;
     padding: 10px 10px 6px;
-    color: #000;
+    color: $caption-text-color;
 
     @include breakpoint(medium) {
       padding-right: 0;

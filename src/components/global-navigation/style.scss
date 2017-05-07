@@ -1,9 +1,15 @@
 // Global Navigation Component
+@import 'mixins';
+@import 'colors';
+
 $transition-duration: 0.5s;
 $transition-timing-function: ease;
 $perspective: perspective(350px);
-
-@import 'mixins';
+$background-color: $true-white;
+$navigation-item-text-color: $granite-gray;
+$navigation-item-hover-text-color: $cerulean;
+$navitation-item-active-color: $giants-orange;
+$navigation-item-border-color: $gray;
 
 [role="navigation"] {
   position: absolute;
@@ -15,7 +21,7 @@ $perspective: perspective(350px);
   left: 0;
   text-align: center;
   list-style: none;
-  background-color: #fff;
+  background-color: $background-color;
   transform: $perspective rotateX(-90deg);
   transform-origin: top center;
   transition: transform $transition-duration $transition-timing-function;
@@ -47,7 +53,7 @@ $perspective: perspective(350px);
   .navigation-item {
     width: 100%;
     text-transform: uppercase;
-    border-top: 1px solid rgba(gray, 0.75);
+    border-top: 1px solid rgba($navigation-item-border-color, 0.75);
 
     @include breakpoint(medium) {
       width: auto;
@@ -58,5 +64,13 @@ $perspective: perspective(350px);
   .navigation-link {
     display: block;
     padding: 10px;
+    color: $navigation-item-text-color;
+    &:hover {
+      color: $navigation-item-hover-text-color;
+    }
+
+    &.is-active {
+      color: $navitation-item-active-color;
+    }
   }
 }

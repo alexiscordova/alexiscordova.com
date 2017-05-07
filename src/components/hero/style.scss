@@ -1,5 +1,9 @@
 // Hero Component
 @import 'mixins';
+@import 'colors';
+
+$sony-background-color: $brand-sony;
+$thismoment-background-color: $brand-thismoment;
 
 [data-component="hero"] {
   position: relative;
@@ -33,11 +37,11 @@
 
   // Project Hero background color overrides
   &[data-project="sony"] {
-    background-color: #343A64;
+    background-color: $sony-background-color;
   }
 
   &[data-project="content-cloud"] {
-    background-color: #6bc04b;
+    background-color: $thismoment-background-color;
   }
 
   .hero-image {
