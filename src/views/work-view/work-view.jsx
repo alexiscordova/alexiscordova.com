@@ -19,7 +19,7 @@ class WorkView extends Component {
   }
 
   componentWillMount() {
-    let { match } = this.props;
+    const { match } = this.props;
 
     this.setState({
       hero: require(`Data/${match.params.project}-hero.json`),
@@ -29,7 +29,7 @@ class WorkView extends Component {
   }
 
   render() {
-    let { hero, intro, screenshots } = this.state;
+    const { hero, intro, screenshots } = this.state;
 
     return (
       <section className="block-center content">

@@ -5,8 +5,8 @@ import './style.scss';
 
 class Hero extends Component {
   render() {
-    let classes = this.props.background ? this.props.classes.split(' ') : '',
-        heroClass = classNames('hero-background-image', 'block-center', classes);
+    const classes = this.props.background ? this.props.classes.split(' ') : '',
+          heroClass = classNames('hero-background-image', 'block-center', classes);
 
     return (
       <section data-component="hero" data-project={this.props.project}>

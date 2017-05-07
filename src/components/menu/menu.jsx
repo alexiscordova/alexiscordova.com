@@ -26,7 +26,7 @@ class Menu extends Component {
   }
 
   render() {
-    let menuClass = classNames('navigation-trigger', {
+    const menuClass = classNames('navigation-trigger', {
       'is-open': this.state.isMenuOpen
     });
 

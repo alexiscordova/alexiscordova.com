@@ -5,7 +5,7 @@ import './style.scss';
 
 class IconContainer extends Component {
   render() {
-    let { networks } = this.props;
+    const { networks } = this.props;
 
     return (
       <div className="icon-container">

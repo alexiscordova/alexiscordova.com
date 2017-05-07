@@ -23,7 +23,7 @@ class GlobalHeader extends Component {
   }
 
   render() {
-    let menuClass = classNames('menu', {
+    const menuClass = classNames('menu', {
       'is-open': this.state.isMenuOpen
     });
 
