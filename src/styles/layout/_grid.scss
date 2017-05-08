@@ -8,7 +8,7 @@ $grid-gutters: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 0 1 auto;
+  flex-basis: 100%;
 
   // Columns
   [class*="column-"] {
