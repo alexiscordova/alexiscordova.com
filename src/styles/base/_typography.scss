@@ -48,6 +48,10 @@ p {
   margin-top: $text-top-margin;
   margin-bottom: $text-bottom-margin;
 
+  &:only-of-type {
+    margin-bottom: 0;
+  }
+
   & + &:last-child {
     margin-bottom: 0;
   }
