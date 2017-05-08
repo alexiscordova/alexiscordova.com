@@ -22,7 +22,7 @@ class CodePen extends Component {
             </div>
           </div>
 
-          <div className="column-small-12">
+          <div className="codepen-caption column-small-12">
             <ReactMarkdown source={this.props.caption} />
           </div>
         </div>
