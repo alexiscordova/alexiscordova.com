@@ -16,7 +16,8 @@ $typography: (
   h5: ($h5-font-size, $h5-line-height),
   h6: ($h6-font-size, $h6-line-height),
   p: ($text-font-size, $base-line-height),
-  small: ($small-font-size, $small-line-height)
+  small: ($small-font-size, $small-line-height),
+  code: ($text-font-size, $base-line-height)
 );
 
 html {
