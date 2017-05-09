@@ -12,6 +12,13 @@ import './style.scss'
 })
 
 class GlobalNavigation extends Component {
+  static propTypes = {
+    button: PropTypes.shape({
+      isClassAdded: PropTypes.bool
+    }),
+    dispatch: PropTypes.func,
+    menuClass: PropTypes.string
+  }
 
   constructor(props) {
     super(props)
@@ -45,7 +52,4 @@ class GlobalNavigation extends Component {
   }
 }
 
-GlobalNavigation.propTypes = {
-  menuClass: PropTypes.string
-};
 export default GlobalNavigation

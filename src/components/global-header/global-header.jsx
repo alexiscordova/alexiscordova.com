@@ -14,6 +14,10 @@ import './style.scss'
 })
 
 class GlobalHeader extends Component {
+  static propTypes = {
+    menu: PropTypes.shape({
+      isMenuOpen: PropTypes.bool
+    })
   }
 
   render() {
@@ -35,7 +39,7 @@ class GlobalHeader extends Component {
           </div>
 
           <div className="column-small-2 is-hidden-medium end">
-            <Menu handleMenuState={this.handleMenuState} />
+            <Menu />
           </div>
 
           <GlobalNavigation menuClass={menuClass} />
@@ -45,4 +49,4 @@ class GlobalHeader extends Component {
   }
 }
 
-export default GlobalHeader;
+export default GlobalHeader

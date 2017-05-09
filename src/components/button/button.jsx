@@ -11,6 +11,16 @@ import './style.scss'
 })
 
 class Button extends Component {
+  static propTypes = {
+    button: PropTypes.shape({
+      payload: PropTypes.string,
+      isClassAdded: PropTypes.bool
+    }),
+    classes: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    handleClick: PropTypes.func.isRequired
+  }
+
   render() {
     const classes = this.props.classes.split(' '),
           animationClass = this.props.button.payload,
@@ -26,9 +36,4 @@ class Button extends Component {
   }
 }
 
-Button.propTypes = {
-  classes: PropTypes.string,
-  text: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired
-};
 export default Button
