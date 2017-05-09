@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import { addButtonAnimation, removeButtonAnimation } from '../../actions/buttonActions';
+import './style.scss'
 
 @connect(store => {
   return {
@@ -12,6 +12,13 @@ import { addButtonAnimation, removeButtonAnimation } from '../../actions/buttonA
 })
 
 class GlobalNavigation extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
   handleClick() {
     if (!this.props.button.isClassAdded) {
       this.props.dispatch(addButtonAnimation('ripple'))
@@ -34,12 +41,11 @@ class GlobalNavigation extends Component {
           </li>
         </ul>
       </nav>
-    );
+    )
   }
 }
 
 GlobalNavigation.propTypes = {
   menuClass: PropTypes.string
 };
-
-export default GlobalNavigation;
+export default GlobalNavigation

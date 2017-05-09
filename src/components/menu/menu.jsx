@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import classNames from 'classnames'
 import { openMenu, closeMenu } from '../../actions/menuActions'
+import './style.scss'
 
 @connect((store) => {
   return {
@@ -48,12 +48,8 @@ class Menu extends Component {
           </g>
         </svg>
       </div>
-    );
+    )
   }
 }
 
-Menu.propTypes = {
-  handleMenuState: PropTypes.func
-}
-
-export default Menu;
+export default Menu

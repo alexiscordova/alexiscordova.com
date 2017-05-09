@@ -1,14 +1,15 @@
-import React from 'react';
-import { Router, Route, Redirect, Switch } from 'react-router';
-import createBrowserHistory from 'history/createBrowserHistory';
-import AppView from './views/app-view/app-view';
-import HomeView from './views/home-view/home-view';
-import AboutView from './views/about-view/about-view';
-import WorkView from './views/work-view/work-view';
+import React, { Component } from 'react'
+import { PropTypes } from 'prop-types'
+import { Router, Route, Redirect, Switch } from 'react-router'
+import createBrowserHistory from 'history/createBrowserHistory'
 import { connect } from 'react-redux'
 import { closeMenu } from './actions/menuActions'
+import AppView from './views/app-view/app-view'
+import HomeView from './views/home-view/home-view'
+import AboutView from './views/about-view/about-view'
+import WorkView from './views/work-view/work-view'
 
-const history = createBrowserHistory();
+const history = createBrowserHistory()
 
 @connect((store) => {
   return {

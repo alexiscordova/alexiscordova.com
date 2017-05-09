@@ -1,11 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import Routes from './router';
-import './styles/style.scss';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
+import { AppContainer } from 'react-hot-loader'
+import Routes from './router'
 import store from './store'
 import rootReducer from './reducers/index'
+
+import './styles/style.scss'
 
 const render = (Component) => {
   ReactDOM.render(
@@ -15,17 +16,17 @@ const render = (Component) => {
       </AppContainer>
     </Provider>,
     document.querySelector('#app')
-  );
-};
+  )
+}
 
-render(Routes);
+render(Routes)
 
 if (module.hot) {
-  module.hot.accept();
+  module.hot.accept()
 
   module.hot.accept(Routes, () => {
-    render(Routes);
-  });
+    render(Routes)
+  })
 
   module.hot.accept(rootReducer, () => {
     const nextRootReducer = require('./reducers/index')

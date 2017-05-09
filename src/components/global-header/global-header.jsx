@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import classNames from 'classnames';
-import Menu from 'Components/menu/menu';
-import GlobalNavigation from 'Components/global-navigation/global-navigation';
-import './style.scss';
-
-class GlobalHeader extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleMenuState = this.handleMenuState.bind(this);
-
-    this.state = {
-      isMenuOpen: false
-    };
+import React, { Component } from 'react'
+import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import classNames from 'classnames'
+import Menu from 'Components/menu/menu'
+import GlobalNavigation from 'Components/global-navigation/global-navigation'
+import './style.scss'
+
 @connect((store) => {
   return {
     menu: store.menu
   }
 })
 
+class GlobalHeader extends Component {
   }
 
   render() {
@@ -48,7 +41,7 @@ import { connect } from 'react-redux'
           <GlobalNavigation menuClass={menuClass} />
         </div>
       </header>
-    );
+    )
   }
 }
 
