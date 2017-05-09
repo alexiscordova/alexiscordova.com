@@ -5,6 +5,7 @@ import Routes from './router';
 import './styles/style.scss';
 import { Provider } from 'react-redux'
 import store from './store'
+import rootReducer from './reducers/index'
 
 const render = (Component) => {
   ReactDOM.render(
@@ -25,4 +26,9 @@ if (module.hot) {
   module.hot.accept(Routes, () => {
     render(Routes);
   });
+
+  module.hot.accept(rootReducer, () => {
+    const nextRootReducer = require('./reducers/index')
+    store.replaceReducer(nextRootReducer)
+  })
 }
