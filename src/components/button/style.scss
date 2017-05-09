@@ -51,7 +51,7 @@ $button-font-size: $text-font-size;
   }
 
   &.ripple:after {
-    animation: ripple 0.5s 2 ease-in;
+    animation: ripple 0.5s 0.5s 2 ease-in;
   }
 
   &:hover {
