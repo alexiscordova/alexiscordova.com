@@ -17,23 +17,14 @@ const history = createBrowserHistory();
 })
 
 // Routes
-const routes = () => (
-  <Router history={history}>
-    <AppView>
-      <Switch>
-        <Route exact path="/" component={HomeView} />
-        <Route path="/about" component={AboutView} />
-        <Route exact path="/work">
-          <Redirect to="/" />
-        </Route>
-        <Route path="/work/:project" component={WorkView} />
-        <Route>
-          <Redirect to="/" />
-        </Route>
-      </Switch>
-    </AppView>
-  </Router>
-);
+class Routes extends Component {
+  static propTypes = {
+    menu: PropTypes.shape({
+      isMenuOpen: PropTypes.bool
+    }),
+    dispatch: PropTypes.func
+  }
+
   componentDidUpdate() {
     history.listen(() => {
       if (this.props.menu.isMenuOpen) {
@@ -41,5 +32,25 @@ const routes = () => (
       }
     })
   }
+  render() {
+    return (
+      <Router history={history}>
+        <AppView>
+          <Switch>
+            <Route exact path="/" component={HomeView} />
+            <Route path="/about" component={AboutView} />
+            <Route exact path="/work">
+              <Redirect to="/" />
+            </Route>
+            <Route path="/work/:project" component={WorkView} />
+            <Route>
+              <Redirect to="/" />
+            </Route>
+          </Switch>
+        </AppView>
+      </Router>
+    )
+  }
+}
 
-export default routes;
+export default Routes
