@@ -2,33 +2,41 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './style.scss';
+import { connect } from 'react-redux'
+import { openMenu, closeMenu } from '../../actions/menuActions'
+
+@connect((store) => {
+  return {
+    menu: store.menu
+  }
+})
 
 class Menu extends Component {
-  constructor(props) {
-    super(props);
-
-    this.toggleMenu = this.toggleMenu.bind(this);
-
-    this.state = {
-      isMenuOpen: false
-    };
+  static propTypes = {
+    menu: PropTypes.shape({
+      isMenuOpen: PropTypes.bool
+    }),
+    dispatch: PropTypes.func
   }
 
-  // This sends the current menu state back up to the parent to keep both menu and icon in sync
-  // However, this is bizarre syntax and if componentDidUpdate is used, the browser freaks out
-  // https://facebook.github.io/react/docs/react-component.html#setstate
+  constructor(props) {
+    super(props)
+
+    this.toggleMenu = this.toggleMenu.bind(this)
+  }
+
   toggleMenu() {
-    this.setState({
-      isMenuOpen: !this.state.isMenuOpen
-    }, () => {
-      this.props.handleMenuState(this.state.isMenuOpen);
-    });
+    if (this.props.menu.isMenuOpen) {
+      this.props.dispatch(closeMenu())
+    } else {
+      this.props.dispatch(openMenu())
+    }
   }
 
   render() {
     const menuClass = classNames('navigation-trigger', {
-      'is-open': this.state.isMenuOpen
-    });
+      'is-open': this.props.menu.isMenuOpen
+    })
 
     return (
       <div data-component="menu" className={menuClass} onClick={this.toggleMenu}>
