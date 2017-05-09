@@ -14,18 +14,19 @@ class GlobalHeader extends Component {
     this.state = {
       isMenuOpen: false
     };
+import { connect } from 'react-redux'
+@connect((store) => {
+  return {
+    menu: store.menu
   }
+})
 
-  handleMenuState(status) {
-    this.setState({
-      isMenuOpen: status
-    });
   }
 
   render() {
     const menuClass = classNames('menu', {
-      'is-open': this.state.isMenuOpen
-    });
+      'is-open': this.props.menu.isMenuOpen
+    })
 
     return (
       <header data-component="global-header">
