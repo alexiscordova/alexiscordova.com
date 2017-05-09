@@ -5,8 +5,16 @@ import AppView from './views/app-view/app-view';
 import HomeView from './views/home-view/home-view';
 import AboutView from './views/about-view/about-view';
 import WorkView from './views/work-view/work-view';
+import { connect } from 'react-redux'
+import { closeMenu } from './actions/menuActions'
 
 const history = createBrowserHistory();
+
+@connect((store) => {
+  return {
+    menu: store.menu
+  }
+})
 
 // Routes
 const routes = () => (
@@ -26,5 +34,12 @@ const routes = () => (
     </AppView>
   </Router>
 );
+  componentDidUpdate() {
+    history.listen(() => {
+      if (this.props.menu.isMenuOpen) {
+        this.props.dispatch(closeMenu())
+      }
+    })
+  }
 
 export default routes;
