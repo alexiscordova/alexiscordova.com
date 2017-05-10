@@ -1,6 +1,4 @@
-export default function reducer(state = {
-  isClassAdded: false
-}, action) {
+export default function reducer(state = { isClassAdded: false }, action) {
   switch (action.type) {
     case "ADD_BUTTON_ANIMATION":
       return {

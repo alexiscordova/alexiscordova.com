@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import classNames from 'classnames';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import classNames from 'classnames'
+import './style.scss'
 
 class Card extends Component {
   render() {
@@ -18,14 +18,19 @@ class Card extends Component {
               <h4 className="card-title">{this.props.title}</h4>
               { typeof this.props.client !== 'undefined' ? (
                 <p className="card-metadata">{this.props.projectDate} • {this.props.client}</p>
+                <p className="card-metadata">
+                  {this.props.projectDate} • {this.props.client}
+                </p>
               ) : (
-                <p className="card-metadata">{this.props.projectDate}</p>
+                <p className="card-metadata">
+                  {this.props.projectDate}
+                </p>
               )}
             </figcaption>
           </figure>
         </Link>
       </section>
-    );
+    )
   }
 }
 
@@ -38,5 +43,4 @@ Card.propTypes = {
   projectDate: PropTypes.string,
   client: PropTypes.string
 };
-
-export default Card;
+export default Card

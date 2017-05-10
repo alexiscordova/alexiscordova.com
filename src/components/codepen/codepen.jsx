@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
+import './style.scss'
 
 class CodePen extends Component {
   render() {
@@ -27,7 +27,7 @@ class CodePen extends Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }
 
@@ -36,5 +36,4 @@ CodePen.propTypes = {
   title: PropTypes.string,
   caption: PropTypes.string
 };
-
-export default CodePen;
+export default CodePen

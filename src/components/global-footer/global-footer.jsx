@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import './style.scss';
+import React, { Component } from 'react'
+import './style.scss'
 
 class GlobalFooter extends Component {
   render() {
-    const currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear()
 
     return (
       <footer className="global-footer">
@@ -16,8 +16,8 @@ class GlobalFooter extends Component {
           </div>
         </div>
       </footer>
-    );
+    )
   }
 }
 
-export default GlobalFooter;
+export default GlobalFooter

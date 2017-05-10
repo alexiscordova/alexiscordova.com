@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import './style.scss'
 
 class Hero extends Component {
   render() {
     const classes = this.props.background ? this.props.classes.split(' ') : '',
-          heroClass = classNames('hero-background-image', 'block-center', classes);
+          heroClass = classNames('hero-background-image', 'block-center', classes)
 
     return (
       <section data-component="hero" data-project={this.props.project}>
@@ -24,7 +24,7 @@ class Hero extends Component {
           </div>
         )}
       </section>
-    );
+    )
   }
 }
 
@@ -40,5 +40,4 @@ Hero.defaultProps = {
   heroImage: 'http://placehold.it/1900x600',
   alt: 'Missing alt text'
 };
-
-export default Hero;
+export default Hero

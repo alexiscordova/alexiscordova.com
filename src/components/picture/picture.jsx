@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import 'picturefill';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import 'picturefill'
 import 'picturefill/dist/plugins/mutation/pf.mutation.js'
 
 class Picture extends Component {
@@ -26,7 +26,7 @@ class Picture extends Component {
           <img src={this.props.largeImage} alt={this.props.alt} />
         </noscript>
       </picture>
-    );
+    )
   }
 }
 
@@ -48,5 +48,4 @@ Picture.defaultProps = {
   largeImage: 'http://placehold.it/350x350?text=large',
   largeRetinaImage: 'http://placehold.it/700x700?text=large+2x'
 };
-
-export default Picture;
+export default Picture

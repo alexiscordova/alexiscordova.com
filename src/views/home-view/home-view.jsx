@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import CardContainer from 'Containers/card-container/card-container';
-import Hero from 'Components/hero/hero';
-import Introduction from 'Components/introduction/introduction';
-import Card from 'Components/card/card';
-import Profile from 'Components/profile/profile';
-import ButtonContainer from 'Containers/button-container/button-container';
-import HomeHero from 'Data/home-hero';
-import HomeIntro from 'Data/home-introduction';
-import FeaturedWork from 'Data/featured-work';
-import OtherWork from 'Data/other-work';
+import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
+import CardContainer from 'Containers/card-container/card-container'
+import Hero from 'Components/hero/hero'
+import Introduction from 'Components/introduction/introduction'
+import Card from 'Components/card/card'
+import Profile from 'Components/profile/profile'
+import ButtonContainer from 'Containers/button-container/button-container'
+import HomeHero from 'Data/home-hero'
+import HomeIntro from 'Data/home-introduction'
+import FeaturedWork from 'Data/featured-work'
+import OtherWork from 'Data/other-work'
 
 const __svg__ = {
   path: '../../assets/svg/*.svg',
   name: '[hash].icons.svg'
-};
+}
 
-require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__)
 
 class HomeView extends Component {
   render() {
@@ -88,8 +88,8 @@ class HomeView extends Component {
           text="Download Résumé (PDF)"
         />
       </section>
-    );
+    )
   }
 }
 
-export default HomeView;
+export default HomeView

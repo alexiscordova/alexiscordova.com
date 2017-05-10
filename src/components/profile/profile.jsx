@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Avatar from 'Components/avatar/avatar';
-import IconContainer from 'Containers/icon-container/icon-container';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Avatar from 'Components/avatar/avatar'
+import IconContainer from 'Containers/icon-container/icon-container'
 
 let networks = [
   {
@@ -46,7 +46,7 @@ let networks = [
     "className": "icon-twitter",
     "link": "https://twitter.com/acordova"
   }
-];
+]
 
 class ProfileContainer extends Component {
   render() {
@@ -66,7 +66,7 @@ class ProfileContainer extends Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }
 
@@ -75,5 +75,4 @@ ProfileContainer.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 };
-
-export default ProfileContainer;
+export default ProfileContainer

@@ -1,9 +1,9 @@
-let webpack = require('webpack');
-let path = require('path');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let WebpackMd5Hash = require('webpack-md5-hash');
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
-let FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WebpackMd5Hash = require('webpack-md5-hash')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   resolve: {

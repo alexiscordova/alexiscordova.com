@@ -1,35 +1,35 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import Hero from 'Components/hero/hero';
-import Introduction from 'Components/introduction/introduction';
-import Screenshot from 'Components/screenshot/screenshot';
-import CodePen from 'Components/codepen/codepen';
-import ScrollToTopOnMount from 'Components/scroll-to-top-on-mount/scroll-to-top-on-mount';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import Hero from 'Components/hero/hero'
+import Introduction from 'Components/introduction/introduction'
+import Screenshot from 'Components/screenshot/screenshot'
+import CodePen from 'Components/codepen/codepen'
+import ScrollToTopOnMount from 'Components/scroll-to-top-on-mount/scroll-to-top-on-mount'
 
 class WorkView extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       hero: {},
       intro: {},
       screenshots: {}
-    };
+    }
   }
 
   componentWillMount() {
-    const { match } = this.props;
+    const { match } = this.props
 
     this.setState({
       hero: require(`Data/${match.params.project}-hero.json`),
       intro: require(`Data/${match.params.project}-introduction.json`),
       screenshots: require(`Data/${match.params.project}-screenshots.json`)
-    });
+    })
   }
 
   render() {
-    const { hero, intro, screenshots } = this.state;
+    const { hero, intro, screenshots } = this.state
 
     return (
       <section className="block-center content">
@@ -61,7 +61,7 @@ class WorkView extends Component {
                 imageUrl={screenshot.imageUrl}
                 details={screenshot.details}
               />
-            );
+            )
           } else if (screenshot.type === 'codepen') {
             return (
               <CodePen
@@ -71,11 +71,11 @@ class WorkView extends Component {
                 title={screenshot.title}
                 caption={screenshot.caption}
               />
-            );
+            )
           }
         })}
       </section>
-    );
+    )
   }
 }
 
@@ -86,5 +86,4 @@ WorkView.propTypes = {
     })
   })
 }
-
-export default WorkView;
+export default WorkView

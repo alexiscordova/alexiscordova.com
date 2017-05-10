@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
+import './style.scss'
 
 class Screenshot extends Component {
   render() {
@@ -23,7 +23,7 @@ class Screenshot extends Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }
 
@@ -31,5 +31,4 @@ Screenshot.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   details: PropTypes.string
 };
-
-export default Screenshot;
+export default Screenshot

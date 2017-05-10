@@ -33,6 +33,7 @@ class Routes extends Component {
       }
     })
   }
+
   render() {
     return (
       <Router history={history}>

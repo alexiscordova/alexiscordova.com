@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Icon from 'Components/icon/icon';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Icon from 'Components/icon/icon'
+import './style.scss'
 
 class IconContainer extends Component {
   render() {
-    const { networks } = this.props;
+    const { networks } = this.props
 
     return (
       <div className="icon-container">
@@ -21,12 +21,11 @@ class IconContainer extends Component {
           )
         })}
       </div>
-    );
+    )
   }
 }
 
 IconContainer.propTypes = {
   networks: PropTypes.array.isRequired
 };
-
-export default IconContainer;
+export default IconContainer

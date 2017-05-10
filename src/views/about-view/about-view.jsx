@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import Hero from 'Components/hero/hero';
-import Introduction from 'Components/introduction/introduction';
+import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
+import Hero from 'Components/hero/hero'
+import Introduction from 'Components/introduction/introduction'
 
 class AboutView extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       about: {}
-    };
+    }
   }
 
   componentWillMount() {
     this.setState({
       about: require('Data/about.json')
-    });
+    })
   }
 
   render() {
-    const { about } = this.state;
+    const { about } = this.state
 
     return (
       <section className="block-center content">
@@ -38,8 +38,8 @@ class AboutView extends Component {
           text={about.text}
         />
       </section>
-    );
+    )
   }
 }
 
-export default AboutView;
+export default AboutView

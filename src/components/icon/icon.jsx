@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './style.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import './style.scss'
 
 class Icon extends Component {
   render() {
@@ -10,7 +10,7 @@ class Icon extends Component {
           <use xlinkHref={`#icon-${this.props.name}`} />
         </svg>
       </a>
-    );
+    )
   }
 }
 
@@ -26,5 +26,4 @@ Icon.defaultProps = {
   width: '40',
   height: '40'
 };
-
-export default Icon;
+export default Icon

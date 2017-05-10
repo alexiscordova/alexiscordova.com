@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class CardContainer extends Component {
   render() {
@@ -14,7 +14,7 @@ class CardContainer extends Component {
           {this.props.children}
         </div>
       </section>
-    );
+    )
   }
 }
 
@@ -22,5 +22,4 @@ CardContainer.propTypes = {
   headline: PropTypes.string,
   children: PropTypes.element.isRequired
 };
-
-export default CardContainer;
+export default CardContainer

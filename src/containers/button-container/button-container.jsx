@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Button from 'Components/button/button';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Button from 'Components/button/button'
 
 class ButtonContainer extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.openResumePDF = this.openResumePDF.bind(this);
+    this.openResumePDF = this.openResumePDF.bind(this)
   }
 
   openResumePDF() {
-    window.open(this.props.link);
+    window.open(this.props.link)
   }
 
   render() {
@@ -26,7 +26,7 @@ class ButtonContainer extends Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }
 
@@ -36,5 +36,4 @@ ButtonContainer.propTypes = {
   link: PropTypes.string,
   text: PropTypes.string
 };
-
-export default ButtonContainer;
+export default ButtonContainer

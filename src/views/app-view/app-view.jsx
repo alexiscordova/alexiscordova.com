@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import GlobalHeader from 'Components/global-header/global-header';
-import GlobalFooter from 'Components/global-footer/global-footer';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import GlobalHeader from 'Components/global-header/global-header'
+import GlobalFooter from 'Components/global-footer/global-footer'
 
 class Application extends Component {
   render() {
@@ -15,12 +15,11 @@ class Application extends Component {
 
         <GlobalFooter />
       </article>
-    );
+    )
   }
 }
 
 Application.propTypes = {
   children: PropTypes.any
 }
-
-export default Application;
+export default Application
