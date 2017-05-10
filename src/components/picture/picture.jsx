@@ -24,16 +24,19 @@ class Picture extends Component {
   }
 
   render() {
+    const breakpointLarge = '(min-width: 64em)',
+          breakpointMedium = '(min-width: 40em)'
+
     return (
       <picture>
         <source
           srcSet={`${this.props.largeImage}, ${this.props.largeRetinaImage} 2x`}
-          media="(min-width: 64em)"
+          media={breakpointLarge}
           alt={this.props.alt}
         />
         <source
           srcSet={`${this.props.mediumImage}, ${this.props.mediumRetinaImage} 2x`}
-          media="(min-width: 40em)"
+          media={breakpointMedium}
           alt={this.props.alt}
         />
         <source
