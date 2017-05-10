@@ -30,7 +30,7 @@ class GlobalHeader extends Component {
         <div className="row container block-center">
           <div className="column-small-10 column-medium-6">
             <Link to="/" className="logo-container">
-              <img className="logo-image" width="40" height="40" src={require('Svg/logo-outline-color.svg')} />
+              <img className="logo-image" src={require('Svg/icon-logo-crown.svg')} />
               <h1 className="logo-headline heading-h2">
                 Alexis Córdova
                 <span className="is-hidden">Front-End Web Developer</span>
