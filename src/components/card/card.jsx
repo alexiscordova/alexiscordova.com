@@ -17,7 +17,8 @@ class Card extends Component {
 
   render() {
     const classes = this.props.columns.split(' '),
-          cardClass = classNames('no-gutters-small', classes);
+          cardClass = classNames('no-gutters-small', classes),
+          componentHasClient = typeof this.props.client !== 'undefined'
 
     return (
       <section data-component="card" className={cardClass}>
@@ -26,8 +27,7 @@ class Card extends Component {
             <img className="card-image" src={this.props.image} alt={this.props.alt} />
             <figcaption className="card-caption">
               <h4 className="card-title">{this.props.title}</h4>
-              { typeof this.props.client !== 'undefined' ? (
-                <p className="card-metadata">{this.props.projectDate} • {this.props.client}</p>
+              { componentHasClient ? (
                 <p className="card-metadata">
                   {this.props.projectDate} • {this.props.client}
                 </p>

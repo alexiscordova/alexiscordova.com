@@ -10,6 +10,8 @@ class Screenshot extends Component {
   }
 
   render() {
+    const componentHasDetails = typeof this.props.details !== 'undefined'
+
     return(
       <section data-component="screenshot">
         <div className="row container block-center">
@@ -19,7 +21,7 @@ class Screenshot extends Component {
                 className="screenshot-image"
                 src={require(`Images/work/${this.props.imageUrl}`)}
               />
-                {typeof this.props.details !== 'undefined' &&
+                { componentHasDetails &&
                   <figcaption className="screenshot-caption">
                     <ReactMarkdown source={this.props.details} />
                   </figcaption>

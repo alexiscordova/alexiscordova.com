@@ -14,11 +14,13 @@ class Introduction extends Component {
   }
 
   render() {
+    const componentHasHeadline = typeof this.props.headline !== 'undefined'
+
     return (
       <section data-component="intro">
         <div className="row container block-center">
           <div className="column-small-12">
-            {typeof this.props.headline !== 'undefined' &&
+            { componentHasHeadline &&
               <h2 className="intro-headline">{this.props.headline}</h2>
             }
 
