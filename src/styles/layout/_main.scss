@@ -38,7 +38,7 @@ body {
 
 // Adds consistent spacing for content components
 .content > [data-component]:not(:first-child) {
-  margin-top: ($stripe-height * 2);
+  margin-top: ($stripe-height * 4);
 }
 
 // Adds consistent spacing to the last content component
