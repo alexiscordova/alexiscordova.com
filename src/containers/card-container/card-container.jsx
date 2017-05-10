@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class CardContainer extends Component {
+  static propTypes = {
+    headline: PropTypes.string,
+    children: PropTypes.element.isRequired
+  }
+
   render() {
     return (
       <section data-component="card-container">
@@ -18,8 +23,4 @@ class CardContainer extends Component {
   }
 }
 
-CardContainer.propTypes = {
-  headline: PropTypes.string,
-  children: PropTypes.element.isRequired
-};
 export default CardContainer

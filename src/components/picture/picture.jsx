@@ -4,6 +4,25 @@ import 'picturefill'
 import 'picturefill/dist/plugins/mutation/pf.mutation.js'
 
 class Picture extends Component {
+  static propTypes = {
+    smallImage: PropTypes.string,
+    smallRetinaImage: PropTypes.string,
+    mediumImage: PropTypes.string,
+    mediumRetinaImage: PropTypes.string,
+    largeImage: PropTypes.string,
+    largeRetinaImage: PropTypes.string,
+    alt: PropTypes.string
+  }
+
+  static defaultProps = {
+    smallImage: 'http://placehold.it/350x350?text=small',
+    smallRetinaImage: 'http://placehold.it/350x350?text=small+2x',
+    mediumImage: 'http://placehold.it/350x350?text=medium',
+    mediumRetinaImage: 'http://placehold.it/350x350?text=medium+2x',
+    largeImage: 'http://placehold.it/350x350?text=large',
+    largeRetinaImage: 'http://placehold.it/700x700?text=large+2x'
+  }
+
   render() {
     return (
       <picture>
@@ -30,22 +49,4 @@ class Picture extends Component {
   }
 }
 
-Picture.propTypes = {
-  smallImage: PropTypes.string,
-  smallRetinaImage: PropTypes.string,
-  mediumImage: PropTypes.string,
-  mediumRetinaImage: PropTypes.string,
-  largeImage: PropTypes.string,
-  largeRetinaImage: PropTypes.string,
-  alt: PropTypes.string
-};
-
-Picture.defaultProps = {
-  smallImage: 'http://placehold.it/350x350?text=small',
-  smallRetinaImage: 'http://placehold.it/350x350?text=small+2x',
-  mediumImage: 'http://placehold.it/350x350?text=medium',
-  mediumRetinaImage: 'http://placehold.it/350x350?text=medium+2x',
-  largeImage: 'http://placehold.it/350x350?text=large',
-  largeRetinaImage: 'http://placehold.it/700x700?text=large+2x'
-};
 export default Picture

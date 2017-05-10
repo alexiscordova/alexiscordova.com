@@ -5,6 +5,16 @@ import classNames from 'classnames'
 import './style.scss'
 
 class Card extends Component {
+  static propTypes = {
+    columns: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    alt: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    destination: PropTypes.string.isRequired,
+    projectDate: PropTypes.string,
+    client: PropTypes.string
+  }
+
   render() {
     const classes = this.props.columns.split(' '),
           cardClass = classNames('no-gutters-small', classes);
@@ -34,13 +44,4 @@ class Card extends Component {
   }
 }
 
-Card.propTypes = {
-  columns: PropTypes.string,
-  image: PropTypes.string.isRequired,
-  alt: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  destination: PropTypes.string.isRequired,
-  projectDate: PropTypes.string,
-  client: PropTypes.string
-};
 export default Card

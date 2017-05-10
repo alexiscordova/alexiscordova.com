@@ -4,6 +4,19 @@ import classNames from 'classnames'
 import './style.scss'
 
 class Hero extends Component {
+  static propTypes = {
+    background: PropTypes.bool.isRequired,
+    classes: PropTypes.string,
+    alt: PropTypes.string,
+    heroImage: PropTypes.string,
+    project: PropTypes.string
+  }
+
+  static defaultProps = {
+    heroImage: 'http://placehold.it/1900x600',
+    alt: 'Missing alt text'
+  }
+
   render() {
     const classes = this.props.background ? this.props.classes.split(' ') : '',
           heroClass = classNames('hero-background-image', 'block-center', classes)
@@ -28,16 +41,4 @@ class Hero extends Component {
   }
 }
 
-Hero.propTypes = {
-  background: PropTypes.bool.isRequired,
-  classes: PropTypes.string,
-  alt: PropTypes.string,
-  heroImage: PropTypes.string,
-  project: PropTypes.string
-};
-
-Hero.defaultProps = {
-  heroImage: 'http://placehold.it/1900x600',
-  alt: 'Missing alt text'
-};
 export default Hero

@@ -8,6 +8,14 @@ import CodePen from 'Components/codepen/codepen'
 import ScrollToTopOnMount from 'Components/scroll-to-top-on-mount/scroll-to-top-on-mount'
 
 class WorkView extends Component {
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        project: PropTypes.string
+      })
+    })
+  }
+
   constructor(props) {
     super(props)
 
@@ -79,11 +87,4 @@ class WorkView extends Component {
   }
 }
 
-WorkView.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      project: PropTypes.string
-    })
-  })
-}
 export default WorkView

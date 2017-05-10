@@ -3,6 +3,12 @@ import PropTypes from 'prop-types'
 import './style.scss'
 
 class Avatar extends Component {
+  static propTypes = {
+    avatarImage: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
+  }
+
   render() {
     return (
       <div data-component="avatar">
@@ -18,9 +24,4 @@ class Avatar extends Component {
   }
 }
 
-Avatar.propTypes = {
-  avatarImage: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
-};
 export default Avatar

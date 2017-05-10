@@ -49,6 +49,12 @@ let networks = [
 ]
 
 class ProfileContainer extends Component {
+  static propTypes = {
+    avatarImage: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
+  }
+
   render() {
     return (
       <section data-component="profile">
@@ -70,9 +76,4 @@ class ProfileContainer extends Component {
   }
 }
 
-ProfileContainer.propTypes = {
-  avatarImage: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
-};
 export default ProfileContainer

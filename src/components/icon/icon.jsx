@@ -3,6 +3,19 @@ import PropTypes from 'prop-types'
 import './style.scss'
 
 class Icon extends Component {
+  static propTypes = {
+    width: PropTypes.string,
+    height: PropTypes.string,
+    className: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    link: PropTypes.string
+  }
+
+  static defaultProps = {
+    width: '40',
+    height: '40'
+  }
+
   render() {
     return (
       <a href={this.props.link} data-component="icon">
@@ -14,16 +27,4 @@ class Icon extends Component {
   }
 }
 
-Icon.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
-  className: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  link: PropTypes.string
-};
-
-Icon.defaultProps = {
-  width: '40',
-  height: '40'
-};
 export default Icon

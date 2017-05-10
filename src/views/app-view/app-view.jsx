@@ -4,6 +4,10 @@ import GlobalHeader from 'Components/global-header/global-header'
 import GlobalFooter from 'Components/global-footer/global-footer'
 
 class Application extends Component {
+  static propTypes = {
+    children: PropTypes.any
+  }
+
   render() {
     return (
       <article className="react-root">
@@ -19,7 +23,4 @@ class Application extends Component {
   }
 }
 
-Application.propTypes = {
-  children: PropTypes.any
-}
 export default Application

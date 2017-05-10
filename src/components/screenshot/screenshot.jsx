@@ -4,6 +4,11 @@ import ReactMarkdown from 'react-markdown'
 import './style.scss'
 
 class Screenshot extends Component {
+  static propTypes = {
+    imageUrl: PropTypes.string.isRequired,
+    details: PropTypes.string
+  }
+
   render() {
     return(
       <section data-component="screenshot">
@@ -27,8 +32,4 @@ class Screenshot extends Component {
   }
 }
 
-Screenshot.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
-  details: PropTypes.string
-};
 export default Screenshot

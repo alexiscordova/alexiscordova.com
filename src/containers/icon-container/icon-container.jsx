@@ -4,6 +4,10 @@ import Icon from 'Components/icon/icon'
 import './style.scss'
 
 class IconContainer extends Component {
+  static propTypes = {
+    networks: PropTypes.array.isRequired
+  }
+
   render() {
     const { networks } = this.props
 
@@ -25,7 +29,4 @@ class IconContainer extends Component {
   }
 }
 
-IconContainer.propTypes = {
-  networks: PropTypes.array.isRequired
-};
 export default IconContainer

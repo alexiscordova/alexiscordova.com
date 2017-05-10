@@ -4,6 +4,12 @@ import ReactMarkdown from 'react-markdown'
 import './style.scss'
 
 class CodePen extends Component {
+  static propTypes = {
+    hash: PropTypes.string,
+    title: PropTypes.string,
+    caption: PropTypes.string
+  }
+
   render() {
     return (
       <section data-component="codepen">
@@ -31,9 +37,4 @@ class CodePen extends Component {
   }
 }
 
-CodePen.propTypes = {
-  hash: PropTypes.string,
-  title: PropTypes.string,
-  caption: PropTypes.string
-};
 export default CodePen

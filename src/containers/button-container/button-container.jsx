@@ -3,6 +3,13 @@ import PropTypes from 'prop-types'
 import Button from 'Components/button/button'
 
 class ButtonContainer extends Component {
+  static propTypes = {
+    id: PropTypes.string,
+    classes: PropTypes.string,
+    link: PropTypes.string,
+    text: PropTypes.string
+  }
+
   constructor(props) {
     super(props)
 
@@ -30,10 +37,4 @@ class ButtonContainer extends Component {
   }
 }
 
-ButtonContainer.propTypes = {
-  id: PropTypes.string,
-  classes: PropTypes.string,
-  link: PropTypes.string,
-  text: PropTypes.string
-};
 export default ButtonContainer
