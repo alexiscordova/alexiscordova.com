@@ -4,16 +4,17 @@
   "description": "The personal portfolio site of Alexis Córdova, Front-End UI/UX Developer",
   "main": "src/index.jsx",
   "scripts": {
-    "start": "npm run data && npm-run-all --parallel security-check serve:src lint:watch",
-    "serve:src": "babel-node tools/server.js NODE_ENV=development",
-    "serve:dist": "babel-node tools/server.js NODE_ENV=production",
+    "prestart": "npm run data",
+    "start": "npm-run-all --parallel security-check serve:src",
+    "serve:src": "babel-node tools/server.js",
+    "serve:dist": "npm-run-all build server",
+    "server": "NODE_ENV=production babel-node tools/server.js",
     "lint": "esw webpack.config.* src server.js tools",
-    "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
-    "predata": "npm run clean:dist",
     "clean": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean lint",
     "build": "webpack --progress --config ./webpack.config.prod.js",
+    "predata": "npm run clean",
     "data": "babel-node tools/getData.js -s"
   },
   "repository": {
