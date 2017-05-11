@@ -65,7 +65,33 @@ module.exports = {
         })
       },
       {
-        test: /\.(gif|jpe?g|svg)$/i,
+        test: /\.(gif|jpe?g|png|svg)$/,
+        exclude: /node_modules/,
+        use: [
+          'file-loader?name=[path][name].[ext]',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              mozjpeg: {
+                quality: 65,
+                progressive: true
+              },
+              gifsicle: {
+                interlaced: false
+              },
+              optipng: {
+                optimizationLevel: 4
+              },
+              pngquaint: {
+                quality: '75-90',
+                speed: 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(eot|otf|ttf|woff)$/,
         use: [
           'file-loader?name=[path][name].[ext]'
         ]
