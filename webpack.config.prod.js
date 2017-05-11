@@ -1,7 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const WebpackMd5Hash = require('webpack-md5-hash')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
@@ -70,8 +69,6 @@ module.exports = {
     // Generate external CSS file
     new ExtractTextPlugin('style.[contenthash].css'),
 
-    // MD5 hash files for cache busting
-    new WebpackMd5Hash(),
 
     // Create favicons
     new FaviconsWebpackPlugin({
