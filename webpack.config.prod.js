@@ -143,6 +143,17 @@ module.exports = {
     }),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: (module) => {
+        return module.context && module.context.indexOf('node_modules') !== -1;
+      }
+    }),
+
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest'
+    })
   ]
 }
