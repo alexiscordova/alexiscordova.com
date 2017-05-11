@@ -43,11 +43,22 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
             {
-              loader: 'sass-loader?sourceMap',
+              loader: 'css-loader',
               options: {
-                includePaths: ['src/styles/utilities']
+                minimize: true,
+                importLoaders: 1
+              }
+            },
+            'postcss-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                outputStyle: 'compressed',
+                includePaths: [
+                  'src/styles/base',
+                  'src/styles/utilities'
+                ]
               }
             }
           ]
@@ -56,7 +67,6 @@ module.exports = {
       {
         test: /\.(gif|jpe?g|svg)$/i,
         use: [
-          'image-webpack-loader',
           'file-loader?name=[path][name].[ext]'
         ]
       }
@@ -76,8 +86,10 @@ module.exports = {
     }),
 
     // Generate external CSS file
-    new ExtractTextPlugin('style.[contenthash].css'),
-
+    new ExtractTextPlugin({
+      filename: './src/styles/[name].css',
+      disable: process.env.NODE_ENV === 'development'
+    }),
 
     // Create favicons
     new FaviconsWebpackPlugin({
