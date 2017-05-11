@@ -16,16 +16,19 @@ module.exports = {
       Data: path.resolve(__dirname, 'src/data/')
     }
   },
-  devtool: 'source-map',
+
+  devtool: 'cheap-module-source-map',
   entry: {
     main: path.resolve(__dirname, './src/index.jsx')
   },
+
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
+
   module: {
     rules: [
       {
@@ -59,6 +62,7 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
     new SvgStore({
       prefix: ''
