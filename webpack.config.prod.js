@@ -3,6 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const SvgStore = require('webpack-svgstore-plugin')
 
 module.exports = {
   resolve: {
@@ -59,6 +60,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new SvgStore({
+      prefix: ''
+    }),
+
     // Set React to compile production build
     new webpack.DefinePlugin({
       'process.env': {
