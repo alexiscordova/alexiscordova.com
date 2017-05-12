@@ -6,6 +6,7 @@
     "title": "alexiscordova.com",
     "projectDate": "2014-2017",
     "imageUrl": "portfolio/portfolio-promo-large.jpg",
+    "retinaImageUrl": "portfolio/portfolio-promo-large_2x.jpg",
     "alt": "Portfolio for Alexis Cordova",
     "destinationUrl": "/work/portfolio"
   },
@@ -16,6 +17,7 @@
     "title": "Is It Baseball Season Yet",
     "projectDate": "2011-2017",
     "imageUrl": "iibbsy/iibbsy-promo-large.jpg",
+    "retinaImageUrl": "iibbsy/iibbsy-promo-large_2x.jpg",
     "alt": "2014 World Series at AT&T Park, as promotion for Is It Baseball Season Yet",
     "destinationUrl": "/work/iibbsy"
   },
@@ -26,6 +28,7 @@
     "title": "Instagram Administrator",
     "projectDate": "2017",
     "imageUrl": "instagram-admin/instagram-admin-promo-large.jpg",
+    "retinaImageUrl": "instagram-admin/instagram-admin-promo-large_2x.jpg",
     "alt": "Instagram Administrator",
     "destinationUrl": "/work/instagram-admin"
   }

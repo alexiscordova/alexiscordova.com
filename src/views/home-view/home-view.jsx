@@ -44,7 +44,8 @@ class HomeView extends Component {
                 <Card
                   key={project.id}
                   columns="column-small-12 column-medium-6"
-                  image={require(`Images/work/${project.imageUrl}`)}
+                  imageUrl={require(`Images/work/${project.imageUrl}`)}
+                  retinaImageUrl={require(`Images/work/${project.retinaImageUrl}`)}
                   alt={project.alt}
                   title={project.title}
                   projectDate={project.projectDate}
@@ -63,7 +64,8 @@ class HomeView extends Component {
                 <Card
                   key={project.id}
                   columns="column-small-12 column-medium-6"
-                  image={require(`Images/work/${project.imageUrl}`)}
+                  imageUrl={require(`Images/work/${project.imageUrl}`)}
+                  retinaImageUrl={require(`Images/work/${project.retinaImageUrl}`)}
                   alt={project.alt}
                   title={project.title}
                   projectDate={project.projectDate}
@@ -76,7 +78,8 @@ class HomeView extends Component {
         </CardContainer>
 
         <Profile
-          avatarImage={require('Images/about/profile-avatar.jpg')}
+          avatarImageUrl={require('Images/about/profile-avatar.jpg')}
+          avatarRetinaImateUrl={require('Images/about/profile-avatar_2x.jpg')}
           name="Alexis Córdova"
           title="Front-End Developer and Maker of Things"
         />

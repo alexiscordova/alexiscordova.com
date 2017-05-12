@@ -4,7 +4,8 @@ import './style.scss'
 
 class Avatar extends Component {
   static propTypes = {
-    avatarImage: PropTypes.string.isRequired,
+    avatarImageUrl: PropTypes.string.isRequired,
+    avatarRetinaImateUrl: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
   }
@@ -13,7 +14,10 @@ class Avatar extends Component {
     return (
       <div data-component="avatar">
         <figure className="avatar">
-          <img className="avatar-image" src={this.props.avatarImage} />
+          <img
+            className="avatar-image"
+            srcSet={`${this.props.avatarImageUrl}, ${this.props.avatarRetinaImateUrl} 2x`}
+          />
           <figcaption className="avatar-caption text-center">
             <h2 className="avatar-name">{this.props.name}</h2>
             <p className="avatar-title">{this.props.title}</p>

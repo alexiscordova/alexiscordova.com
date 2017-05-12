@@ -50,7 +50,8 @@ let networks = [
 
 class ProfileContainer extends Component {
   static propTypes = {
-    avatarImage: PropTypes.string.isRequired,
+    avatarImageUrl: PropTypes.string.isRequired,
+    avatarRetinaImateUrl: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
   }
@@ -61,7 +62,8 @@ class ProfileContainer extends Component {
         <div className="row container block-center">
           <div className="column-small-12">
             <Avatar
-              avatarImage={this.props.avatarImage}
+              avatarImageUrl={this.props.avatarImageUrl}
+              avatarRetinaImateUrl={this.props.avatarRetinaImateUrl}
               name={this.props.name}
               title={this.props.title}
             />

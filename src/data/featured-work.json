@@ -7,6 +7,7 @@
     "client": "StubHub",
     "projectDate": "2015",
     "imageUrl": "stubhub/primer-promo-large.jpg",
+    "retinaImageUrl": "stubhub/primer-promo-large_2x.jpg",
     "alt": "StubHub Primer Style Guide",
     "destinationUrl": "/work/stubhub-primer"
   },
@@ -17,7 +18,8 @@
     "title": "SAF Investment Platform",
     "client": "Strategic Alternative Funds (SAF)",
     "projectDate": "2015-2016",
-    "imageUrl": "saf/saf-promo-large.png",
+    "imageUrl": "saf/saf-promo-large.jpg",
+    "retinaImageUrl": "saf/saf-promo-large_2x.jpg",
     "alt": "Strategic Alternative Funds (SAF) Group",
     "destinationUrl": "/work/saf"
   },
@@ -29,6 +31,7 @@
     "client": "Sony Corporation of America",
     "projectDate": "2012-2013",
     "imageUrl": "sony/sony-promo-large.jpg",
+    "retinaImageUrl": "sony/sony-promo-large_2x.jpg",
     "alt": "Sony Rebranding Project",
     "destinationUrl": "/work/sony"
   },
@@ -40,6 +43,7 @@
     "client": "Thismoment",
     "projectDate": "2013-2014",
     "imageUrl": "contentcloud/content-cloud-promo-large.jpg",
+    "retinaImageUrl": "contentcloud/content-cloud-promo-large_2x.jpg",
     "alt": "Thismoment Content Cloud",
     "destinationUrl": "/work/content-cloud"
   }

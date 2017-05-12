@@ -7,7 +7,8 @@ import './style.scss'
 class Card extends Component {
   static propTypes = {
     columns: PropTypes.string,
-    image: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    retinaImageUrl: PropTypes.string.isRequired,
     alt: PropTypes.string,
     title: PropTypes.string.isRequired,
     destination: PropTypes.string.isRequired,
@@ -24,7 +25,11 @@ class Card extends Component {
       <section data-component="card" className={cardClass}>
         <Link to={this.props.destination} className="card-link">
           <figure>
-            <img className="card-image" src={this.props.image} alt={this.props.alt} />
+            <img
+              className="card-image"
+              srcSet={`${this.props.imageUrl}, ${this.props.retinaImageUrl} 2x`}
+              alt={this.props.alt}
+            />
             <figcaption className="card-caption">
               <h4 className="card-title">{this.props.title}</h4>
               { componentHasClient ? (
