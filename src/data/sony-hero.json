@@ -3,6 +3,6 @@
   "filename": "sony-hero.json",
   "isVisible": true,
   "background": false,
-  "backgroundUrl": "sony/sony-header-large.jpg",
+  "imageUrl": "sony/sony-header-large.jpg",
   "alt": "Sony 4K HDTV header"
 }

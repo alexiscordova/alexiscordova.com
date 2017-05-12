@@ -4,6 +4,6 @@
   "isVisible": true,
   "background": false,
   "classes": "home",
-  "backgroundUrl": "stubhub/primer-header-large.jpg",
+  "imageUrl": "stubhub/primer-header-large.jpg",
   "alt": "StubHub Primer demo page"
 }

@@ -4,6 +4,6 @@
   "isVisible": true,
   "background": true,
   "classes": "home",
-  "backgroundUrl": "home/tableau-large_2x.jpg",
+  "imageUrl": "home/tableau-large.jpg",
   "alt": "Working on a MacBook Pro"
 }

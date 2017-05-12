@@ -3,6 +3,6 @@
   "filename": "content-cloud-hero.json",
   "isVisible": true,
   "background": false,
-  "backgroundUrl": "contentcloud/content-cloud-header-large.jpg",
+  "imageUrl": "contentcloud/content-cloud-header-large.jpg",
   "alt": "Content Cloud all content view"
 }

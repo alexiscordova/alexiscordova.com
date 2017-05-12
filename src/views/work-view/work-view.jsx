@@ -47,11 +47,11 @@ class WorkView extends Component {
 
         <ScrollToTopOnMount />
 
-        {typeof hero.backgroundUrl !== 'undefined' &&
+        {typeof hero.imageUrl !== 'undefined' &&
           <Hero
             project={this.props.match.params.project}
             background={hero.background}
-            heroImage={require(`Images/work/${hero.backgroundUrl}`)}
+            heroImage={require(`Images/work/${hero.imageUrl}`)}
             alt={hero.alt}
           />
         }
