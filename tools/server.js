@@ -5,14 +5,15 @@ const path = require('path')
 const open = require('open')
 const compression = require('compression')
 const chalk = require('chalk')
-const config = require('../webpack.config.dev')
 const host = 'http://localhost'
 const port = 3000
 const app = express()
 const environment = app.get('env')
-const compiler = webpack(config)
+
 
 if (environment === 'development') {
+  const config = require('../webpack.config.dev')
+  const compiler = webpack(config)
   const indexFile = path.join(compiler.outputPath, 'index.html')
 
   app.use(require('webpack-dev-middleware')(compiler, {
