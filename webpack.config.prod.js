@@ -135,15 +135,15 @@ module.exports = {
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
         minifyURLs: true
       },
       inject: true
     }),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      comments: false
+    }),
 
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
