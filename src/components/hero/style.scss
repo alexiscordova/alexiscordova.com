@@ -10,10 +10,9 @@ $thismoment-background-color: $brand-thismoment;
   z-index: 1;
   background-color: #999;
   .hero-background-image {
-    max-width: 2000px;
     height: 200px;
-    background-size: cover;
     background-position: top center;
+    background-size: cover;
     background-repeat: no-repeat;
 
     .hero-skew {
