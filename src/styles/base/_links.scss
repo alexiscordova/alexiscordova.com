@@ -18,12 +18,14 @@ a {
     content: '';
   }
 
-  &:hover {
-    color: $link-text-hover-color;
-    transition: color 0.25s ease-in;
+  @media (hover:hover) {
+    &:hover {
+      color: $link-text-hover-color;
+      transition: color 0.25s ease-in;
 
-    &:after {
-      width: 100%;
+      &:after {
+        width: 100%;
+      }
     }
   }
 }
