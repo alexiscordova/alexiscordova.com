@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SvgStore = require('webpack-svgstore-plugin')
+const WebpackMd5Hash = require('webpack-md5-hash')
 
 module.exports = {
   resolve: {
@@ -26,7 +27,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: '[name]-[chunkhash].js'
   },
 
   module: {
@@ -100,6 +101,8 @@ module.exports = {
   },
 
   plugins: [
+    new WebpackMd5Hash(),
+
     new SvgStore({
       prefix: ''
     }),
@@ -113,7 +116,7 @@ module.exports = {
 
     // Generate external CSS file
     new ExtractTextPlugin({
-      filename: './src/styles/[name].css',
+      filename: './src/styles/[name]-[chunkhash].css',
       disable: process.env.NODE_ENV === 'development'
     }),
 

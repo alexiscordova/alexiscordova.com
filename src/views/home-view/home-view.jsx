@@ -13,7 +13,7 @@ import OtherWork from 'Data/other-work'
 
 const __svg__ = {
   path: '../../assets/svg/*.svg',
-  name: 'icons.svg'
+  name: 'icons-[hash].svg'
 }
 
 require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__)
