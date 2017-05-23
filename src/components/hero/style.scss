@@ -6,6 +6,7 @@ $thismoment-background-color: $brand-thismoment;
   position: relative;
   z-index: 1;
   background-color: #999;
+
   .hero-background-image {
     height: 200px;
     background-position: top center;
@@ -26,6 +27,7 @@ $thismoment-background-color: $brand-thismoment;
     @include breakpoint(large) {
       height: 600px;
     }
+
     &.home {
       background-image: url('../../assets/images/home/tableau-large.jpg');
     }

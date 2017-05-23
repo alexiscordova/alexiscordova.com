@@ -5,7 +5,7 @@
 // e.g., font-size: 1em = 1rem = 16px = 100%;
 // http://www.w3.org/TR/css3-mediaqueries/#units
 
-$screen-sm: 0em; // 0px
+$screen-sm: 0; // 0px
 $screen-md: 40em; // 640px
 $screen-lg: 64em; // 1024px
 
@@ -25,17 +25,20 @@ $breakpoints: (
         @content;
       }
     }
+
     @else if $breakpoint == 'medium' {
       @media only screen and (min-width: map-get($breakpoints, medium)) {
         @content;
       }
     }
+
     @else if $breakpoint == 'large' {
       @media only screen and (min-width: map-get($breakpoints, large)) {
         @content;
       }
     }
   }
+
   @else {
     @warn 'Not a valid breakpoint: ' + $breakpoint;
   }

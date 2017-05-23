@@ -24,10 +24,12 @@ $transition-timing-function: ease;
       transform $transition-duration $transition-timing-function,
       y $transition-duration $transition-delay $transition-timing-function;
   }
+
   .line-middle {
     opacity: 1;
     transition: opacity 0.25s $transition-delay $transition-timing-function;
   }
+
   .line-bottom {
     transition:
       transform $transition-duration $transition-timing-function,
@@ -42,10 +44,12 @@ $transition-timing-function: ease;
         y $transition-duration $transition-timing-function,
         transform $transition-duration $transition-delay $transition-timing-function;
     }
+
     .line-middle {
       opacity: 0;
       transition: opacity 0.25s $transition-timing-function;
     }
+
     .line-bottom {
       y: 18px;
       transform: rotate(45deg);

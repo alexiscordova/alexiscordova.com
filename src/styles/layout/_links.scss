@@ -16,7 +16,7 @@ a {
     content: '';
   }
 
-  @media (hover:hover) {
+  @media (hover: hover) {
     &:hover {
       color: $link-text-hover-color;
       transition: color 0.25s ease-in;
