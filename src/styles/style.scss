@@ -7,14 +7,14 @@
 @import 'utilities/classes';
 
 // Base
-@import
-  'base/typography',
-  'base/links',
-  'base/lists',
-  'base/images';
+@import 'base/fonts';
 
-// Layouts
+// Layout
 @import
+  'layout/typography',
+  'layout/links',
+  'layout/lists',
+  'layout/images',
   'layout/main',
   'layout/sticky-footer',
   'layout/grid';
