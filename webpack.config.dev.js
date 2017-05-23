@@ -52,12 +52,14 @@ module.exports = {
             }
           },
           'postcss-loader',
+          'sass-loader',
           {
-            loader: 'sass-loader',
+            loader: 'sass-resources-loader',
             options: {
-              includePaths: [
-                'src/styles/base',
-                'src/styles/utilities'
+              resources: [
+                'src/styles/utilities/_mixins.scss',
+                'src/styles/base/_type-setting.scss',
+                'src/styles/base/_colors.scss'
               ]
             }
           }
