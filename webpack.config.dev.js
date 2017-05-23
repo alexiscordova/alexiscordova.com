@@ -3,6 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SvgStore = require('webpack-svgstore-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   resolve: {
@@ -111,6 +112,8 @@ module.exports = {
 
     new webpack.HotModuleReplacementPlugin(),
 
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+
+    new StyleLintPlugin()
   ]
 }

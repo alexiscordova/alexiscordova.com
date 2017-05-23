@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SvgStore = require('webpack-svgstore-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 const WebpackMd5Hash = require('webpack-md5-hash')
 
 module.exports = {
@@ -158,6 +159,8 @@ module.exports = {
 
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest'
-    })
+    }),
+
+    new StyleLintPlugin()
   ]
 }
