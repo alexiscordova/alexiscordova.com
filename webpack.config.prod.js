@@ -21,7 +21,7 @@ module.exports = {
 
   devtool: 'cheap-module-source-map',
   entry: {
-    main: path.resolve(__dirname, './src/index.jsx')
+    main: path.resolve(__dirname, 'src/index.jsx')
   },
 
   target: 'web',
@@ -118,7 +118,7 @@ module.exports = {
 
     // Generate external CSS file
     new ExtractTextPlugin({
-      filename: './src/styles/[name]-[chunkhash].css',
+      filename: 'src/styles/[name]-[chunkhash].css',
       disable: process.env.NODE_ENV === 'development'
     }),
 
