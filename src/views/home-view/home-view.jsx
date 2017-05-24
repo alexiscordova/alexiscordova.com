@@ -10,10 +10,11 @@ import HomeHero from 'Data/home-hero'
 import HomeIntro from 'Data/home-introduction'
 import FeaturedWork from 'Data/featured-work'
 import OtherWork from 'Data/other-work'
+import Analytics from '../../analytics'
 
 const __svg__ = {
   path: '../../assets/svg/*.svg',
-  name: 'icons-[hash].svg'
+  name: 'src/assets/svg/icons-[hash].svg'
 }
 
 require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__)
@@ -22,7 +23,7 @@ class HomeView extends Component {
   render() {
     return(
       <section className="block-center content">
-        <Helmet>
+        <Helmet onChangeClientState={newState => { Analytics(newState)}}>
           <title>Alexis Córdova | Front-End Developer | San Francisco, CA</title>
         </Helmet>
 

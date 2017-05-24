@@ -6,6 +6,7 @@ import Introduction from 'Components/introduction/introduction'
 import Screenshot from 'Components/screenshot/screenshot'
 import CodePen from 'Components/codepen/codepen'
 import ScrollToTopOnMount from 'Components/scroll-to-top-on-mount/scroll-to-top-on-mount'
+import Analytics from '../../analytics'
 
 class WorkView extends Component {
   static propTypes = {
@@ -41,7 +42,7 @@ class WorkView extends Component {
 
     return (
       <section className="block-center content">
-        <Helmet>
+        <Helmet onChangeClientState={newState => { Analytics(newState)}}>
           <title>Alexis Córdova | Front-End Developer | Work</title>
         </Helmet>
 

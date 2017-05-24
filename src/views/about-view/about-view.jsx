@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 import Hero from 'Components/hero/hero'
 import Introduction from 'Components/introduction/introduction'
+import Analytics from '../../analytics'
 
 class AboutView extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class AboutView extends Component {
 
     return (
       <section className="block-center content">
-        <Helmet>
+        <Helmet onChangeClientState={newState => { Analytics(newState)}}>
           <title>Alexis Córdova | Front-End Developer | About Alexis</title>
         </Helmet>
 

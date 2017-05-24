@@ -9,6 +9,7 @@ import AppView from './views/app-view/app-view'
 import HomeView from './views/home-view/home-view'
 import AboutView from './views/about-view/about-view'
 import WorkView from './views/work-view/work-view'
+import ReactGA from 'react-ga'
 
 const history = createBrowserHistory();
 
@@ -25,6 +26,12 @@ class Routes extends Component {
       isMenuOpen: PropTypes.bool
     }),
     dispatch: PropTypes.func
+  }
+
+  constructor(props) {
+    super(props)
+
+    ReactGA.initialize('UA-347921-4')
   }
 
   componentDidUpdate() {
