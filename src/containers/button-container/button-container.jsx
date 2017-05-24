@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import ReactGA from 'react-ga'
 import Button from 'Components/button/button'
 
 class ButtonContainer extends Component {
@@ -16,7 +17,17 @@ class ButtonContainer extends Component {
     this.openResumePDF = this.openResumePDF.bind(this)
   }
 
-  openResumePDF() {
+  sendAnalyticsEvent(event) {
+    ReactGA.event({
+      category: 'Button',
+      action: event.type,
+      label: event.target.innerText
+    })
+  }
+
+  openResumePDF(event) {
+    this.sendAnalyticsEvent(event)
+
     window.open(this.props.link)
   }
 
@@ -27,7 +38,7 @@ class ButtonContainer extends Component {
           <div className="column-small-12">
             <Button
               classes={this.props.classes}
-              handleClick={this.openResumePDF}
+              handleClick={(event) => { this.openResumePDF(event)}}
               text={this.props.text}
             />
           </div>

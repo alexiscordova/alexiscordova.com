@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import classNames from 'classnames'
+import ReactGA from 'react-ga'
 import './style.scss'
 
 class Card extends Component {
@@ -16,13 +17,27 @@ class Card extends Component {
     client: PropTypes.string
   }
 
+  constructor(props) {
+    super(props)
+
+    this.sendAnalyticsEvent = this.sendAnalyticsEvent.bind(this)
+  }
+
+  sendAnalyticsEvent(event) {
+    ReactGA.event({
+      category: 'Card',
+      action: event.type,
+      label: this.props.title
+    })
+  }
+
   render() {
     const classes = this.props.columns.split(' '),
           cardClass = classNames('no-gutters-small', classes),
           componentHasClient = typeof this.props.client !== 'undefined'
 
     return (
-      <section data-component="card" className={cardClass}>
+      <section data-component="card" className={cardClass} onClick={(event) => this.sendAnalyticsEvent(event)}>
         <Link to={this.props.destination} className="card-link">
           <figure>
             <img
