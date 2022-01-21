@@ -11,7 +11,7 @@ class GlobalFooter extends Component {
           <div className="column-small-12">
             <small className="footer-text">
               © 2001-{currentYear}
-              <span className="author-metadata">Alexis Córdova • Made in San Francisco</span>
+              <span className="author-metadata">Alexis Córdova • Made in Portland, OR</span>
             </small>
           </div>
         </div>
