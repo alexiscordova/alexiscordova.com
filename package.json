@@ -1,6 +1,6 @@
 {
   "name": "alexiscordova.com",
-  "version": "4.1.0",
+  "version": "4.1.2",
   "description": "The personal portfolio site of Alexis Córdova, Front-End UI/UX Developer",
   "main": "src/index.jsx",
   "scripts": {
