@@ -1,5 +1,17 @@
 [
   {
+    "name": "Salesforce Lightning Design System",
+    "id": "salesforce-lightning-design-system",
+    "isVisible": true,
+    "title": "Salesforce Lightning Design System - Coming Soon",
+    "client": "Salesforce",
+    "projectDate": "2018-Present",
+    "imageUrl": "slds/slds-promo-large.jpg",
+    "retinaImageUrl": "slds/slds-promo-large_2x.jpg",
+    "alt": "Astro, Salesforce's main mascot, holding a giant pencil while putting together arbitrary user interface elements",
+    "destinationUrl": "#"
+  },
+  {
     "name": "StubHub Primer",
     "id": "stubhub-primer",
     "isVisible": true,

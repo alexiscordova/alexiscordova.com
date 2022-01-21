@@ -1,16 +1,15 @@
 {
   "name": "alexiscordova.com",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "The personal portfolio site of Alexis Córdova, Front-End UI/UX Developer",
   "main": "src/index.jsx",
   "scripts": {
     "prestart": "npm run data",
-    "start": "npm-run-all --parallel security-check serve:src",
+    "start": "npm-run-all --parallel serve:src",
     "serve:src": "babel-node tools/server.js",
     "serve:dist": "npm-run-all build server",
     "server": "NODE_ENV=production babel-node tools/server.js",
     "lint": "esw webpack.config.* src server.js tools",
-    "security-check": "nsp check",
     "clean": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean lint",
     "build": "webpack --progress --config ./webpack.config.prod.js",
