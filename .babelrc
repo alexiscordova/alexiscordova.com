@@ -1,12 +1,23 @@
 {
   "presets": [
-    ["env", {"modules": false}],
-    "stage-0",
-    "react"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current",
+          "esmodules": true
+        }
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
   ],
   "plugins": [
-    "react-hot-loader/babel",
-    "transform-decorators-legacy",
-    "transform-class-properties"
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
   ]
 }

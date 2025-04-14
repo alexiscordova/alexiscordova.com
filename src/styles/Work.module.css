@@ -1,0 +1,41 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+  position: relative;
+}
+
+.container h1:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "name": "Home - Hero",
-  "filename": "home-hero.json",
-  "isVisible": true,
-  "background": true,
-  "classes": "home",
-  "imageUrl": "home/tableau-large.jpg",
-  "alt": "Working on a MacBook Pro"
-}
