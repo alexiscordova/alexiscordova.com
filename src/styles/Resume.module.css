@@ -1,0 +1,103 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: var(--font-family);
+}
+
+.header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.header p {
+  font-size: 1.25rem;
+  color: var(--light-text-color);
+}
+
+.resumeContent {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 2rem;
+  color: #d4d4d4;
+  font-family: "Consolas", "Monaco", "Andale Mono", monospace;
+  line-height: 1.5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: auto;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.keyword {
+  color: #569cd6; /* blue */
+}
+
+.variable {
+  color: #9cdcfe; /* light blue */
+}
+
+.function {
+  color: #dcdcaa; /* yellow */
+}
+
+.operator {
+  color: #d4d4d4; /* white */
+}
+
+.bracket {
+  color: #d4d4d4; /* white */
+}
+
+.parentheses {
+  color: #d4d4d4; /* white */
+}
+
+.closingBracket {
+  margin-top: 0.5rem;
+}
+
+.runButton {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #4ec9b0; /* teal */
+  color: #1e1e1e;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #5eddc0;
+}
+
+@media screen and (max-width: 768px) {
+  .resumeContent {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}

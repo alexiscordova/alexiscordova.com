@@ -1,0 +1,9 @@
+{
+  "schedule": "weekly",
+  "aggressiveCompression": true,
+  "compressWiki": true,
+  "minKBReduced": 10,
+  "prTitle": "🤖 Optimize images",
+  "prBody": "Image optimization completed by Imgbot",
+  "ignoredFiles": ["public/favicon.ico", "public/images/logos/**"]
+}
