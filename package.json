@@ -23,7 +23,7 @@
     "bcryptjs": "^3.0.2",
     "contentful": "^11.5.13",
     "next": "^15.3.0",
-    "next-auth": "^4.24.11",
+    "next-auth": "^4.24.12",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
